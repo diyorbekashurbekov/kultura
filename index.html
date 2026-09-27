@@ -1,0 +1,2499 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Культурный отдых — Роль искусства в жизни человека | Практическое занятие №6</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Animation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+
+    <style>
+        /* ============================================================
+           PREMIUM LIGHT LUXURY DESIGN SYSTEM (Inspired by 60fps.fr)
+           ============================================================ */
+        :root {
+            --bg-base: #f8f9fd;
+            --bg-surface: #ffffff;
+            --bg-surface-trans: rgba(255, 255, 255, 0.82);
+            --bg-card: rgba(255, 255, 255, 0.9);
+            --border-subtle: rgba(0, 0, 0, 0.07);
+            --border-focus: rgba(124, 58, 237, 0.45);
+            --text-main: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #64748b;
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --primary-glow: rgba(99, 102, 241, 0.28);
+            --accent-pink: #ec4899;
+            --accent-cyan: #0284c7;
+            --accent-amber: #d97706;
+            --accent-emerald: #059669;
+            --gradient-hero: linear-gradient(135deg, #4f46e5 0%, #db2777 50%, #0284c7 100%);
+            --shadow-subtle: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+            --shadow-card: 0 20px 40px -15px rgba(15, 23, 42, 0.08), 0 0 1px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 30px 60px -15px rgba(99, 102, 241, 0.18), 0 0 1px rgba(99, 102, 241, 0.2);
+            --font-display: 'Playfair Display', Georgia, serif;
+            --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --radius-sm: 10px;
+            --transition-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            background: var(--bg-base);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            overflow-x: hidden;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary) #e2e8f0;
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: rgba(99, 102, 241, 0.4); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+
+        body {
+            position: relative;
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            background-color: var(--bg-base);
+        }
+
+        /* ============================================================
+           PRELOADER (Luxury Light Aesthetic - 60fps.fr Style)
+           ============================================================ */
+        #sitePreloader {
+            position: fixed;
+            inset: 0;
+            z-index: 999999;
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            transition: opacity 0.6s var(--transition-smooth), visibility 0.6s;
+        }
+
+        #sitePreloader.loaded {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .loader-visual {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loader-svg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            transform: rotate(-90deg);
+        }
+
+        .loader-svg circle {
+            fill: none;
+            stroke-width: 3.5;
+            cx: 60;
+            cy: 60;
+            r: 52;
+        }
+
+        .loader-track { stroke: #e2e8f0; }
+        .loader-bar {
+            stroke: url(#loaderLightGrad);
+            stroke-dasharray: 326.7;
+            stroke-dashoffset: 326.7;
+            stroke-linecap: round;
+            transition: stroke-dashoffset 0.1s linear;
+        }
+
+        .loader-count {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .loader-sub {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            animation: pulse-light 1.8s ease-in-out infinite;
+        }
+
+        @keyframes pulse-light {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 1; color: var(--primary); }
+        }
+
+        /* ============================================================
+           LIGHT MOTION AMBIENT ENGINE (Iridescent Canvas & Motion Video)
+           ============================================================ */
+        .ambient-engine {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        #fluidCanvas {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .motion-video-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.28;
+            mix-blend-mode: multiply;
+            filter: contrast(115%) saturate(150%) brightness(1.05);
+            transition: opacity 0.8s ease;
+        }
+
+        .ambient-light-mesh {
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 15% 20%, rgba(199, 210, 254, 0.45) 0%, transparent 40%),
+                radial-gradient(circle at 85% 30%, rgba(252, 231, 243, 0.5) 0%, transparent 45%),
+                radial-gradient(circle at 50% 80%, rgba(224, 231, 255, 0.45) 0%, transparent 50%);
+            mix-blend-mode: normal;
+            pointer-events: none;
+        }
+
+        .ambient-subtle-grid {
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(to right, rgba(99, 102, 241, 0.035) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(99, 102, 241, 0.035) 1px, transparent 1px);
+            background-size: 48px 48px;
+            pointer-events: none;
+        }
+
+        /* ============================================================
+           MAGNETIC CURSOR (Light Theme)
+           ============================================================ */
+        .cursor-ring {
+            position: fixed;
+            width: 34px;
+            height: 34px;
+            border: 1.5px solid rgba(79, 70, 229, 0.5);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 999990;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s var(--transition-smooth), 
+                        height 0.3s var(--transition-smooth), 
+                        border-color 0.3s ease, 
+                        background 0.3s ease;
+        }
+
+        .cursor-dot {
+            position: fixed;
+            width: 6px;
+            height: 6px;
+            background: var(--primary);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 999991;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 8px var(--primary-glow);
+        }
+
+        .cursor-ring.active {
+            width: 70px;
+            height: 70px;
+            border-color: var(--accent-pink);
+            background: rgba(236, 72, 153, 0.08);
+        }
+
+        /* ============================================================
+           HEADER & NAVIGATION (Clean White Glass)
+           ============================================================ */
+        .header-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 18px 48px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.4s var(--transition-smooth);
+        }
+
+        .header-nav.scrolled {
+            padding: 12px 48px;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(25px) saturate(180%);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-main);
+        }
+
+        .brand-badge {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--accent-pink));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.15rem;
+            color: white;
+            box-shadow: 0 6px 20px var(--primary-glow);
+        }
+
+        .brand-title {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.3rem;
+            letter-spacing: -0.5px;
+            color: var(--text-main);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 32px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+            padding: 6px 0;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s var(--transition-smooth);
+            border-radius: 2px;
+        }
+
+        .nav-menu a:hover { color: var(--primary); }
+        .nav-menu a:hover::after { width: 100%; }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .icon-btn {
+            background: #ffffff;
+            border: 1px solid var(--border-subtle);
+            color: var(--text-secondary);
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .icon-btn:hover, .icon-btn.active {
+            background: var(--primary);
+            color: #ffffff;
+            border-color: var(--primary);
+            box-shadow: 0 6px 20px var(--primary-glow);
+            transform: scale(1.05);
+        }
+
+        /* ============================================================
+           HERO SECTION (High-end White Aesthetics)
+           ============================================================ */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 150px 24px 90px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-meta {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 22px;
+            background: #ffffff;
+            border: 1px solid var(--border-subtle);
+            border-radius: 100px;
+            font-family: var(--font-mono);
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .hero-meta .live-indicator {
+            width: 8px;
+            height: 8px;
+            background: var(--accent-emerald);
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(5, 150, 105, 0.6);
+            animation: pulse-green 2s infinite;
+        }
+
+        @keyframes pulse-green {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.4); opacity: 0.6; }
+        }
+
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 6.8vw, 6.4rem);
+            font-weight: 900;
+            line-height: 1.06;
+            letter-spacing: -2px;
+            max-width: 1080px;
+            margin-bottom: 26px;
+            color: var(--text-main);
+        }
+
+        .hero-title .gradient-text {
+            background: var(--gradient-hero);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient-flow 6s ease infinite alternate;
+        }
+
+        @keyframes gradient-flow {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 1.9vw, 1.4rem);
+            color: var(--text-secondary);
+            max-width: 740px;
+            margin: 0 auto 44px;
+            line-height: 1.65;
+            font-weight: 400;
+        }
+
+        .hero-buttons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
+            margin-bottom: 64px;
+        }
+
+        .btn-modern {
+            padding: 16px 38px;
+            border-radius: 100px;
+            font-size: 0.96rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.35s var(--transition-smooth);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: none;
+            font-family: var(--font-body);
+        }
+
+        .btn-primary-glow {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #ffffff;
+            box-shadow: 0 10px 30px var(--primary-glow);
+        }
+
+        .btn-primary-glow:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 16px 45px rgba(99, 102, 241, 0.45);
+        }
+
+        .btn-glass {
+            background: #ffffff;
+            color: var(--text-main);
+            border: 1px solid var(--border-subtle);
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .btn-glass:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+        }
+
+        .syllabus-chips {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            max-width: 860px;
+        }
+
+        .chip {
+            padding: 10px 20px;
+            background: #ffffff;
+            border: 1px solid var(--border-subtle);
+            border-radius: 14px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: var(--shadow-subtle);
+            font-weight: 500;
+        }
+
+        .chip i { color: var(--primary); }
+
+        /* ============================================================
+           SECTIONS LAYOUT
+           ============================================================ */
+        .section-wrap {
+            max-width: 1260px;
+            margin: 0 auto;
+            padding: 100px 24px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+
+        .section-kicker {
+            font-family: var(--font-mono);
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--primary);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+            display: inline-block;
+        }
+
+        .section-headline {
+            font-family: var(--font-display);
+            font-size: clamp(2.3rem, 4vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -1px;
+            margin-bottom: 18px;
+            color: var(--text-main);
+        }
+
+        .section-lead {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* ============================================================
+           ACADEMIC COMPETENCIES (РОД1 - РОД5)
+           ============================================================ */
+        .rod-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .rod-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 34px;
+            backdrop-filter: blur(20px);
+            transition: all 0.4s var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+        }
+
+        .rod-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--primary);
+            opacity: 0.5;
+            transition: opacity 0.3s;
+        }
+
+        .rod-card:hover {
+            border-color: var(--border-focus);
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .rod-card:hover::before { opacity: 1; }
+
+        .rod-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 18px;
+        }
+
+        .rod-badge {
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--primary-dark);
+            border: 1px solid rgba(99, 102, 241, 0.25);
+            font-family: var(--font-mono);
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 5px 14px;
+            border-radius: 8px;
+        }
+
+        .rod-icon {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .rod-title {
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+
+        .rod-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.68;
+        }
+
+        /* ============================================================
+           EXERCISE 1 ("Обобщающее слово" - Live Interactive)
+           ============================================================ */
+        .exercise-box {
+            background: #ffffff;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 48px;
+            margin-top: 40px;
+            box-shadow: var(--shadow-card);
+        }
+
+        .exercise-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #f1f5f9;
+            margin-bottom: 32px;
+        }
+
+        .exercise-title {
+            font-family: var(--font-display);
+            font-size: 1.65rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .exercise-score {
+            font-family: var(--font-mono);
+            font-size: 0.95rem;
+            padding: 8px 18px;
+            background: rgba(5, 150, 105, 0.1);
+            border: 1px solid rgba(5, 150, 105, 0.25);
+            color: var(--accent-emerald);
+            border-radius: 100px;
+            font-weight: 600;
+        }
+
+        .word-task-card {
+            background: #f8fafc;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 26px;
+            margin-bottom: 22px;
+            transition: all 0.3s ease;
+        }
+
+        .word-task-card.correct {
+            border-color: var(--accent-emerald);
+            background: rgba(5, 150, 105, 0.05);
+        }
+
+        .word-task-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .word-tag {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 7px 18px;
+            border-radius: 100px;
+            font-size: 0.94rem;
+            color: var(--text-main);
+            font-weight: 600;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+
+        .word-input-row {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .word-input {
+            flex: 1;
+            background: #ffffff;
+            border: 1.5px solid #cbd5e1;
+            color: var(--text-main);
+            padding: 13px 20px;
+            border-radius: var(--radius-sm);
+            font-size: 0.96rem;
+            font-family: var(--font-body);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .word-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px var(--primary-glow);
+        }
+
+        .btn-check-word {
+            padding: 13px 26px;
+            background: var(--primary);
+            border: none;
+            color: white;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-check-word:hover { background: var(--primary-dark); }
+
+        .word-feedback {
+            margin-top: 12px;
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        .word-feedback.show { display: block; }
+
+        /* ============================================================
+           FORMS OF REST (Clean 3D Tilt Spotlight Cards)
+           ============================================================ */
+        .forms-deck {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .tilt-card-3d {
+            position: relative;
+            border-radius: var(--radius-lg);
+            background: #ffffff;
+            border: 1px solid var(--border-subtle);
+            overflow: hidden;
+            cursor: pointer;
+            transform-style: preserve-3d;
+            box-shadow: var(--shadow-card);
+            transition: border-color 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .tilt-card-3d:hover {
+            border-color: var(--border-focus);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .card-spotlight {
+            position: absolute;
+            inset: 0;
+            border-radius: var(--radius-lg);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 3;
+        }
+
+        .tilt-card-3d:hover .card-spotlight { opacity: 1; }
+
+        .card-media {
+            height: 240px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s var(--transition-smooth);
+        }
+
+        .tilt-card-3d:hover .card-media img {
+            transform: scale(1.08);
+        }
+
+        .card-media::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(255, 255, 255, 0.95) 0%, transparent 60%);
+        }
+
+        .card-floating-badge {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            width: 46px;
+            height: 46px;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            color: var(--primary);
+            z-index: 2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        }
+
+        .card-content {
+            padding: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .card-title {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+
+        .card-text {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .card-pill {
+            font-size: 0.78rem;
+            padding: 5px 14px;
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            border-radius: 100px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        /* ============================================================
+           BENTO SHOWCASE (Роль искусства в обществе)
+           ============================================================ */
+        .bento-showcase {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 50px;
+        }
+
+        .bento-cell {
+            background: #ffffff;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 40px 34px;
+            box-shadow: var(--shadow-card);
+            transition: all 0.4s var(--transition-smooth);
+            position: relative;
+        }
+
+        .bento-cell:hover {
+            border-color: var(--border-focus);
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .bento-cell.span-2 { grid-column: span 2; }
+
+        .bento-icon-wrapper {
+            width: 54px;
+            height: 54px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 22px;
+        }
+
+        .bento-cell h3 {
+            font-family: var(--font-display);
+            font-size: 1.45rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+
+        .bento-cell p {
+            color: var(--text-secondary);
+            font-size: 0.96rem;
+            line-height: 1.72;
+        }
+
+        /* ============================================================
+           QUIZ ENGINE (Light Style)
+           ============================================================ */
+        .quiz-container {
+            max-width: 840px;
+            margin: 50px auto 0;
+            background: #ffffff;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 50px;
+            box-shadow: var(--shadow-card);
+            position: relative;
+        }
+
+        .quiz-top-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+        }
+
+        .academic-badge {
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.25);
+            color: var(--primary-dark);
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .quiz-step-count {
+            font-family: var(--font-mono);
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .quiz-meter {
+            width: 100%;
+            height: 6px;
+            background: #e2e8f0;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 35px;
+        }
+
+        .quiz-meter-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--accent-pink));
+            width: 0%;
+            transition: width 0.4s var(--transition-smooth);
+        }
+
+        .quiz-stem {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 32px;
+            color: var(--text-main);
+        }
+
+        .quiz-choices {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .quiz-choice-btn {
+            background: #f8fafc;
+            border: 1.5px solid #e2e8f0;
+            color: var(--text-main);
+            padding: 18px 24px;
+            border-radius: var(--radius-md);
+            font-family: var(--font-body);
+            font-size: 0.98rem;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .quiz-choice-btn:hover {
+            border-color: var(--primary);
+            background: rgba(99, 102, 241, 0.05);
+            transform: translateX(6px);
+        }
+
+        .quiz-choice-letter {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            flex-shrink: 0;
+        }
+
+        .quiz-choice-btn.is-correct {
+            border-color: var(--accent-emerald);
+            background: rgba(5, 150, 105, 0.08);
+        }
+
+        .quiz-choice-btn.is-correct .quiz-choice-letter {
+            background: var(--accent-emerald);
+            color: #ffffff;
+            border-color: var(--accent-emerald);
+        }
+
+        .quiz-choice-btn.is-wrong {
+            border-color: #ef4444;
+            background: rgba(239, 68, 68, 0.08);
+        }
+
+        .quiz-rationale {
+            margin-top: 24px;
+            padding: 20px;
+            background: #f1f5f9;
+            border: 1px solid #cbd5e1;
+            border-radius: var(--radius-md);
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            display: none;
+            line-height: 1.65;
+        }
+
+        .quiz-rationale.revealed { display: block; }
+
+        .btn-quiz-next {
+            margin-top: 28px;
+            display: none;
+        }
+
+        .btn-quiz-next.revealed { display: inline-flex; }
+
+        .quiz-scoreboard {
+            text-align: center;
+            display: none;
+        }
+
+        .quiz-scoreboard.revealed { display: block; }
+
+        .score-emblem { font-size: 4.8rem; margin-bottom: 16px; }
+
+        .score-digit {
+            font-family: var(--font-display);
+            font-size: 4.2rem;
+            font-weight: 900;
+            background: var(--gradient-hero);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 12px 0;
+        }
+
+        /* ============================================================
+           MEMORY GAME (Light Style)
+           ============================================================ */
+        .memory-arena {
+            max-width: 660px;
+            margin: 40px auto 0;
+        }
+
+        .memory-dashboard {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            margin-bottom: 32px;
+        }
+
+        .mem-indicator { text-align: center; }
+
+        .mem-indicator-val {
+            font-family: var(--font-display);
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .mem-indicator-lbl {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .memory-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            perspective: 1000px;
+        }
+
+        .mem-tile {
+            aspect-ratio: 1;
+            position: relative;
+            cursor: pointer;
+            transform-style: preserve-3d;
+            transition: transform 0.6s var(--transition-smooth);
+        }
+
+        .mem-tile.flipped { transform: rotateY(180deg); }
+
+        .mem-face {
+            position: absolute;
+            inset: 0;
+            border-radius: var(--radius-md);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            backface-visibility: hidden;
+            border: 1.5px solid var(--border-subtle);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+
+        .mem-face-front {
+            background: #ffffff;
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+
+        .mem-face-back {
+            background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+            border-color: var(--primary);
+            transform: rotateY(180deg);
+            gap: 6px;
+        }
+
+        .mem-face-back .emoji { font-size: 2.3rem; }
+        .mem-face-back .caption { font-size: 0.78rem; color: var(--text-main); font-weight: 700; }
+
+        /* ============================================================
+           GALLERY & LIGHTBOX
+           ============================================================ */
+        .art-masonry {
+            columns: 3;
+            column-gap: 24px;
+            margin-top: 50px;
+        }
+
+        .art-frame {
+            break-inside: avoid;
+            margin-bottom: 24px;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            box-shadow: var(--shadow-card);
+            transition: transform 0.4s var(--transition-smooth);
+        }
+
+        .art-frame:hover { transform: scale(1.02); }
+
+        .art-frame img {
+            width: 100%;
+            display: block;
+            transition: transform 0.8s var(--transition-smooth);
+        }
+
+        .art-frame:hover img { transform: scale(1.08); }
+
+        .art-caption {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.85) 0%, transparent 60%);
+            display: flex;
+            align-items: flex-end;
+            padding: 24px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .art-frame:hover .art-caption { opacity: 1; }
+
+        #mediaViewer {
+            position: fixed;
+            inset: 0;
+            z-index: 999995;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(25px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: zoom-out;
+        }
+
+        #mediaViewer.visible { display: flex; }
+
+        #mediaViewer img {
+            max-width: 88vw;
+            max-height: 88vh;
+            border-radius: var(--radius-md);
+            box-shadow: 0 30px 100px rgba(0,0,0,0.5);
+        }
+
+        /* ============================================================
+           VIDEO EMBEDS (Light Frame)
+           ============================================================ */
+        .video-trio {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 26px;
+            margin-top: 50px;
+        }
+
+        .video-box {
+            background: #ffffff;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+            transition: transform 0.4s ease;
+        }
+
+        .video-box:hover { transform: translateY(-5px); border-color: var(--border-focus); }
+
+        .video-ratio {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+        }
+
+        .video-ratio iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-detail { padding: 24px; }
+        .video-detail h4 { font-size: 1.15rem; margin-bottom: 8px; font-weight: 700; color: var(--text-main); }
+        .video-detail p { font-size: 0.9rem; color: var(--text-secondary); }
+
+        /* ============================================================
+           FOOTER (Light Clean)
+           ============================================================ */
+        .site-footer {
+            border-top: 1px solid var(--border-subtle);
+            padding: 70px 24px 35px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            background: #ffffff;
+        }
+
+        .footer-brand {
+            font-family: var(--font-display);
+            font-size: 2.3rem;
+            font-weight: 900;
+            background: var(--gradient-hero);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+        }
+
+        .footer-meta {
+            color: var(--text-secondary);
+            font-size: 0.96rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .footer-copy {
+            border-top: 1px solid #f1f5f9;
+            padding-top: 24px;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        .scroll-top-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.15rem;
+            cursor: pointer;
+            z-index: 100;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px var(--primary-glow);
+        }
+
+        .scroll-top-btn.visible { opacity: 1; transform: translateY(0); }
+
+        @media (max-width: 992px) {
+            .bento-showcase { grid-template-columns: 1fr; }
+            .bento-cell.span-2 { grid-column: span 1; }
+            .art-masonry { columns: 2; }
+            .header-nav { padding: 14px 20px; }
+            .nav-menu { display: none; }
+        }
+
+        @media (max-width: 600px) {
+            .art-masonry { columns: 1; }
+            .memory-grid { grid-template-columns: repeat(3, 1fr); }
+            .quiz-container { padding: 30px 20px; }
+            .exercise-box { padding: 30px 20px; }
+            .cursor-ring, .cursor-dot { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== PRELOADER ==================== -->
+    <div id="sitePreloader">
+        <div class="loader-visual">
+            <svg class="loader-svg" viewBox="0 0 120 120">
+                <defs>
+                    <linearGradient id="loaderLightGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#4f46e5"/>
+                        <stop offset="50%" stop-color="#db2777"/>
+                        <stop offset="100%" stop-color="#0284c7"/>
+                    </linearGradient>
+                </defs>
+                <circle class="loader-track"/>
+                <circle class="loader-bar" id="loaderBar"/>
+            </svg>
+            <div class="loader-count" id="loaderCount">0%</div>
+        </div>
+        <div class="loader-sub">Искусство &bull; Культура &bull; Знания</div>
+    </div>
+
+    <!-- ==================== AMBIENT LIGHT MOTION ENGINE ==================== -->
+    <div class="ambient-engine">
+        <!-- Interactive Generative Canvas (Soft Iridescent Fluid Mesh) -->
+        <canvas id="fluidCanvas"></canvas>
+        
+        <!-- Ambient Motion Video Layer (Bright Aesthetic Fluid Art) -->
+        <video class="motion-video-bg" id="ambientVideo" autoplay muted loop playsinline>
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-fluid-art-mixing-colors-in-water-43303-large.mp4" type="video/mp4">
+        </video>
+
+        <div class="ambient-light-mesh"></div>
+        <div class="ambient-subtle-grid"></div>
+    </div>
+
+    <!-- ==================== MAGNETIC CURSOR ==================== -->
+    <div class="cursor-ring" id="curRing"></div>
+    <div class="cursor-dot" id="curDot"></div>
+
+    <!-- ==================== MEDIA LIGHTBOX ==================== -->
+    <div id="mediaViewer" onclick="closeViewer()">
+        <img id="viewerImage" src="" alt="Культурный шедевр">
+    </div>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="header-nav" id="mainHeader">
+        <a href="#hero" class="brand-logo">
+            <div class="brand-badge"><i class="fas fa-landmark"></i></div>
+            <div class="brand-title">Культурный Отдых</div>
+        </a>
+
+        <ul class="nav-menu">
+            <li><a href="#syllabus">УМК & РОД</a></li>
+            <li><a href="#forms">Формы отдыха</a></li>
+            <li><a href="#role">Роль искусства</a></li>
+            <li><a href="#exercise">Задание 1</a></li>
+            <li><a href="#quiz">Викторина</a></li>
+            <li><a href="#game">Игра «Пары»</a></li>
+            <li><a href="#gallery">Галерея</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <!-- Background mode toggle -->
+            <button class="icon-btn" id="toggleBgBtn" title="Переключить моушн: Видео / Генеративный шелк">
+                <i class="fas fa-film"></i>
+            </button>
+            
+            <!-- Music player toggle -->
+            <button class="icon-btn" id="musicToggleBtn" title="Включить классическую музыку">
+                <i class="fas fa-music"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section" id="hero">
+        <div class="hero-meta">
+            <span class="live-indicator"></span>
+            <span>ПРАКТИЧЕСКОЕ ЗАНЯТИЕ №6 &bull; РЕЗУЛЬТАТЫ ОБУЧЕНИЯ РОД1, РОД2, РОД4</span>
+        </div>
+
+        <h1 class="hero-title">
+            Культурный отдых:<br>
+            <span class="gradient-text">Роль искусства в жизни</span>
+        </h1>
+
+        <p class="hero-subtitle">
+            Театры, музеи, фестивали, выставки, концерты, литература и музыка — 
+            комплексный светлый интерактивный портал для студентов и преподавателей
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#exercise" class="btn-modern btn-primary-glow">
+                <i class="fas fa-play"></i> Выполнить задание 1
+            </a>
+            <a href="#quiz" class="btn-modern btn-glass">
+                <i class="fas fa-brain"></i> Пройти тест
+            </a>
+            <a href="#game" class="btn-modern btn-glass">
+                <i class="fas fa-gamepad"></i> Мини-игра
+            </a>
+        </div>
+
+        <div class="syllabus-chips">
+            <div class="chip"><i class="fas fa-clock"></i> Практика — 5 часов</div>
+            <div class="chip"><i class="fas fa-user-graduate"></i> СРС — 3 часа</div>
+            <div class="chip"><i class="fas fa-chalkboard-teacher"></i> СРСП — 2 часа</div>
+            <div class="chip"><i class="fas fa-tv"></i> Интерактивная доска &bull; Проектор</div>
+        </div>
+    </section>
+
+    <!-- ==================== SYLLABUS & COMPETENCIES (РОД1 - РОД5) ==================== -->
+    <section class="section-wrap" id="syllabus">
+        <div class="section-header">
+            <span class="section-kicker">Учебно-методический комплекс</span>
+            <h2 class="section-headline">Ожидаемые результаты обучения (РОД)</h2>
+            <p class="section-lead">Ключевые речевые, коммуникативные и культурные компетенции занятия согласно программе обучения</p>
+        </div>
+
+        <div class="rod-grid">
+            <div class="rod-card">
+                <div class="rod-header">
+                    <span class="rod-badge">РОД 1</span>
+                    <i class="fas fa-language rod-icon"></i>
+                </div>
+                <h3 class="rod-title">Языковые средства</h3>
+                <p class="rod-desc">Правильный выбор и использование языковых и речевых средств для решения задач общения и познания на основе глубокого объёма лексики и грамматики.</p>
+            </div>
+
+            <div class="rod-card">
+                <div class="rod-header">
+                    <span class="rod-badge">РОД 2</span>
+                    <i class="fas fa-comments rod-icon"></i>
+                </div>
+                <h3 class="rod-title">Диалог и аргументация</h3>
+                <p class="rod-desc">Запрашивать и сообщать информацию в соответствии с ситуацией, оценивать поступки собеседников и использовать слово как инструмент культурного диалога.</p>
+            </div>
+
+            <div class="rod-card">
+                <div class="rod-header">
+                    <span class="rod-badge">РОД 3</span>
+                    <i class="fas fa-user-check rod-icon"></i>
+                </div>
+                <h3 class="rod-title">Речевое поведение</h3>
+                <p class="rod-desc">Выстраивать программы речевого поведения в ситуациях личностного, социального и профессионального общения в соответствии с нормами этикета и культуры.</p>
+            </div>
+
+            <div class="rod-card">
+                <div class="rod-header">
+                    <span class="rod-badge">РОД 4</span>
+                    <i class="fas fa-scale-balanced rod-icon"></i>
+                </div>
+                <h3 class="rod-title">Культурная дискуссия</h3>
+                <p class="rod-desc">Обсуждать этические, культурные и социально значимые проблемы, отстаивать личную точку зрения и критически оценивать суждения собеседников.</p>
+            </div>
+
+            <div class="rod-card">
+                <div class="rod-header">
+                    <span class="rod-badge">РОД 5</span>
+                    <i class="fas fa-globe rod-icon"></i>
+                </div>
+                <h3 class="rod-title">Социальная коммуникация</h3>
+                <p class="rod-desc">Участвовать в коммуникации различных сфер (бытовой, учебной, культурной), заявляя о потребностях содержательно полно и прагматически адекватно.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== EXERCISE 1 (FROM METHODOLOGY: "ОБОБЩАЮЩЕЕ СЛОВО") ==================== -->
+    <section class="section-wrap" id="exercise">
+        <div class="section-header">
+            <span class="section-kicker">Интерактивная доска &bull; Практикум</span>
+            <h2 class="section-headline">Задание 1. Найдите обобщающее слово</h2>
+            <p class="section-lead">Определите родовое (обобщающее) понятие для каждой группы терминов культуры и искусства</p>
+        </div>
+
+        <div class="exercise-box">
+            <div class="exercise-header">
+                <div class="exercise-title">Тренажёр словарного запаса (РОД 1)</div>
+                <div class="exercise-score" id="exerciseScore">Баллы: 0 / 4</div>
+            </div>
+
+            <!-- Task Item 1 -->
+            <div class="word-task-card" id="taskCard1">
+                <div class="word-task-items">
+                    <span class="word-tag">🎭 Театр</span>
+                    <span class="word-tag">🏛️ Музей</span>
+                    <span class="word-tag">🖼️ Выставка</span>
+                    <span class="word-tag">🎵 Концерт</span>
+                    <span class="word-tag">🎪 Фестиваль</span>
+                </div>
+                <div class="word-input-row">
+                    <input type="text" class="word-input" id="inputWord1" placeholder="Введите обобщающее словосочетание...">
+                    <button class="btn-check-word" onclick="checkGeneralWord(1, ['культурный отдых', 'отдых', 'досуг'])">Проверить</button>
+                </div>
+                <div class="word-feedback" id="feedbackWord1"></div>
+            </div>
+
+            <!-- Task Item 2 -->
+            <div class="word-task-card" id="taskCard2">
+                <div class="word-task-items">
+                    <span class="word-tag">🩰 Балет</span>
+                    <span class="word-tag">🎼 Опера</span>
+                    <span class="word-tag">🎭 Драма</span>
+                    <span class="word-tag">😄 Комедия</span>
+                    <span class="word-tag">🎪 Мюзикл</span>
+                </div>
+                <div class="word-input-row">
+                    <input type="text" class="word-input" id="inputWord2" placeholder="Введите обобщающее понятие...">
+                    <button class="btn-check-word" onclick="checkGeneralWord(2, ['театральное искусство', 'театр', 'театральные жанры', 'жанры театра'])">Проверить</button>
+                </div>
+                <div class="word-feedback" id="feedbackWord2"></div>
+            </div>
+
+            <!-- Task Item 3 -->
+            <div class="word-task-card" id="taskCard3">
+                <div class="word-task-items">
+                    <span class="word-tag">🎨 Живопись</span>
+                    <span class="word-tag">🗿 Скульптура</span>
+                    <span class="word-tag">🏛️ Архитектура</span>
+                    <span class="word-tag">📷 Фотография</span>
+                </div>
+                <div class="word-input-row">
+                    <input type="text" class="word-input" id="inputWord3" placeholder="Введите обобщающее понятие...">
+                    <button class="btn-check-word" onclick="checkGeneralWord(3, ['изобразительное искусство', 'визуальное искусство', 'искусство'])">Проверить</button>
+                </div>
+                <div class="word-feedback" id="feedbackWord3"></div>
+            </div>
+
+            <!-- Task Item 4 -->
+            <div class="word-task-card" id="taskCard4">
+                <div class="word-task-items">
+                    <span class="word-tag">📖 Роман</span>
+                    <span class="word-tag">📜 Поэма</span>
+                    <span class="word-tag">📝 Рассказ</span>
+                    <span class="word-tag">✍️ Повесть</span>
+                </div>
+                <div class="word-input-row">
+                    <input type="text" class="word-input" id="inputWord4" placeholder="Введите обобщающее понятие...">
+                    <button class="btn-check-word" onclick="checkGeneralWord(4, ['литература', 'литературные жанры', 'художественная литература'])">Проверить</button>
+                </div>
+                <div class="word-feedback" id="feedbackWord4"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FORMS OF CULTURAL REST ==================== -->
+    <section class="section-wrap" id="forms">
+        <div class="section-header">
+            <span class="section-kicker">Раздел 2 программы</span>
+            <h2 class="section-headline">Формы культурного отдыха</h2>
+            <p class="section-lead">Шесть ключевых сфер духовного и интеллектуального обогащения личности</p>
+        </div>
+
+        <div class="forms-deck">
+            <!-- 1. Theater -->
+            <div class="tilt-card-3d">
+                <div class="card-spotlight"></div>
+                <div class="card-media">
+                    <img src="https://images.unsplash.com/photo-1503095396549-807759245b35?w=700&q=80" alt="Театр" loading="lazy">
+                    <div class="card-floating-badge"><i class="fas fa-masks-theater"></i></div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">🎭 Театр</h3>
+                    <p class="card-text">Живая синергия актера и зрителя. Театр пробуждает сопереживание, погружает в этические конфликты эпох и учит понимать многогранность человеческой натуры.</p>
+                    <div class="card-tags">
+                        <span class="card-pill">Драматургия</span>
+                        <span class="card-pill">Катарсис</span>
+                        <span class="card-pill">Сцена</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Museum -->
+            <div class="tilt-card-3d">
+                <div class="card-spotlight"></div>
+                <div class="card-media">
+                    <img src="https://images.unsplash.com/photo-1554907984-15263bfd63bd?w=700&q=80" alt="Музей" loading="lazy">
+                    <div class="card-floating-badge"><i class="fas fa-landmark"></i></div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">🏛️ Музеи</h3>
+                    <p class="card-text">Хранилища исторической памяти цивилизации. От Лувра до Эрмитажа — экспозиции расширяют эрудицию и формируют уважение к историческому наследию.</p>
+                    <div class="card-tags">
+                        <span class="card-pill">Артефакты</span>
+                        <span class="card-pill">История</span>
+                        <span class="card-pill">Наследие</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Festivals -->
+            <div class="tilt-card-3d">
+                <div class="card-spotlight"></div>
+                <div class="card-media">
+                    <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=700&q=80" alt="Фестиваль" loading="lazy">
+                    <div class="card-floating-badge"><i class="fas fa-star"></i></div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">🎪 Фестивали</h3>
+                    <p class="card-text">Праздник единения культур. Музыкальные, книжные и кинематографические фестивали открывают новые таланты и формируют созидательное сообщество.</p>
+                    <div class="card-tags">
+                        <span class="card-pill">Единение</span>
+                        <span class="card-pill">Творчество</span>
+                        <span class="card-pill">Драйв</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Exhibitions -->
+            <div class="tilt-card-3d">
+                <div class="card-spotlight"></div>
+                <div class="card-media">
+                    <img src="https://images.unsplash.com/photo-1531243269054-5ebf6f34081e?w=700&q=80" alt="Выставки" loading="lazy">
+                    <div class="card-floating-badge"><i class="fas fa-palette"></i></div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">🖼️ Выставки</h3>
+                    <p class="card-text">Диалог с современными и классическими художниками. Живопись, инсталляции и медиа-арт учат видеть скрытые смыслы в визуальных метафорах.</p>
+                    <div class="card-tags">
+                        <span class="card-pill">Живопись</span>
+                        <span class="card-pill">Авангард</span>
+                        <span class="card-pill">Концепт</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Concerts -->
+            <div class="tilt-card-3d">
+                <div class="card-spotlight"></div>
+                <div class="card-media">
+                    <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=700&q=80" alt="Концерты" loading="lazy">
+                    <div class="card-floating-badge"><i class="fas fa-music"></i></div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">🎵 Концерты</h3>
+                    <p class="card-text">Универсальный язык вселенной. Симфонический оркестр, джазовая импровизация или рок-драйв гармонизируют нервную систему и вдохновляют.</p>
+                    <div class="card-tags">
+                        <span class="card-pill">Гармония</span>
+                        <span class="card-pill">Энергия</span>
+                        <span class="card-pill">Акустика</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Literature -->
+            <div class="tilt-card-3d">
+                <div class="card-spotlight"></div>
+                <div class="card-media">
+                    <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=700&q=80" alt="Литература" loading="lazy">
+                    <div class="card-floating-badge"><i class="fas fa-book-open"></i></div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">📚 Литература</h3>
+                    <p class="card-text">Глубочайший тренажер эмпатии и мышления. Чтение шедевров классики и современности расширяет словарный запас и формирует философский взгляд на мир.</p>
+                    <div class="card-tags">
+                        <span class="card-pill">Мышление</span>
+                        <span class="card-pill">Слово</span>
+                        <span class="card-pill">Мудрость</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ROLE OF ART (BENTO SHOWCASE) ==================== -->
+    <section class="section-wrap" id="role">
+        <div class="section-header">
+            <span class="section-kicker">Раздел 3 & 4 программы</span>
+            <h2 class="section-headline">Роль искусства в жизни человека и общества</h2>
+            <p class="section-lead">Научные и социологические факты о глубинном воздействии культуры на интеллект и здоровье</p>
+        </div>
+
+        <div class="bento-showcase">
+            <div class="bento-cell span-2">
+                <div class="bento-icon-wrapper" style="background:rgba(99, 102, 241, 0.12);color:var(--primary);">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>Когнитивное развитие & Интеллект</h3>
+                <p>Нейробиологические исследования подтверждают: регулярный культурный досуг стимулирует нейропластичность головного мозга. Анализ сложных произведений искусства активирует лобные доли, тренирует критическое мышление и способность решать нестандартные профессиональные задачи.</p>
+            </div>
+
+            <div class="bento-cell">
+                <div class="bento-icon-wrapper" style="background:rgba(236, 72, 153, 0.12);color:var(--accent-pink);">
+                    <i class="fas fa-heart-pulse"></i>
+                </div>
+                <h3>Психоэмоциональный баланс</h3>
+                <p>Арт-терапия и прослушивание музыки снижают уровень гормона стресса кортизола до 35%, стабилизируют пульс и предотвращают профессиональное выгорание.</p>
+            </div>
+
+            <div class="bento-cell">
+                <div class="bento-icon-wrapper" style="background:rgba(217, 119, 6, 0.12);color:var(--accent-amber);">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h3>Креативность и инновации</h3>
+                <p>Искусство разрушает ментальные шаблоны. Ученые и инженеры, увлекающиеся искусством, регистрируют на 40% больше авторских патентов.</p>
+            </div>
+
+            <div class="bento-cell span-2">
+                <div class="bento-icon-wrapper" style="background:rgba(2, 132, 199, 0.12);color:var(--accent-cyan);">
+                    <i class="fas fa-users-rays"></i>
+                </div>
+                <h3>Общественная сплоченность & Идентичность</h3>
+                <p>Культурные институты являются фундаментом гражданского общества. Общие культурные коды снижают уровень социальной агрессии, развивают толерантность и воспитывают уважение к культурному многообразию планеты.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== INTERACTIVE QUIZ ==================== -->
+    <section class="section-wrap" id="quiz">
+        <div class="section-header">
+            <span class="section-kicker">Проверка знаний &bull; РОД 1, 2, 4</span>
+            <h2 class="section-headline">Интерактивная викторина</h2>
+            <p class="section-lead">Проверьте эрудицию и понимание ключевых концепций культурного отдыха</p>
+        </div>
+
+        <div class="quiz-container">
+            <div id="quizPlayZone">
+                <div class="quiz-top-bar">
+                    <span class="academic-badge"><i class="fas fa-graduation-cap"></i> Тест по занятию №6</span>
+                    <span class="quiz-step-count" id="quizStepText">Вопрос 1 из 15</span>
+                </div>
+                <div class="quiz-meter"><div class="quiz-meter-fill" id="quizMeterBar"></div></div>
+                <h3 class="quiz-stem" id="quizQuestionStem">Загрузка вопроса...</h3>
+                <div class="quiz-choices" id="quizOptionGroup"></div>
+                <div class="quiz-rationale" id="quizFeedbackBox"></div>
+                <button class="btn-modern btn-primary-glow btn-quiz-next" id="quizNextAction" onclick="proceedNextQuestion()">
+                    Следующий вопрос <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <div class="quiz-scoreboard" id="quizScoreZone">
+                <div class="score-emblem">🏆</div>
+                <h2 style="font-family:var(--font-display);font-size:2.2rem;color:var(--text-main);">Тестирование завершено!</h2>
+                <div class="score-digit" id="quizScoreValue">0 / 15</div>
+                <p id="quizScoreCommentary" style="color:var(--text-secondary);font-size:1.1rem;margin-bottom:28px;"></p>
+                <button class="btn-modern btn-primary-glow" onclick="resetQuizTest()">
+                    <i class="fas fa-rotate-right"></i> Пройти тест заново
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== MEMORY GAME ==================== -->
+    <section class="section-wrap" id="game">
+        <div class="section-header">
+            <span class="section-kicker">Интерактивный гейминг</span>
+            <h2 class="section-headline">Игра «Найди культурную пару»</h2>
+            <p class="section-lead">Развивайте зрительную память и ассоциативное мышление через искусство</p>
+        </div>
+
+        <div class="memory-arena">
+            <div class="memory-dashboard">
+                <div class="mem-indicator">
+                    <div class="mem-indicator-val" id="memPairsFound">0 / 8</div>
+                    <div class="mem-indicator-lbl">Найдено пар</div>
+                </div>
+                <div class="mem-indicator">
+                    <div class="mem-indicator-val" id="memMoveCounter">0</div>
+                    <div class="mem-indicator-lbl">Всего ходов</div>
+                </div>
+                <div class="mem-indicator">
+                    <div class="mem-indicator-val" id="memTimeDisplay">00:00</div>
+                    <div class="mem-indicator-lbl">Время</div>
+                </div>
+            </div>
+
+            <div class="memory-grid" id="memoryCardsGrid"></div>
+
+            <div style="text-align:center;margin-top:35px;">
+                <button class="btn-modern btn-glass" onclick="restartMemoryMatch()">
+                    <i class="fas fa-rotate-right"></i> Перезапустить игру
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== MASTERPIECE GALLERY ==================== -->
+    <section class="section-wrap" id="gallery">
+        <div class="section-header">
+            <span class="section-kicker">Эстетический опыт</span>
+            <h2 class="section-headline">Галерея шедевров и атмосферы</h2>
+            <p class="section-lead">Нажмите на любое изображение для просмотра в полноэкранном режиме высокого разрешения</p>
+        </div>
+
+        <div class="art-masonry">
+            <div class="art-frame" onclick="openViewer(this)"><img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=700&q=80" alt="Симфония"><div class="art-caption"><span>🎵 Симфонический зал</span></div></div>
+            <div class="art-frame" onclick="openViewer(this)"><img src="https://images.unsplash.com/photo-1569587112025-0d460e81a126?w=700&q=80" alt="Скульптура"><div class="art-caption"><span>🏛️ Античная скульптура</span></div></div>
+            <div class="art-frame" onclick="openViewer(this)"><img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=700&q=80" alt="Палитра"><div class="art-caption"><span>🎨 Творчество художника</span></div></div>
+            <div class="art-frame" onclick="openViewer(this)"><img src="https://images.unsplash.com/photo-1574169208507-84376144848b?w=700&q=80" alt="Абстракция"><div class="art-caption"><span>🌀 Абстрактный экспрессионизм</span></div></div>
+            <div class="art-frame" onclick="openViewer(this)"><img src="https://images.unsplash.com/photo-1598387993281-cecf8b71a8f8?w=700&q=80" alt="Книги"><div class="art-caption"><span>📚 Сокровищница литературы</span></div></div>
+            <div class="art-frame" onclick="openViewer(this)"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=700&q=80" alt="Фестиваль"><div class="art-caption"><span>✨ Фестиваль света и музыки</span></div></div>
+        </div>
+    </section>
+
+    <!-- ==================== VIDEO LECTURES ==================== -->
+    <section class="section-wrap" id="videos">
+        <div class="section-header">
+            <span class="section-kicker">Мультимедиа &bull; Видеоархив</span>
+            <h2 class="section-headline">Видеоматериалы к занятию</h2>
+            <p class="section-lead">Экспертные взгляды ученых и искусствоведов на роль культуры в XXI веке</p>
+        </div>
+
+        <div class="video-trio">
+            <div class="video-box">
+                <div class="video-ratio"><iframe src="https://www.youtube.com/embed/QZQyV9BB50E" title="Зачем нужно искусство" allowfullscreen loading="lazy"></iframe></div>
+                <div class="video-detail"><h4>🎬 Зачем человеку нужно искусство?</h4><p>Философское осмысление эстетической потребности человечества.</p></div>
+            </div>
+            <div class="video-box">
+                <div class="video-ratio"><iframe src="https://www.youtube.com/embed/PBAl9cFczXY" title="Музеи мира" allowfullscreen loading="lazy"></iframe></div>
+                <div class="video-detail"><h4>🏛️ Величайшие музеи мира</h4><p>Виртуальный тур по ключевым очагам мирового культурного наследия.</p></div>
+            </div>
+            <div class="video-box">
+                <div class="video-ratio"><iframe src="https://www.youtube.com/embed/sn0bDD4gXrE" title="Музыка и мозг" allowfullscreen loading="lazy"></iframe></div>
+                <div class="video-detail"><h4>🎵 Как музыка влияет на наш мозг</h4><p>Нейробиология восприятия звуковых гармоний и мелодий.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="site-footer">
+        <div class="footer-brand">✦ Культурный Отдых</div>
+        <p class="footer-meta">
+            Интерактивный образовательный портал к Практическому занятию №6.<br>
+            Разработано для интерактивной демонстрации, семинаров и университетских лекций.
+        </p>
+        <div class="footer-copy">
+            &copy; 2026 &bull; Академический курс практического русского языка &bull; Все права защищены
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button class="scroll-top-btn" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Audio Player (Background Classical Ambient) -->
+    <audio id="ambientAudio" loop preload="none">
+        <source src="https://cdn.pixabay.com/audio/2022/02/22/audio_d1718ab41b.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- ==================== JAVASCRIPT LOGIC ==================== -->
+    <script>
+        /* 1. PRELOADER (Instant & fail-safe) */
+        (function() {
+            const preloader = document.getElementById('sitePreloader');
+            const countEl = document.getElementById('loaderCount');
+            const barEl = document.getElementById('loaderBar');
+            let progress = 0;
+            const fullCircumference = 326.7;
+
+            const interval = setInterval(() => {
+                progress += Math.floor(Math.random() * 22) + 14;
+                if (progress >= 100) {
+                    progress = 100;
+                    clearInterval(interval);
+                    countEl.textContent = '100%';
+                    barEl.style.strokeDashoffset = '0';
+                    setTimeout(() => {
+                        preloader.classList.add('loaded');
+                    }, 300);
+                } else {
+                    countEl.textContent = progress + '%';
+                    const offset = fullCircumference - (progress / 100) * fullCircumference;
+                    barEl.style.strokeDashoffset = offset;
+                }
+            }, 75);
+
+            setTimeout(() => {
+                if (!preloader.classList.contains('loaded')) {
+                    preloader.classList.add('loaded');
+                }
+            }, 1400);
+        })();
+
+        /* 2. LIGHT IRIDESCENT CANVAS MOTION ENGINE */
+        const canvas = document.getElementById('fluidCanvas');
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let particles = [];
+
+        function resizeCanvas() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        // Pastel luminous palette on white
+        const lightPalette = [
+            [167, 139, 250], // Soft Violet
+            [244, 114, 182], // Soft Rose
+            [56, 189, 248],  // Sky Cyan
+            [251, 191, 36],  // Radiant Gold
+            [129, 140, 248]  // Indigo Pastel
+        ];
+
+        for (let i = 0; i < 6; i++) {
+            particles.push({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                radius: Math.random() * 320 + 220,
+                color: lightPalette[i % lightPalette.length],
+                vx: (Math.random() - 0.5) * 0.65,
+                vy: (Math.random() - 0.5) * 0.65,
+                pulse: Math.random() * Math.PI * 2,
+            });
+        }
+
+        let timeTick = 0;
+        function renderLightFluid() {
+            ctx.fillStyle = 'rgba(248, 249, 253, 0.28)';
+            ctx.fillRect(0, 0, width, height);
+
+            timeTick += 0.012;
+
+            particles.forEach((p) => {
+                p.x += p.vx + Math.sin(timeTick + p.pulse) * 1.6;
+                p.y += p.vy + Math.cos(timeTick * 0.85 + p.pulse) * 1.3;
+
+                if (p.x < -p.radius) p.x = width + p.radius;
+                if (p.x > width + p.radius) p.x = -p.radius;
+                if (p.y < -p.radius) p.y = height + p.radius;
+                if (p.y > height + p.radius) p.y = -p.radius;
+
+                const currentR = p.radius + Math.sin(timeTick * 1.4 + p.pulse) * 35;
+                const grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, currentR);
+                // Soft pastel tones for bright background
+                grad.addColorStop(0, `rgba(${p.color[0]}, ${p.color[1]}, ${p.color[2]}, 0.25)`);
+                grad.addColorStop(0.5, `rgba(${p.color[0]}, ${p.color[1]}, ${p.color[2]}, 0.08)`);
+                grad.addColorStop(1, 'rgba(248, 249, 253, 0)');
+
+                ctx.fillStyle = grad;
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, currentR, 0, Math.PI * 2);
+                ctx.fill();
+            });
+
+            requestAnimationFrame(renderLightFluid);
+        }
+        renderLightFluid();
+
+        /* 3. BACKGROUND MODE TOGGLE (Video vs Canvas WebGL) */
+        const toggleBgBtn = document.getElementById('toggleBgBtn');
+        const ambientVideo = document.getElementById('ambientVideo');
+        let isVideoMode = true;
+
+        toggleBgBtn.addEventListener('click', () => {
+            isVideoMode = !isVideoMode;
+            if (isVideoMode) {
+                ambientVideo.style.opacity = '0.28';
+                toggleBgBtn.classList.remove('active');
+                toggleBgBtn.innerHTML = '<i class="fas fa-film"></i>';
+                toggleBgBtn.title = "Режим: Моушн-видео (Активен)";
+            } else {
+                ambientVideo.style.opacity = '0';
+                toggleBgBtn.classList.add('active');
+                toggleBgBtn.innerHTML = '<i class="fas fa-wand-magic-sparkles"></i>';
+                toggleBgBtn.title = "Режим: Генеративный шелк (Активен)";
+            }
+        });
+
+        /* 4. FLUID MAGNETIC CURSOR (Light Theme) */
+        const curRing = document.getElementById('curRing');
+        const curDot = document.getElementById('curDot');
+        let cursorX = 0, cursorY = 0, ringX = 0, ringY = 0;
+
+        window.addEventListener('mousemove', (e) => {
+            cursorX = e.clientX;
+            cursorY = e.clientY;
+            curDot.style.left = cursorX + 'px';
+            curDot.style.top = cursorY + 'px';
+        });
+
+        function animateCursor() {
+            ringX += (cursorX - ringX) * 0.18;
+            ringY += (cursorY - ringY) * 0.18;
+            curRing.style.left = ringX + 'px';
+            curRing.style.top = ringY + 'px';
+            requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+
+        document.querySelectorAll('a, button, input, .tilt-card-3d, .mem-tile, .art-frame').forEach(elem => {
+            elem.addEventListener('mouseenter', () => curRing.classList.add('active'));
+            elem.addEventListener('mouseleave', () => curRing.classList.remove('active'));
+        });
+
+        /* 5. NAVBAR SCROLL EFFECT */
+        const mainHeader = document.getElementById('mainHeader');
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+        window.addEventListener('scroll', () => {
+            const pos = window.scrollY;
+            if (pos > 50) mainHeader.classList.add('scrolled');
+            else mainHeader.classList.remove('scrolled');
+
+            if (pos > 500) scrollTopBtn.classList.add('visible');
+            else scrollTopBtn.classList.remove('visible');
+        });
+
+        /* 6. AMBIENT AUDIO TOGGLE */
+        const audio = document.getElementById('ambientAudio');
+        const musicBtn = document.getElementById('musicToggleBtn');
+        let isAudioPlaying = false;
+
+        musicBtn.addEventListener('click', () => {
+            if (isAudioPlaying) {
+                audio.pause();
+                musicBtn.classList.remove('active');
+            } else {
+                audio.volume = 0.35;
+                audio.play().catch(() => {});
+                musicBtn.classList.add('active');
+            }
+            isAudioPlaying = !isAudioPlaying;
+        });
+
+        /* 7. 3D TILT WITH SPOTLIGHT EFFECT (Light theme specular sheen) */
+        document.querySelectorAll('.tilt-card-3d').forEach(card => {
+            const spotlight = card.querySelector('.card-spotlight');
+
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotX = ((y - centerY) / centerY) * -7;
+                const rotY = ((x - centerX) / centerX) * 7;
+
+                card.style.transform = `perspective(800px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateY(-5px)`;
+                if (spotlight) {
+                    spotlight.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(99, 102, 241, 0.15) 0%, transparent 65%)`;
+                }
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+            });
+        });
+
+        /* 8. EXERCISE 1: FIND THE GENERALIZING WORD (РОД 1) */
+        let exercisePoints = 0;
+        const taskSolved = { 1: false, 2: false, 3: false, 4: false };
+
+        function checkGeneralWord(taskId, validAnswers) {
+            if (taskSolved[taskId]) return;
+
+            const inputEl = document.getElementById(`inputWord${taskId}`);
+            const feedbackEl = document.getElementById(`feedbackWord${taskId}`);
+            const cardEl = document.getElementById(`taskCard${taskId}`);
+            const userVal = inputEl.value.trim().toLowerCase();
+
+            const isCorrect = validAnswers.some(ans => userVal.includes(ans) || (ans.includes(userVal) && userVal.length > 3));
+
+            if (isCorrect) {
+                taskSolved[taskId] = true;
+                exercisePoints++;
+                document.getElementById('exerciseScore').textContent = `Баллы: ${exercisePoints} / 4`;
+                cardEl.classList.add('correct');
+                feedbackEl.innerHTML = `<span style="color:#059669;font-weight:600;"><i class="fas fa-circle-check"></i> Превосходно! Обобщающее понятие определено верно.</span>`;
+                feedbackEl.classList.add('show');
+                inputEl.disabled = true;
+            } else {
+                feedbackEl.innerHTML = `<span style="color:#dc2626;"><i class="fas fa-triangle-exclamation"></i> Попробуйте ещё раз. Подсказка: объедините суть понятий в одну общую категорию.</span>`;
+                feedbackEl.classList.add('show');
+            }
+        }
+
+        /* 9. QUIZ ENGINE (15 Comprehensive Questions) */
+        const quizBank = [
+            {
+                q: "Какое определение наиболее точно раскрывает понятие «Культурный отдых»?",
+                choices: [
+                    "Пассивное пребывание в состоянии абсолютного покоя",
+                    "Активная деятельность для духовного обогащения и расширения кругозора",
+                    "Исключительно посещение заведений общественного питания",
+                    "Спортивные соревнования на открытом воздухе"
+                ],
+                correct: 1,
+                why: "Культурный отдых — это осознанная и активная форма досуга, нацеленная на приобщение к ценностям искусства и духовное развитие личности."
+            },
+            {
+                q: "В каком веке сформировался так называемый «Золотой век» русской литературы?",
+                choices: [
+                    "XVIII век",
+                    "XIX век",
+                    "XX век",
+                    "XVII век"
+                ],
+                correct: 1,
+                why: "XIX век называют Золотым веком: именно тогда творили Пушкин, Лермонтов, Гоголь, Толстой, Достоевский и Чехов."
+            },
+            {
+                q: "Какой музей признан крупнейшим художественным собранием в России?",
+                choices: [
+                    "Третьяковская галерея",
+                    "Русский музей",
+                    "Государственный Эрмитаж",
+                    "Пушкинский музей"
+                ],
+                correct: 2,
+                why: "Государственный Эрмитаж в Санкт-Петербурге насчитывает более 3 миллионов памятников мировой культуры и искусства."
+            },
+            {
+                q: "Как искусство научно воздействует на психоэмоциональное здоровье человека?",
+                choices: [
+                    "Не оказывает никакого измеримого влияния",
+                    "Только повышает кровяное давление",
+                    "Снижает уровень кортизола и снимает тревожные состояния",
+                    "Вызывает апатию и сонливость"
+                ],
+                correct: 2,
+                why: "Арт-терапия и гармоническая музыка активируют парасимпатическую нервную систему, нормализуя гормональный фон."
+            },
+            {
+                q: "Какова ключевая социальная роль культурного отдыха в жизни общества?",
+                choices: [
+                    "Коммерческая выгода организаторов",
+                    "Формирование культурной идентичности и объединение поколений",
+                    "Разделение общества на социальные классы",
+                    "Вынужденная трата свободного времени"
+                ],
+                correct: 1,
+                why: "Культура транслирует нравственные ценности предков, сближает представителей разных поколений и укрепляет общество."
+            },
+            {
+                q: "Какой композитор является автором всемирно известного балета «Лебединое озеро»?",
+                choices: [
+                    "В.А. Моцарт",
+                    "Л. ван Бетховен",
+                    "П.И. Чайковский",
+                    "С.В. Рахманинов"
+                ],
+                correct: 2,
+                why: "Петр Ильич Чайковский написал бессмертный шедевр «Лебединое озеро» в 1876 году."
+            },
+            {
+                q: "Что в теории театрального искусства (начиная с Аристотеля) называют термином «катарсис»?",
+                choices: [
+                    "Перерыв между действиями спектакля",
+                    "Духовное очищение и эмоциональное возвышение через сопереживание",
+                    "Аплодисменты зрительного зала в финале",
+                    "Сценический костюм главного героя"
+                ],
+                correct: 1,
+                why: "Катарсис — ключевое понятие античной эстетики, означающее очищение души и нравственное преображение зрителя через сострадание героям трагедии."
+            },
+            {
+                q: "Кем и с какой целью была основана знаменитая Государственная Третьяковская галерея?",
+                choices: [
+                    "Императором Петром I для дипломатических приемов",
+                    "Меценатом Павлом Третьяковым для создания общедоступного национального музея",
+                    "Академией наук для коммерческой продажи картин",
+                    "Международным союзом художников"
+                ],
+                correct: 1,
+                why: "Павел Михайлович Третьяков посвятил жизнь собиранию шедевров русского искусства и подарил свою грандиозную коллекцию городу Москве."
+            },
+            {
+                q: "Какова ключевая профессиональная функция дирижёра в симфоническом оркестре?",
+                choices: [
+                    "Задавать громкость звука с помощью специальной аппаратуры",
+                    "Обеспечивать художественное единство, ансамблевую слаженность и ритмический баланс",
+                    "Просто показывать музыкантам точное время окончания концерта",
+                    "Играть на самом тихом музыкальном инструменте"
+                ],
+                correct: 1,
+                why: "Дирижёр объединяет десятки музыкантов в единый звучащий организм, интерпретирует замысел композитора и управляет динамикой и темпом."
+            },
+            {
+                q: "Каково главное преимущество культурных фестивалей как формы проведения досуга?",
+                choices: [
+                    "Они проводятся исключительно в закрытых аудиториях для критиков",
+                    "Создание открытого творческого пространства для живого обмена идеями и премьер",
+                    "На фестивалях запрещено непосредственное общение со зрителями",
+                    "Фестивали не оказывают влияния на развитие туризма и общества"
+                ],
+                correct: 1,
+                why: "Фестивали создают неповторимую атмосферу праздника искусства, открывают молодые таланты и способствуют межкультурной интеграции."
+            },
+            {
+                q: "На какие три основных рода традиционно подразделяется классическая художественная литература?",
+                choices: [
+                    "Проза, стихи и басни",
+                    "Эпос, лирика и драма",
+                    "Детектив, фантастика и мемуары",
+                    "Научная, публицистическая и учебная"
+                ],
+                correct: 1,
+                why: "В литературоведении три фундаментальных рода литературы — это эпос (повествование о событиях), лирика (выражение чувств) и драма (действие на сцене)."
+            },
+            {
+                q: "Какому виду искусства принадлежит знаменитое классическое определение: «... — это застывшая музыка»?",
+                choices: [
+                    "Живопись",
+                    "Скульптура",
+                    "Архитектура",
+                    "Кинематограф"
+                ],
+                correct: 2,
+                why: "Метафора «Архитектура — это застывшая музыка» (И.В. Гёте, Ф. Шеллинг) подчеркивает ритм, гармонию и пропорциональность великих зодческих сооружений."
+            },
+            {
+                q: "Чем современные иммерсивные мультимедийные выставки отличаются от традиционных экспозиций?",
+                choices: [
+                    "Полным отсутствием художественных экспонатов",
+                    "Эффектом полного аудиовизуального погружения зрителя внутрь полотен художников",
+                    "Категорическим запретом на любое взаимодействие с пространством",
+                    "Они предназначены исключительно для детских садов"
+                ],
+                correct: 1,
+                why: "Иммерсивный формат использует 360-градусные проекции, объемный звук и интерактивные медиа-технологии, превращая зрителя в участника произведения."
+            },
+            {
+                q: "Каким образом культурный отдых способствует развитию межкультурного диалога (РОД 5)?",
+                choices: [
+                    "Доказывает безусловное превосходство одной культуры над другими",
+                    "Помогает глубже понять историю, традицию и менталитет других народов через искусство",
+                    "Полностью устраняет необходимость общения на родном языке",
+                    "Изолирует общество от международных культурных процессов"
+                ],
+                correct: 1,
+                why: "Искусство говорит на универсальном языке общечеловеческих ценностей, воспитывая толерантность и уважение к мировому культурному разнообразию."
+            },
+            {
+                q: "Какую важнейшую способность человека, по исследованиям психологов, сильнее всего развивает чтение литературы?",
+                choices: [
+                    "Физическую выносливость",
+                    "Эмпатию — способность глубоко понимать чувства и мотивы других людей",
+                    "Скорость механического набора символов на клавиатуре",
+                    "Способность запоминать случайные телефонные номера"
+                ],
+                correct: 1,
+                why: "Художественная литература погружает читателя во внутренний мир персонажей, развивая эмоциональный интеллект и глубокую социальную эмпатию."
+            }
+        ];
+
+        let quizIndex = 0;
+        let quizScore = 0;
+        let questionLocked = false;
+        const lettersList = ['А', 'Б', 'В', 'Г'];
+
+        function showQuestion() {
+            const curQ = quizBank[quizIndex];
+            document.getElementById('quizStepText').textContent = `Вопрос ${quizIndex + 1} из ${quizBank.length}`;
+            document.getElementById('quizMeterBar').style.width = ((quizIndex) / quizBank.length * 100) + '%';
+            document.getElementById('quizQuestionStem').textContent = curQ.q;
+
+            const optContainer = document.getElementById('quizOptionGroup');
+            optContainer.innerHTML = '';
+
+            curQ.choices.forEach((choiceText, idx) => {
+                const btn = document.createElement('button');
+                btn.className = 'quiz-choice-btn';
+                btn.innerHTML = `<span class="quiz-choice-letter">${lettersList[idx]}</span><span>${choiceText}</span>`;
+                btn.onclick = () => evaluateAnswer(idx, btn);
+                optContainer.appendChild(btn);
+            });
+
+            document.getElementById('quizFeedbackBox').classList.remove('revealed');
+            document.getElementById('quizNextAction').classList.remove('revealed');
+            questionLocked = false;
+        }
+
+        function evaluateAnswer(selectedIdx, clickedBtn) {
+            if (questionLocked) return;
+            questionLocked = true;
+
+            const curQ = quizBank[quizIndex];
+            const allBtns = document.querySelectorAll('.quiz-choice-btn');
+
+            if (selectedIdx === curQ.correct) {
+                quizScore++;
+                clickedBtn.classList.add('is-correct');
+            } else {
+                clickedBtn.classList.add('is-wrong');
+                allBtns[curQ.correct].classList.add('is-correct');
+            }
+
+            const feedbackEl = document.getElementById('quizFeedbackBox');
+            feedbackEl.innerHTML = `<strong><i class="fas fa-info-circle"></i> Пояснение:</strong> ${curQ.why}`;
+            feedbackEl.classList.add('revealed');
+
+            document.getElementById('quizNextAction').classList.add('revealed');
+        }
+
+        function proceedNextQuestion() {
+            quizIndex++;
+            if (quizIndex < quizBank.length) {
+                showQuestion();
+            } else {
+                finishQuiz();
+            }
+        }
+
+        function finishQuiz() {
+            document.getElementById('quizPlayZone').style.display = 'none';
+            document.getElementById('quizScoreZone').classList.add('revealed');
+            document.getElementById('quizMeterBar').style.width = '100%';
+
+            document.getElementById('quizScoreValue').textContent = `${quizScore} / ${quizBank.length}`;
+            const percent = (quizScore / quizBank.length) * 100;
+            let note = "";
+
+            if (percent >= 80) note = "Превосходно! Вы продемонстрировали глубокие знания в сфере культуры и искусства! 🌟";
+            else if (percent >= 50) note = "Хороший результат! Вы уверенно ориентируетесь в большинстве тем. 👏";
+            else note = "Рекомендуется повторить ключевые разделы занятия. 📚";
+
+            document.getElementById('quizScoreCommentary').textContent = note;
+        }
+
+        function resetQuizTest() {
+            quizIndex = 0;
+            quizScore = 0;
+            document.getElementById('quizPlayZone').style.display = 'block';
+            document.getElementById('quizScoreZone').classList.remove('revealed');
+            showQuestion();
+        }
+
+        showQuestion();
+
+        /* 10. MEMORY PAIRS GAME */
+        const memoryCardsData = [
+            { icon: '🎭', text: 'Театр' },
+            { icon: '🏛️', text: 'Музей' },
+            { icon: '🎵', text: 'Музыка' },
+            { icon: '📚', text: 'Книги' },
+            { icon: '🎨', text: 'Живопись' },
+            { icon: '🎪', text: 'Фестиваль' },
+            { icon: '🖼️', text: 'Выставка' },
+            { icon: '🎬', text: 'Кино' }
+        ];
+
+        let flippedTiles = [];
+        let matchedPairsCount = 0;
+        let totalMoves = 0;
+        let gameSeconds = 0;
+        let gameTimerRef = null;
+        let gameActive = false;
+
+        function shuffleList(list) {
+            const arr = [...list];
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+
+        function setupMemoryGame() {
+            const grid = document.getElementById('memoryCardsGrid');
+            grid.innerHTML = '';
+            flippedTiles = [];
+            matchedPairsCount = 0;
+            totalMoves = 0;
+            gameSeconds = 0;
+            gameActive = false;
+
+            if (gameTimerRef) clearInterval(gameTimerRef);
+
+            document.getElementById('memPairsFound').textContent = `0 / ${memoryCardsData.length}`;
+            document.getElementById('memMoveCounter').textContent = '0';
+            document.getElementById('memTimeDisplay').textContent = '00:00';
+
+            const deck = shuffleList([...memoryCardsData, ...memoryCardsData]);
+
+            deck.forEach((item) => {
+                const tile = document.createElement('div');
+                tile.className = 'mem-tile';
+                tile.dataset.id = item.text;
+                tile.innerHTML = `
+                    <div class="mem-face mem-face-front"><i class="fas fa-sparkles"></i></div>
+                    <div class="mem-face mem-face-back">
+                        <span class="emoji">${item.icon}</span>
+                        <span class="caption">${item.text}</span>
+                    </div>
+                `;
+                tile.onclick = () => handleTileFlip(tile);
+                grid.appendChild(tile);
+            });
+        }
+
+        function handleTileFlip(tile) {
+            if (flippedTiles.length >= 2 || tile.classList.contains('flipped')) return;
+
+            if (!gameActive) {
+                gameActive = true;
+                gameTimerRef = setInterval(() => {
+                    gameSeconds++;
+                    const m = Math.floor(gameSeconds / 60).toString().padStart(2, '0');
+                    const s = (gameSeconds % 60).toString().padStart(2, '0');
+                    document.getElementById('memTimeDisplay').textContent = `${m}:${s}`;
+                }, 1000);
+            }
+
+            tile.classList.add('flipped');
+            flippedTiles.push(tile);
+
+            if (flippedTiles.length === 2) {
+                totalMoves++;
+                document.getElementById('memMoveCounter').textContent = totalMoves;
+
+                const [t1, t2] = flippedTiles;
+                if (t1.dataset.id === t2.dataset.id) {
+                    matchedPairsCount++;
+                    document.getElementById('memPairsFound').textContent = `${matchedPairsCount} / ${memoryCardsData.length}`;
+                    flippedTiles = [];
+
+                    if (matchedPairsCount === memoryCardsData.length) {
+                        clearInterval(gameTimerRef);
+                        setTimeout(() => {
+                            alert(`🎉 Победа! Все пары найдены за ${totalMoves} ходов и ${document.getElementById('memTimeDisplay').textContent}!`);
+                        }, 400);
+                    }
+                } else {
+                    setTimeout(() => {
+                        t1.classList.remove('flipped');
+                        t2.classList.remove('flipped');
+                        flippedTiles = [];
+                    }, 850);
+                }
+            }
+        }
+
+        function restartMemoryMatch() {
+            setupMemoryGame();
+        }
+
+        setupMemoryGame();
+
+        /* 11. LIGHTBOX VIEWER */
+        const mediaViewer = document.getElementById('mediaViewer');
+        const viewerImage = document.getElementById('viewerImage');
+
+        function openViewer(element) {
+            const img = element.querySelector('img');
+            if (img) {
+                viewerImage.src = img.src;
+                mediaViewer.classList.add('visible');
+            }
+        }
+
+        function closeViewer() {
+            mediaViewer.classList.remove('visible');
+        }
+    </script>
+</body>
+</html>
