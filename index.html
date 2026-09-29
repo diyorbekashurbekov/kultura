@@ -6,12 +6,12 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <title>Культурный отдых — Роль искусства в жизни человека | Практическое занятие №6</title>
+    <title>Культурный отдых | Практическое занятие №6 — Интеллектуальный Турнир Команд</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Libraries -->
@@ -21,23 +21,31 @@
 
     <style>
         /* ============================================================
-           PREMIUM LIGHT LUXURY DESIGN SYSTEM (60fps.fr + Apple Aesthetic)
+           PREMIUM DESIGN SYSTEM (Light Luxury + Academic Tournament)
            ============================================================ */
         :root {
             --bg-base: #f8f9fd;
             --bg-surface: #ffffff;
-            --bg-card: rgba(255, 255, 255, 0.94);
+            --bg-card: rgba(255, 255, 255, 0.96);
             --border-subtle: rgba(0, 0, 0, 0.08);
             --border-focus: rgba(99, 102, 241, 0.5);
             --text-main: #0f172a;
             --text-secondary: #475569;
             --text-muted: #64748b;
+            
+            /* Team Colors */
+            --team-pres-glow: rgba(245, 158, 11, 0.3);
+            --team-pres: #d97706; /* Презентующие (Золотой/Янтарный) */
+            --team-dop: #2563eb;  /* Дополняющие (Синий) */
+            --team-dop-glow: rgba(37, 99, 235, 0.3);
+            --team-ocen: #7c3aed; /* Оценивающие (Фиолетовый) */
+            --team-ocen-glow: rgba(124, 58, 237, 0.3);
+            
             --primary: #6366f1;
             --primary-dark: #4f46e5;
             --primary-glow: rgba(99, 102, 241, 0.25);
             --accent-pink: #ec4899;
             --accent-cyan: #0284c7;
-            --accent-amber: #d97706;
             --accent-emerald: #059669;
             --gradient-hero: linear-gradient(135deg, #4f46e5 0%, #db2777 50%, #0284c7 100%);
             --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.04);
@@ -82,7 +90,7 @@
         }
 
         /* ============================================================
-           PRELOADER (Luxury Light Aesthetic - 60fps.fr Style)
+           PRELOADER
            ============================================================ */
         #sitePreloader {
             position: fixed;
@@ -159,7 +167,7 @@
         }
 
         /* ============================================================
-           AMBIENT MOTION ENGINE (Iridescent Canvas & Video Layer)
+           AMBIENT MOTION ENGINE
            ============================================================ */
         .ambient-engine {
             position: fixed;
@@ -183,7 +191,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 0.25;
+            opacity: 0.22;
             mix-blend-mode: multiply;
             filter: contrast(110%) saturate(140%) brightness(1.05);
             transition: opacity 0.8s ease;
@@ -193,9 +201,9 @@
             position: absolute;
             inset: 0;
             background: 
-                radial-gradient(circle at 12% 18%, rgba(199, 210, 254, 0.42) 0%, transparent 40%),
+                radial-gradient(circle at 12% 18%, rgba(199, 210, 254, 0.4) 0%, transparent 40%),
                 radial-gradient(circle at 88% 28%, rgba(252, 231, 243, 0.45) 0%, transparent 45%),
-                radial-gradient(circle at 50% 82%, rgba(224, 231, 255, 0.4) 0%, transparent 50%);
+                radial-gradient(circle at 50% 82%, rgba(224, 231, 255, 0.38) 0%, transparent 50%);
             pointer-events: none;
         }
 
@@ -237,7 +245,7 @@
         }
 
         /* ============================================================
-           HEADER & NAVIGATION (Clear, intuitive & accessible)
+           HEADER & NAVIGATION
            ============================================================ */
         .header-nav {
             position: fixed;
@@ -271,14 +279,14 @@
         .brand-badge {
             width: 38px;
             height: 38px;
-            background: linear-gradient(135deg, var(--primary), var(--accent-pink));
+            background: linear-gradient(135deg, var(--team-pres), #f59e0b);
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.1rem;
             color: white;
-            box-shadow: 0 4px 15px var(--primary-glow);
+            box-shadow: 0 4px 15px var(--team-pres-glow);
         }
 
         .brand-title {
@@ -293,7 +301,7 @@
             display: flex;
             align-items: center;
             list-style: none;
-            gap: 26px;
+            gap: 22px;
         }
 
         .nav-menu a {
@@ -366,7 +374,7 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 140px 24px 80px;
+            padding: 130px 24px 70px;
             position: relative;
             z-index: 2;
         }
@@ -382,7 +390,7 @@
             font-family: var(--font-mono);
             font-size: 0.8rem;
             color: var(--text-secondary);
-            margin-bottom: 28px;
+            margin-bottom: 24px;
             box-shadow: var(--shadow-sm);
         }
 
@@ -402,12 +410,12 @@
 
         .hero-title {
             font-family: var(--font-display);
-            font-size: clamp(2.8rem, 6.2vw, 5.8rem);
+            font-size: clamp(2.6rem, 5.8vw, 5.4rem);
             font-weight: 900;
             line-height: 1.08;
             letter-spacing: -1.5px;
             max-width: 1040px;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
             color: var(--text-main);
         }
 
@@ -427,8 +435,8 @@
         .hero-subtitle {
             font-size: clamp(1.05rem, 1.8vw, 1.3rem);
             color: var(--text-secondary);
-            max-width: 740px;
-            margin: 0 auto 38px;
+            max-width: 780px;
+            margin: 0 auto 36px;
             line-height: 1.65;
             font-weight: 400;
         }
@@ -439,14 +447,14 @@
             justify-content: center;
             gap: 16px;
             flex-wrap: wrap;
-            margin-bottom: 50px;
+            margin-bottom: 46px;
         }
 
         .btn-modern {
             padding: 15px 34px;
             border-radius: 100px;
             font-size: 0.94rem;
-            font-weight: 600;
+            font-weight: 700;
             text-decoration: none;
             cursor: pointer;
             transition: all 0.35s var(--transition-smooth);
@@ -458,14 +466,14 @@
         }
 
         .btn-primary-glow {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            background: linear-gradient(135deg, var(--team-pres), #ea580c);
             color: #ffffff;
-            box-shadow: 0 8px 25px var(--primary-glow);
+            box-shadow: 0 8px 25px var(--team-pres-glow);
         }
 
         .btn-primary-glow:hover {
             transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 14px 38px rgba(99, 102, 241, 0.4);
+            box-shadow: 0 14px 38px rgba(217, 119, 6, 0.45);
         }
 
         .btn-glass {
@@ -482,30 +490,184 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
         }
 
-        .syllabus-chips {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 14px;
-            flex-wrap: wrap;
-            max-width: 860px;
+        /* Group Roles Banner in Hero */
+        .group-roles-banner {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            max-width: 980px;
+            width: 100%;
+            margin-top: 10px;
         }
 
-        .chip {
-            padding: 8px 18px;
+        .role-chip-card {
             background: #ffffff;
-            border: 1px solid var(--border-subtle);
-            border-radius: 12px;
+            border: 1.5px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 16px 20px;
+            text-align: left;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+        }
+
+        .role-chip-card:hover { transform: translateY(-3px); }
+
+        .role-chip-card.pres { border-color: rgba(217, 119, 6, 0.3); background: #fffbeb; }
+        .role-chip-card.dop { border-color: rgba(37, 99, 235, 0.3); background: #eff6ff; }
+        .role-chip-card.ocen { border-color: rgba(124, 58, 237, 0.3); background: #f5f3ff; }
+
+        .role-card-badge {
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 6px;
+            display: inline-block;
+        }
+
+        .role-card-title {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 4px;
+        }
+
+        .role-card-desc {
             font-size: 0.82rem;
             color: var(--text-secondary);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            box-shadow: var(--shadow-sm);
-            font-weight: 600;
+            line-height: 1.45;
         }
 
-        .chip i { color: var(--primary); }
+        /* ============================================================
+           POETRY & QUOTES SECTION (АЛ БАСТА ӨЛЕҢДЕР МЕН ЦИТАТАЛАР)
+           ============================================================ */
+        .poetry-section {
+            background: #ffffff;
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 90px 24px;
+        }
+
+        .poetry-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 36px;
+            margin-top: 40px;
+        }
+
+        .poem-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: var(--radius-lg);
+            padding: 38px 42px;
+            position: relative;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .poem-badge {
+            font-family: var(--font-mono);
+            font-size: 0.76rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 14px;
+            display: block;
+        }
+
+        .poem-title {
+            font-family: var(--font-display);
+            font-size: 1.55rem;
+            font-weight: 800;
+            margin-bottom: 18px;
+            color: var(--text-main);
+        }
+
+        .poem-lines {
+            font-family: var(--font-display);
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: #334155;
+            font-style: italic;
+            border-left: 3px solid var(--primary);
+            padding-left: 24px;
+            margin-bottom: 20px;
+        }
+
+        .poem-author {
+            font-family: var(--font-body);
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-align: right;
+        }
+
+        /* Quotes Carousel / Grid */
+        .quotes-deck {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            margin-top: 36px;
+        }
+
+        .quote-bubble {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: var(--radius-md);
+            padding: 26px;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+
+        .quote-bubble:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary);
+            box-shadow: var(--shadow-card);
+        }
+
+        .quote-icon {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 14px;
+            opacity: 0.7;
+        }
+
+        .quote-text {
+            font-family: var(--font-display);
+            font-size: 1.05rem;
+            font-style: italic;
+            color: var(--text-main);
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .quote-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .quote-author img {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .author-info h5 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .author-info span {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
 
         /* ============================================================
            SECTIONS LAYOUT & HEADERS
@@ -513,15 +675,15 @@
         .section-wrap {
             max-width: 1260px;
             margin: 0 auto;
-            padding: 90px 24px;
+            padding: 85px 24px;
             position: relative;
             z-index: 2;
         }
 
         .section-header {
             text-align: center;
-            max-width: 820px;
-            margin: 0 auto 55px;
+            max-width: 840px;
+            margin: 0 auto 50px;
         }
 
         .section-kicker {
@@ -537,7 +699,7 @@
 
         .section-headline {
             font-family: var(--font-display);
-            font-size: clamp(2.2rem, 3.8vw, 3.3rem);
+            font-size: clamp(2.2rem, 3.8vw, 3.2rem);
             font-weight: 800;
             line-height: 1.15;
             letter-spacing: -0.8px;
@@ -552,397 +714,148 @@
         }
 
         /* ============================================================
-           THEORY SPLIT-SECTION WITH IMAGERY (Раздел 1)
+           TOURNAMENT BATTLE ARENA (ЖАРЫС БӨЛІМІ)
            ============================================================ */
-        .theory-split {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 48px;
-            align-items: center;
-            background: #ffffff;
-            border: 1px solid var(--border-subtle);
-            border-radius: var(--radius-lg);
-            padding: 44px;
-            box-shadow: var(--shadow-card);
-            margin-bottom: 60px;
-        }
-
-        .theory-image-holder {
+        .battle-arena-section {
+            background: linear-gradient(180deg, #f8f9fd 0%, #ffffff 50%, #f8f9fd 100%);
+            border-top: 2px solid var(--border-subtle);
+            border-bottom: 2px solid var(--border-subtle);
+            padding: 90px 24px;
             position: relative;
+        }
+
+        /* LIVE SCOREBOARD HEADER (Табло очков команд) */
+        .live-scoreboard {
+            background: #ffffff;
+            border: 2px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 30px 40px;
+            box-shadow: 0 16px 40px rgba(0,0,0,0.06);
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .team-score-card {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 28px;
             border-radius: var(--radius-md);
-            overflow: hidden;
-            aspect-ratio: 4/3;
-            box-shadow: var(--shadow-card);
+            transition: all 0.3s ease;
         }
 
-        .theory-image-holder img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.8s var(--transition-smooth);
+        .team-score-card.dop {
+            background: #eff6ff;
+            border: 2px solid rgba(37, 99, 235, 0.3);
         }
 
-        .theory-image-holder:hover img { transform: scale(1.06); }
-
-        .theory-badge-overlay {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            background: rgba(255, 255, 255, 0.94);
-            backdrop-filter: blur(12px);
-            padding: 8px 18px;
-            border-radius: 100px;
-            font-size: 0.82rem;
-            font-weight: 700;
-            color: var(--primary);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        .team-score-card.ocen {
+            background: #f5f3ff;
+            border: 2px solid rgba(124, 58, 237, 0.3);
+            flex-direction: row-reverse;
+            text-align: right;
         }
 
-        .theory-body h3 {
+        .team-pts-digit {
             font-family: var(--font-display);
-            font-size: 1.9rem;
+            font-size: 3.4rem;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .team-score-card.dop .team-pts-digit { color: var(--team-dop); }
+        .team-score-card.ocen .team-pts-digit { color: var(--team-ocen); }
+
+        .team-meta-info h4 {
+            font-size: 1.15rem;
             font-weight: 800;
-            margin-bottom: 18px;
-            line-height: 1.25;
-        }
-
-        .theory-body p {
-            color: var(--text-secondary);
-            font-size: 0.98rem;
-            margin-bottom: 16px;
-        }
-
-        .theory-quote-card {
-            background: #f8fafc;
-            border-left: 4px solid var(--primary);
-            padding: 18px 24px;
-            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-            margin-top: 22px;
-            font-style: italic;
             color: var(--text-main);
-            font-weight: 500;
+            margin-bottom: 4px;
         }
 
-        .theory-quote-card cite {
-            display: block;
-            margin-top: 8px;
-            font-style: normal;
-            font-size: 0.85rem;
+        .team-meta-info span {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
             color: var(--text-muted);
             font-weight: 600;
         }
 
-        /* ============================================================
-           VISUAL COMPETENCY CARDS (РОД1 - РОД5 с фотографиями!)
-           ============================================================ */
-        .rod-visual-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 26px;
-            margin-top: 40px;
-        }
-
-        .rod-visual-card {
-            background: #ffffff;
-            border: 1px solid var(--border-subtle);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-card);
-            transition: all 0.4s var(--transition-smooth);
+        .score-control-btns {
             display: flex;
-            flex-direction: column;
+            gap: 6px;
+            margin-top: 8px;
         }
 
-        .rod-visual-card:hover {
-            border-color: var(--border-focus);
-            transform: translateY(-6px);
-            box-shadow: var(--shadow-hover);
-        }
+        .team-score-card.ocen .score-control-btns { justify-content: flex-end; }
 
-        .rod-card-thumb {
-            height: 190px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .rod-card-thumb img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.7s var(--transition-smooth);
-        }
-
-        .rod-visual-card:hover .rod-card-thumb img { transform: scale(1.08); }
-
-        .rod-pill-float {
-            position: absolute;
-            top: 16px;
-            left: 16px;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            color: var(--primary-dark);
+        .mini-score-btn {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            padding: 4px 10px;
+            border-radius: 6px;
             font-family: var(--font-mono);
             font-size: 0.8rem;
             font-weight: 700;
-            padding: 5px 14px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-        }
-
-        .rod-card-inner {
-            padding: 26px;
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-        }
-
-        .rod-card-inner h3 {
-            font-family: var(--font-display);
-            font-size: 1.35rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: var(--text-main);
-        }
-
-        .rod-card-inner p {
-            font-size: 0.92rem;
-            color: var(--text-secondary);
-            line-height: 1.65;
-            margin-bottom: 16px;
-            flex: 1;
-        }
-
-        .rod-outcome-tag {
-            font-size: 0.78rem;
-            font-weight: 600;
-            color: var(--primary);
-            background: #e0e7ff;
-            padding: 4px 12px;
-            border-radius: 100px;
-            align-self: flex-start;
-        }
-
-        /* ============================================================
-           FORMS OF REST (6 Cards with Photos & Spotlight)
-           ============================================================ */
-        .forms-deck {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-            gap: 28px;
-            margin-top: 45px;
-        }
-
-        .tilt-card-3d {
-            position: relative;
-            border-radius: var(--radius-lg);
-            background: #ffffff;
-            border: 1px solid var(--border-subtle);
-            overflow: hidden;
             cursor: pointer;
-            transform-style: preserve-3d;
-            box-shadow: var(--shadow-card);
-            transition: border-color 0.4s ease, box-shadow 0.4s ease;
+            transition: all 0.2s ease;
         }
 
-        .tilt-card-3d:hover {
-            border-color: var(--border-focus);
-            box-shadow: var(--shadow-hover);
+        .mini-score-btn:hover { background: #0f172a; color: white; border-color: #0f172a; }
+
+        .scoreboard-center-vs {
+            text-align: center;
         }
 
-        .card-spotlight {
-            position: absolute;
-            inset: 0;
-            border-radius: var(--radius-lg);
-            pointer-events: none;
-            opacity: 0;
-            transition: opacity 0.3s;
-            z-index: 3;
-        }
-
-        .tilt-card-3d:hover .card-spotlight { opacity: 1; }
-
-        .card-media {
-            height: 230px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card-media img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.8s var(--transition-smooth);
-        }
-
-        .tilt-card-3d:hover .card-media img { transform: scale(1.08); }
-
-        .card-floating-badge {
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            width: 44px;
-            height: 44px;
-            border-radius: 14px;
-            background: rgba(255, 255, 255, 0.94);
-            backdrop-filter: blur(15px);
+        .vs-circle {
+            width: 58px;
+            height: 58px;
+            background: #0f172a;
+            color: white;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.25rem;
-            color: var(--primary);
-            z-index: 2;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
-        }
-
-        .card-content {
-            padding: 28px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .card-title {
             font-family: var(--font-display);
-            font-size: 1.55rem;
-            font-weight: 700;
-            margin-bottom: 12px;
-            color: var(--text-main);
-        }
-
-        .card-text {
-            color: var(--text-secondary);
-            font-size: 0.94rem;
-            line-height: 1.68;
-            margin-bottom: 18px;
-        }
-
-        .card-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .card-pill {
-            font-size: 0.76rem;
-            padding: 4px 12px;
-            background: #f1f5f9;
-            border: 1px solid #e2e8f0;
-            border-radius: 100px;
-            color: var(--text-muted);
-            font-weight: 600;
-        }
-
-        /* ============================================================
-           ROLE OF ART (BENTO SHOWCASE С КАРТИНКАМИ!)
-           ============================================================ */
-        .bento-photo-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            margin-top: 45px;
-        }
-
-        .bento-photo-card {
-            background: #ffffff;
-            border: 1px solid var(--border-subtle);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-card);
-            transition: all 0.4s var(--transition-smooth);
-            position: relative;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .bento-photo-card:hover {
-            border-color: var(--border-focus);
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .bento-photo-card.span-2 { grid-column: span 2; }
-
-        .bento-card-photo {
-            height: 180px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .bento-photo-card.span-2 .bento-card-photo { height: 210px; }
-
-        .bento-card-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.8s var(--transition-smooth);
-        }
-
-        .bento-photo-card:hover .bento-card-photo img { transform: scale(1.07); }
-
-        .bento-photo-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, transparent 60%);
-        }
-
-        .bento-icon-badge {
-            position: absolute;
-            bottom: 12px;
-            left: 24px;
-            width: 44px;
-            height: 44px;
-            border-radius: 12px;
-            background: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             font-size: 1.3rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            font-weight: 900;
+            margin: 0 auto 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
-        .bento-card-desc {
-            padding: 20px 26px 28px;
-            flex: 1;
-        }
-
-        .bento-card-desc h3 {
-            font-family: var(--font-display);
-            font-size: 1.35rem;
+        .btn-declare-winner {
+            background: linear-gradient(135deg, var(--team-pres), #ea580c);
+            color: white;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 100px;
+            font-size: 0.78rem;
             font-weight: 700;
-            margin-bottom: 10px;
-            color: var(--text-main);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px var(--team-pres-glow);
         }
 
-        .bento-card-desc p {
-            color: var(--text-secondary);
-            font-size: 0.94rem;
-            line-height: 1.68;
-        }
+        .btn-declare-winner:hover { transform: scale(1.05); }
 
-        /* ============================================================
-           CENTRAL GAME HUB (Интерактивный центр игр)
-           ============================================================ */
-        .game-hub-section {
-            background: linear-gradient(180deg, #f8f9fd 0%, #ffffff 50%, #f8f9fd 100%);
-            border-top: 1px solid var(--border-subtle);
-            border-bottom: 1px solid var(--border-subtle);
-            padding: 90px 24px;
-        }
-
-        .game-nav-tabs {
+        /* Round Tabs Navigation */
+        .battle-round-tabs {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 12px;
             flex-wrap: wrap;
-            margin-bottom: 40px;
+            margin-bottom: 35px;
         }
 
-        .game-tab-btn {
-            padding: 12px 24px;
+        .battle-tab-btn {
+            padding: 12px 22px;
             background: #ffffff;
             border: 1.5px solid var(--border-subtle);
             border-radius: 100px;
-            font-size: 0.92rem;
+            font-size: 0.88rem;
             font-weight: 700;
             color: var(--text-secondary);
             cursor: pointer;
@@ -953,33 +866,87 @@
             box-shadow: var(--shadow-sm);
         }
 
-        .game-tab-btn:hover {
+        .battle-tab-btn:hover {
             border-color: var(--primary);
             color: var(--primary);
             transform: translateY(-2px);
         }
 
-        .game-tab-btn.active {
-            background: var(--primary);
-            border-color: var(--primary);
+        .battle-tab-btn.active {
+            background: #0f172a;
+            border-color: #0f172a;
             color: #ffffff;
-            box-shadow: 0 6px 20px var(--primary-glow);
+            box-shadow: 0 6px 20px rgba(15, 23, 42, 0.2);
         }
 
-        .game-panel-view {
+        .round-panel {
             display: none;
-            animation: fadeIn 0.4s var(--transition-smooth);
+            animation: fadeIn 0.35s ease;
         }
 
-        .game-panel-view.active { display: block; }
+        .round-panel.active { display: block; }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(12px); }
+            from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
+        /* Moderator Action Box (Для Презентующей группы!) */
+        .moderator-strip {
+            background: #fffbeb;
+            border: 1.5px solid rgba(217, 119, 6, 0.35);
+            border-radius: var(--radius-md);
+            padding: 16px 24px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .mod-title {
+            font-weight: 800;
+            font-size: 0.92rem;
+            color: var(--team-pres);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .mod-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-award-dop {
+            background: var(--team-dop);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-award-ocen {
+            background: var(--team-ocen);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-award-dop:hover, .btn-award-ocen:hover { opacity: 0.9; transform: translateY(-1px); }
+
         /* ============================================================
-           GAME 1: 15-QUESTION QUIZ
+           ROUND 1: QUIZ DUEL
            ============================================================ */
         .quiz-container {
             max-width: 860px;
@@ -987,7 +954,7 @@
             background: #ffffff;
             border: 1px solid var(--border-subtle);
             border-radius: var(--radius-lg);
-            padding: 45px;
+            padding: 40px;
             box-shadow: var(--shadow-card);
         }
 
@@ -998,38 +965,18 @@
             margin-bottom: 20px;
         }
 
-        .academic-badge {
-            background: rgba(99, 102, 241, 0.1);
-            border: 1px solid rgba(99, 102, 241, 0.25);
-            color: var(--primary-dark);
-            padding: 6px 16px;
-            border-radius: 100px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .quiz-step-count {
-            font-family: var(--font-mono);
-            font-size: 0.88rem;
-            color: var(--text-muted);
-            font-weight: 600;
-        }
-
         .quiz-meter {
             width: 100%;
             height: 6px;
             background: #e2e8f0;
             border-radius: 4px;
             overflow: hidden;
-            margin-bottom: 30px;
+            margin-bottom: 28px;
         }
 
         .quiz-meter-fill {
             height: 100%;
-            background: linear-gradient(90deg, var(--primary), var(--accent-pink));
+            background: linear-gradient(90deg, var(--team-dop), var(--team-ocen));
             width: 0%;
             transition: width 0.35s ease;
         }
@@ -1039,24 +986,24 @@
             font-size: 1.5rem;
             font-weight: 700;
             line-height: 1.4;
-            margin-bottom: 28px;
+            margin-bottom: 26px;
             color: var(--text-main);
         }
 
         .quiz-choices {
             display: flex;
             flex-direction: column;
-            gap: 13px;
+            gap: 12px;
         }
 
         .quiz-choice-btn {
             background: #f8fafc;
             border: 1.5px solid #e2e8f0;
             color: var(--text-main);
-            padding: 16px 22px;
+            padding: 16px 20px;
             border-radius: var(--radius-md);
             font-family: var(--font-body);
-            font-size: 0.96rem;
+            font-size: 0.95rem;
             text-align: left;
             cursor: pointer;
             display: flex;
@@ -1072,9 +1019,9 @@
         }
 
         .quiz-choice-letter {
-            width: 34px;
-            height: 34px;
-            border-radius: 10px;
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
             background: #ffffff;
             border: 1px solid #cbd5e1;
             display: flex;
@@ -1116,34 +1063,8 @@
 
         .quiz-rationale.revealed { display: block; }
 
-        .btn-quiz-next {
-            margin-top: 26px;
-            display: none;
-        }
-
-        .btn-quiz-next.revealed { display: inline-flex; }
-
-        .quiz-scoreboard {
-            text-align: center;
-            display: none;
-        }
-
-        .quiz-scoreboard.revealed { display: block; }
-
-        .score-emblem { font-size: 4.5rem; margin-bottom: 14px; }
-
-        .score-digit {
-            font-family: var(--font-display);
-            font-size: 4rem;
-            font-weight: 900;
-            background: var(--gradient-hero);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin: 10px 0;
-        }
-
         /* ============================================================
-           GAME 2: GUESS THE MASTERPIECE (Новая игра с картинами!)
+           ROUND 2: ART GUESS SPEED BATTLE
            ============================================================ */
         .art-quiz-box {
             max-width: 860px;
@@ -1151,17 +1072,16 @@
             background: #ffffff;
             border: 1px solid var(--border-subtle);
             border-radius: var(--radius-lg);
-            padding: 40px;
+            padding: 38px;
             box-shadow: var(--shadow-card);
         }
 
         .art-quiz-media {
             width: 100%;
-            height: 340px;
+            height: 330px;
             border-radius: var(--radius-md);
             overflow: hidden;
-            margin-bottom: 24px;
-            position: relative;
+            margin-bottom: 22px;
             box-shadow: var(--shadow-card);
         }
 
@@ -1169,15 +1089,6 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.6s ease;
-        }
-
-        .art-quiz-question-title {
-            font-family: var(--font-display);
-            font-size: 1.45rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            text-align: center;
         }
 
         .art-quiz-grid {
@@ -1187,11 +1098,11 @@
         }
 
         .art-quiz-btn {
-            padding: 16px 20px;
+            padding: 15px 18px;
             background: #f8fafc;
             border: 1.5px solid #e2e8f0;
             border-radius: var(--radius-md);
-            font-size: 0.96rem;
+            font-size: 0.94rem;
             font-weight: 600;
             color: var(--text-main);
             cursor: pointer;
@@ -1202,7 +1113,6 @@
         .art-quiz-btn:hover {
             border-color: var(--primary);
             background: rgba(99, 102, 241, 0.05);
-            transform: translateY(-2px);
         }
 
         .art-quiz-btn.correct {
@@ -1218,12 +1128,12 @@
         }
 
         .art-quiz-fact {
-            margin-top: 20px;
-            padding: 18px 22px;
+            margin-top: 18px;
+            padding: 16px 20px;
             background: #f1f5f9;
             border-left: 4px solid var(--primary);
             border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-            font-size: 0.94rem;
+            font-size: 0.92rem;
             color: var(--text-secondary);
             display: none;
         }
@@ -1231,55 +1141,49 @@
         .art-quiz-fact.revealed { display: block; }
 
         /* ============================================================
-           GAME 3: CULTURAL CATEGORY SORTER (Новая игра-классификатор)
+           ROUND 3: TERM SORTER RELAY
            ============================================================ */
         .sorter-box {
-            max-width: 900px;
+            max-width: 880px;
             margin: 0 auto;
             background: #ffffff;
             border: 1px solid var(--border-subtle);
             border-radius: var(--radius-lg);
-            padding: 40px;
+            padding: 38px;
             box-shadow: var(--shadow-card);
         }
 
-        .sorter-card-deck {
+        .sorter-deck {
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 120px;
+            min-height: 110px;
             background: #f8fafc;
             border: 2px dashed #cbd5e1;
             border-radius: var(--radius-md);
-            padding: 24px;
-            margin-bottom: 30px;
+            padding: 20px;
+            margin-bottom: 26px;
         }
 
-        .current-term-card {
+        .active-term {
             background: #ffffff;
             border: 2px solid var(--primary);
-            padding: 16px 36px;
+            padding: 14px 34px;
             border-radius: 100px;
-            font-size: 1.3rem;
-            font-weight: 700;
+            font-size: 1.25rem;
+            font-weight: 800;
             color: var(--primary-dark);
-            box-shadow: 0 8px 25px var(--primary-glow);
-            animation: bounceIn 0.35s ease;
-        }
-
-        @keyframes bounceIn {
-            from { transform: scale(0.85); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
+            box-shadow: 0 8px 24px var(--primary-glow);
         }
 
         .sorter-baskets {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
+            gap: 14px;
         }
 
-        .sorter-basket-btn {
-            padding: 22px 14px;
+        .basket-btn {
+            padding: 20px 12px;
             background: #ffffff;
             border: 2px solid #e2e8f0;
             border-radius: var(--radius-md);
@@ -1289,100 +1193,21 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 10px;
-            box-shadow: var(--shadow-sm);
+            gap: 8px;
         }
 
-        .sorter-basket-btn:hover {
+        .basket-btn:hover {
             border-color: var(--primary);
-            transform: translateY(-4px);
-            box-shadow: 0 10px 24px rgba(99, 102, 241, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.12);
         }
 
-        .sorter-basket-btn i { font-size: 1.8rem; color: var(--primary); }
-        .sorter-basket-title { font-weight: 700; font-size: 0.95rem; color: var(--text-main); }
-        .sorter-basket-count { font-size: 0.8rem; color: var(--text-muted); font-weight: 600; }
+        .basket-btn i { font-size: 1.6rem; color: var(--primary); }
+        .basket-title { font-weight: 800; font-size: 0.9rem; color: var(--text-main); }
+        .basket-count { font-size: 0.78rem; color: var(--text-muted); font-weight: 600; }
 
         /* ============================================================
-           GAME 4: MEMORY MATCH GAME
-           ============================================================ */
-        .memory-arena {
-            max-width: 660px;
-            margin: 0 auto;
-        }
-
-        .memory-dashboard {
-            display: flex;
-            justify-content: center;
-            gap: 48px;
-            margin-bottom: 28px;
-        }
-
-        .mem-indicator { text-align: center; }
-
-        .mem-indicator-val {
-            font-family: var(--font-display);
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
-
-        .mem-indicator-lbl {
-            font-size: 0.78rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 600;
-        }
-
-        .memory-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
-            perspective: 1000px;
-        }
-
-        .mem-tile {
-            aspect-ratio: 1;
-            position: relative;
-            cursor: pointer;
-            transform-style: preserve-3d;
-            transition: transform 0.6s var(--transition-smooth);
-        }
-
-        .mem-tile.flipped { transform: rotateY(180deg); }
-
-        .mem-face {
-            position: absolute;
-            inset: 0;
-            border-radius: var(--radius-md);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            backface-visibility: hidden;
-            border: 1.5px solid var(--border-subtle);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-        }
-
-        .mem-face-front {
-            background: #ffffff;
-            color: var(--primary);
-            font-size: 1.5rem;
-        }
-
-        .mem-face-back {
-            background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
-            border-color: var(--primary);
-            transform: rotateY(180deg);
-            gap: 6px;
-        }
-
-        .mem-face-back .emoji { font-size: 2.2rem; }
-        .mem-face-back .caption { font-size: 0.76rem; color: var(--text-main); font-weight: 700; }
-
-        /* ============================================================
-           GAME 5: EXERCISE 1 (С КАРТИНКАМИ-ИЛЛЮСТРАЦИЯМИ!)
+           ROUND 4: GENERALIZING WORD (ЗАДАНИЕ 1)
            ============================================================ */
         .exercise-box {
             max-width: 860px;
@@ -1390,7 +1215,7 @@
             background: #ffffff;
             border: 1px solid var(--border-subtle);
             border-radius: var(--radius-lg);
-            padding: 40px;
+            padding: 38px;
             box-shadow: var(--shadow-card);
         }
 
@@ -1398,9 +1223,8 @@
             background: #f8fafc;
             border: 1px solid var(--border-subtle);
             border-radius: var(--radius-md);
-            padding: 24px;
-            margin-bottom: 22px;
-            transition: all 0.3s ease;
+            padding: 22px;
+            margin-bottom: 20px;
         }
 
         .word-task-card.correct {
@@ -1408,27 +1232,26 @@
             background: rgba(5, 150, 105, 0.05);
         }
 
-        .word-task-items {
+        .word-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 18px;
+            gap: 8px;
+            margin-bottom: 16px;
         }
 
         .word-tag {
             background: #ffffff;
             border: 1px solid #e2e8f0;
-            padding: 7px 18px;
+            padding: 6px 16px;
             border-radius: 100px;
-            font-size: 0.94rem;
+            font-size: 0.92rem;
             color: var(--text-main);
             font-weight: 600;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
         }
 
         .word-input-row {
             display: flex;
-            gap: 12px;
+            gap: 10px;
             align-items: center;
         }
 
@@ -1439,149 +1262,273 @@
             color: var(--text-main);
             padding: 12px 18px;
             border-radius: var(--radius-sm);
-            font-size: 0.95rem;
-            font-family: var(--font-body);
-        }
-
-        .word-input:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px var(--primary-glow);
+            font-size: 0.94rem;
         }
 
         .btn-check-word {
-            padding: 12px 24px;
+            padding: 12px 22px;
             background: var(--primary);
             border: none;
             color: white;
             border-radius: var(--radius-sm);
-            font-weight: 600;
+            font-weight: 700;
             cursor: pointer;
-            transition: all 0.3s ease;
         }
-
-        .btn-check-word:hover { background: var(--primary-dark); }
-
-        .word-feedback {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            display: none;
-        }
-
-        .word-feedback.show { display: block; }
 
         /* ============================================================
-           GAME 6: CULTURAL DEBATE CLUB (Интерактивные дебаты РОД 4)
+           ROUND 5: DEBATE ARENA WITH TIMER
            ============================================================ */
-        .debate-box {
-            max-width: 860px;
+        .debate-arena-box {
+            max-width: 880px;
             margin: 0 auto;
             background: #ffffff;
             border: 1px solid var(--border-subtle);
             border-radius: var(--radius-lg);
-            padding: 40px;
+            padding: 38px;
             box-shadow: var(--shadow-card);
         }
 
-        .debate-topic-card {
-            background: linear-gradient(135deg, #e0e7ff 0%, #fce7f3 100%);
-            padding: 24px 30px;
-            border-radius: var(--radius-md);
-            margin-bottom: 28px;
+        .debate-timer-widget {
             text-align: center;
+            margin-bottom: 28px;
+            padding: 18px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: var(--radius-md);
         }
 
-        .debate-topic-title {
-            font-family: var(--font-display);
-            font-size: 1.45rem;
-            font-weight: 800;
-            color: var(--text-main);
-            margin-bottom: 8px;
+        .timer-digits {
+            font-family: var(--font-mono);
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--team-pres);
+            line-height: 1;
+            margin-bottom: 10px;
         }
 
-        .debate-columns {
+        .debate-sides-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
-            margin-bottom: 28px;
+            margin-bottom: 26px;
         }
 
-        .debate-col {
-            background: #f8fafc;
-            border: 1px solid var(--border-subtle);
+        .side-card {
             border-radius: var(--radius-md);
             padding: 22px;
+            border: 2px solid transparent;
         }
 
-        .debate-col h4 {
+        .side-card.dop-side {
+            background: #eff6ff;
+            border-color: rgba(37, 99, 235, 0.3);
+        }
+
+        .side-card.ocen-side {
+            background: #f5f3ff;
+            border-color: rgba(124, 58, 237, 0.3);
+        }
+
+        .side-card h4 {
             font-size: 1.05rem;
-            font-weight: 700;
-            margin-bottom: 14px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            font-weight: 800;
+            margin-bottom: 12px;
         }
 
-        .debate-col ul {
+        .side-card ul {
             list-style: none;
-            font-size: 0.92rem;
+            font-size: 0.9rem;
             color: var(--text-secondary);
         }
 
-        .debate-col li {
-            padding: 8px 0;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        .debate-vote-actions {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
+        .side-card li {
+            padding: 6px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
         }
 
         /* ============================================================
-           GALLERY & LIGHTBOX
+           WINNER CELEBRATION MODAL & CONFETTI
            ============================================================ */
-        .art-masonry {
-            columns: 3;
-            column-gap: 24px;
-            margin-top: 45px;
+        #winnerModal {
+            position: fixed;
+            inset: 0;
+            z-index: 999998;
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(15px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
         }
 
-        .art-frame {
-            break-inside: avoid;
-            margin-bottom: 24px;
+        #winnerModal.show { display: flex; }
+
+        .winner-card {
+            background: #ffffff;
+            border-radius: var(--radius-lg);
+            max-width: 580px;
+            width: 100%;
+            padding: 45px 35px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 25px 70px rgba(0,0,0,0.3);
+            animation: popIn 0.4s var(--transition-smooth);
+        }
+
+        @keyframes popIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .winner-trophy { font-size: 5rem; margin-bottom: 14px; }
+        .winner-team-title { font-family: var(--font-display); font-size: 2.4rem; font-weight: 900; margin-bottom: 10px; }
+        .winner-stats { font-family: var(--font-mono); font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 24px; }
+
+        #confettiCanvas {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 999999;
+        }
+
+        /* ============================================================
+           THEORY & VISUAL COMPETENCIES
+           ============================================================ */
+        .theory-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+            align-items: center;
+            background: #ffffff;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 42px;
+            box-shadow: var(--shadow-card);
+            margin-bottom: 50px;
+        }
+
+        .theory-image-holder {
+            position: relative;
             border-radius: var(--radius-md);
             overflow: hidden;
+            aspect-ratio: 4/3;
+        }
+
+        .theory-image-holder img { width: 100%; height: 100%; object-fit: cover; }
+
+        .rod-visual-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 24px;
+            margin-top: 36px;
+        }
+
+        .rod-visual-card {
+            background: #ffffff;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+            transition: all 0.35s ease;
+        }
+
+        .rod-visual-card:hover { transform: translateY(-5px); border-color: var(--border-focus); }
+
+        .rod-card-thumb { height: 180px; position: relative; overflow: hidden; }
+        .rod-card-thumb img { width: 100%; height: 100%; object-fit: cover; }
+        .rod-pill-float {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--primary-dark);
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 6px;
+        }
+
+        .rod-card-inner { padding: 24px; }
+        .rod-card-inner h3 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; margin-bottom: 8px; }
+        .rod-card-inner p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; }
+
+        /* ============================================================
+           BENTO SHOWCASE & FORMS
+           ============================================================ */
+        .forms-deck {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 26px;
+            margin-top: 40px;
+        }
+
+        .tilt-card-3d {
             position: relative;
+            border-radius: var(--radius-lg);
+            background: #ffffff;
+            border: 1px solid var(--border-subtle);
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+            transition: all 0.35s ease;
+        }
+
+        .tilt-card-3d:hover { transform: translateY(-5px); border-color: var(--border-focus); }
+        .card-media { height: 220px; overflow: hidden; }
+        .card-media img { width: 100%; height: 100%; object-fit: cover; }
+        .card-content { padding: 26px; }
+        .card-title { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; margin-bottom: 10px; }
+        .card-text { font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 16px; }
+
+        .bento-photo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            margin-top: 40px;
+        }
+
+        .bento-photo-card {
+            background: #ffffff;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+        }
+
+        .bento-photo-card.span-2 { grid-column: span 2; }
+        .bento-card-photo { height: 180px; overflow: hidden; }
+        .bento-card-photo img { width: 100%; height: 100%; object-fit: cover; }
+        .bento-card-desc { padding: 22px; }
+        .bento-card-desc h3 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; margin-bottom: 8px; }
+        .bento-card-desc p { font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; }
+
+        /* ============================================================
+           MEDIA GALLERY & LIGHTBOX
+           ============================================================ */
+        .art-masonry { columns: 3; column-gap: 22px; margin-top: 40px; }
+        .art-frame {
+            break-inside: avoid;
+            margin-bottom: 22px;
+            border-radius: var(--radius-md);
+            overflow: hidden;
             cursor: pointer;
             box-shadow: var(--shadow-card);
-            transition: transform 0.4s var(--transition-smooth);
+            position: relative;
         }
-
-        .art-frame:hover { transform: scale(1.02); }
-
-        .art-frame img {
-            width: 100%;
-            display: block;
-            transition: transform 0.8s var(--transition-smooth);
-        }
-
-        .art-frame:hover img { transform: scale(1.08); }
-
+        .art-frame img { width: 100%; display: block; transition: transform 0.6s ease; }
+        .art-frame:hover img { transform: scale(1.06); }
         .art-caption {
             position: absolute;
             inset: 0;
-            background: linear-gradient(to top, rgba(15, 23, 42, 0.85) 0%, transparent 60%);
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.8) 0%, transparent 60%);
             display: flex;
             align-items: flex-end;
-            padding: 24px;
+            padding: 20px;
+            color: white;
+            font-weight: 600;
             opacity: 0;
             transition: opacity 0.3s ease;
-            color: #ffffff;
-            font-weight: 600;
         }
-
         .art-frame:hover .art-caption { opacity: 1; }
 
         #mediaViewer {
@@ -1595,54 +1542,8 @@
             justify-content: center;
             cursor: zoom-out;
         }
-
         #mediaViewer.visible { display: flex; }
-
-        #mediaViewer img {
-            max-width: 88vw;
-            max-height: 88vh;
-            border-radius: var(--radius-md);
-            box-shadow: 0 30px 100px rgba(0,0,0,0.5);
-        }
-
-        /* ============================================================
-           VIDEO EMBEDS
-           ============================================================ */
-        .video-trio {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 26px;
-            margin-top: 45px;
-        }
-
-        .video-box {
-            background: #ffffff;
-            border: 1px solid var(--border-subtle);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-card);
-            transition: transform 0.4s ease;
-        }
-
-        .video-box:hover { transform: translateY(-5px); border-color: var(--border-focus); }
-
-        .video-ratio {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-        }
-
-        .video-ratio iframe {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        .video-detail { padding: 22px; }
-        .video-detail h4 { font-size: 1.1rem; margin-bottom: 8px; font-weight: 700; color: var(--text-main); }
-        .video-detail p { font-size: 0.9rem; color: var(--text-secondary); }
+        #mediaViewer img { max-width: 88vw; max-height: 88vh; border-radius: var(--radius-md); }
 
         /* ============================================================
            FOOTER
@@ -1651,11 +1552,10 @@
             border-top: 1px solid var(--border-subtle);
             padding: 70px 24px 35px;
             text-align: center;
+            background: #ffffff;
             position: relative;
             z-index: 2;
-            background: #ffffff;
         }
-
         .footer-brand {
             font-family: var(--font-display);
             font-size: 2.2rem;
@@ -1665,27 +1565,12 @@
             -webkit-text-fill-color: transparent;
             margin-bottom: 12px;
         }
-
-        .footer-meta {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            max-width: 600px;
-            margin: 0 auto 30px;
-        }
-
-        .footer-copy {
-            border-top: 1px solid #f1f5f9;
-            padding-top: 24px;
-            font-size: 0.82rem;
-            color: var(--text-muted);
-        }
-
         .scroll-top-btn {
             position: fixed;
             bottom: 30px;
             right: 30px;
-            width: 50px;
-            height: 50px;
+            width: 48px;
+            height: 48px;
             border-radius: 50%;
             background: var(--primary);
             color: white;
@@ -1693,7 +1578,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             cursor: pointer;
             z-index: 100;
             opacity: 0;
@@ -1701,30 +1586,35 @@
             transition: all 0.3s ease;
             box-shadow: 0 10px 25px var(--primary-glow);
         }
-
         .scroll-top-btn.visible { opacity: 1; transform: translateY(0); }
 
         @media (max-width: 992px) {
+            .group-roles-banner { grid-template-columns: 1fr; }
+            .poetry-grid { grid-template-columns: 1fr; }
+            .quotes-deck { grid-template-columns: 1fr; }
             .theory-split { grid-template-columns: 1fr; }
+            .live-scoreboard { grid-template-columns: 1fr; gap: 16px; }
+            .team-score-card.ocen { flex-direction: row; text-align: left; }
+            .team-score-card.ocen .score-control-btns { justify-content: flex-start; }
             .bento-photo-grid { grid-template-columns: 1fr; }
             .bento-photo-card.span-2 { grid-column: span 1; }
-            .sorter-baskets { grid-template-columns: repeat(2, 1fr); }
-            .debate-columns { grid-template-columns: 1fr; }
             .art-masonry { columns: 2; }
             .header-nav { padding: 12px 20px; }
             .nav-menu { display: none; }
         }
 
         @media (max-width: 600px) {
-            .art-quiz-grid { grid-template-columns: 1fr; }
+            .sorter-baskets { grid-template-columns: repeat(2, 1fr); }
+            .art-quiz-grid, .debate-sides-grid { grid-template-columns: 1fr; }
             .art-masonry { columns: 1; }
-            .memory-grid { grid-template-columns: repeat(3, 1fr); }
-            .quiz-container, .art-quiz-box, .sorter-box, .exercise-box, .debate-box { padding: 24px 18px; }
             .cursor-ring, .cursor-dot { display: none; }
         }
     </style>
 </head>
 <body>
+
+    <!-- Canvas Confetti Overlay -->
+    <canvas id="confettiCanvas"></canvas>
 
     <!-- ==================== PRELOADER ==================== -->
     <div id="sitePreloader">
@@ -1742,10 +1632,10 @@
             </svg>
             <div class="loader-count" id="loaderCount">0%</div>
         </div>
-        <div class="loader-sub">Искусство &bull; Культура &bull; Знания</div>
+        <div class="loader-sub">Искусство &bull; Знания &bull; Турнир</div>
     </div>
 
-    <!-- ==================== AMBIENT LIGHT MOTION ENGINE ==================== -->
+    <!-- ==================== AMBIENT MOTION ENGINE ==================== -->
     <div class="ambient-engine">
         <canvas id="fluidCanvas"></canvas>
         <video class="motion-video-bg" id="ambientVideo" autoplay muted loop playsinline>
@@ -1766,20 +1656,24 @@
     <!-- ==================== HEADER ==================== -->
     <header class="header-nav" id="mainHeader">
         <a href="#hero" class="brand-logo">
-            <div class="brand-badge"><i class="fas fa-landmark"></i></div>
+            <div class="brand-badge"><i class="fas fa-crown"></i></div>
             <div class="brand-title">Культурный Отдых</div>
         </a>
 
         <ul class="nav-menu">
+            <li><a href="#poetry"><i class="fas fa-feather-pointed"></i> Поэзия & Цитаты</a></li>
+            <li><a href="#teams"><i class="fas fa-users-gear"></i> 3 Группы</a></li>
+            <li><a href="#tournament" style="color:var(--team-pres);font-weight:700;"><i class="fas fa-trophy"></i> Турнир Команд</a></li>
             <li><a href="#theory"><i class="fas fa-book-open"></i> Теория</a></li>
-            <li><a href="#syllabus"><i class="fas fa-graduation-cap"></i> УМК & РОД</a></li>
             <li><a href="#forms"><i class="fas fa-masks-theater"></i> Формы</a></li>
             <li><a href="#role"><i class="fas fa-brain"></i> Роль искусства</a></li>
-            <li><a href="#gameHub" style="color:var(--primary);font-weight:700;"><i class="fas fa-gamepad"></i> Центр игр (5 в 1)</a></li>
             <li><a href="#gallery"><i class="fas fa-images"></i> Галерея</a></li>
         </ul>
 
         <div class="nav-actions">
+            <a href="#tournament" class="btn-modern" style="padding:8px 18px;font-size:0.82rem;background:#0f172a;color:white;">
+                <i class="fas fa-swords"></i> Битва
+            </a>
             <button class="icon-btn" id="toggleBgBtn" title="Переключить фон: Видео / Генеративный шелк">
                 <i class="fas fa-film"></i>
             </button>
@@ -1793,7 +1687,7 @@
     <section class="hero-section" id="hero">
         <div class="hero-badge-pill">
             <span class="live-dot"></span>
-            <span>ПРАКТИЧЕСКОЕ ЗАНЯТИЕ №6 &bull; РЕЗУЛЬТАТЫ ОБУЧЕНИЯ РОД1, РОД2, РОД4</span>
+            <span>ПРАКТИЧЕСКОЕ ЗАНЯТИЕ №6 &bull; ИНТЕЛЛЕКТУАЛЬНЫЙ ТУРНИР ТРЁХ ГРУПП</span>
         </div>
 
         <h1 class="hero-title">
@@ -1802,395 +1696,318 @@
         </h1>
 
         <p class="hero-subtitle">
-            Интерактивный образовательный портал: наглядная теория с иллюстрациями, 
-            актуальные видеоматериалы и 5 обучающих игр для студентов
+            Интерактивный презентационный портал: защита проекта <strong>Презентующей группой</strong> 
+            и командный баттл между <strong>«Дополняющими»</strong> и <strong>«Оценивающими»</strong>
         </p>
 
         <div class="hero-buttons">
-            <a href="#gameHub" class="btn-modern btn-primary-glow">
-                <i class="fas fa-gamepad"></i> Открыть Центр игр (5 игр)
+            <a href="#tournament" class="btn-modern btn-primary-glow">
+                <i class="fas fa-trophy"></i> Открыть Турнирную Битву Команд
             </a>
-            <a href="#theory" class="btn-modern btn-glass">
-                <i class="fas fa-book-open"></i> Изучить теорию
+            <a href="#poetry" class="btn-modern btn-glass">
+                <i class="fas fa-feather-pointed"></i> Стихи и Цитаты
             </a>
-            <a href="#syllabus" class="btn-modern btn-glass">
-                <i class="fas fa-graduation-cap"></i> Компетенции РОД
+            <a href="#teams" class="btn-modern btn-glass">
+                <i class="fas fa-users"></i> Роли групп
             </a>
         </div>
 
-        <div class="syllabus-chips">
-            <div class="chip"><i class="fas fa-clock"></i> Практика — 5 часов</div>
-            <div class="chip"><i class="fas fa-user-graduate"></i> СРС — 3 часа</div>
-            <div class="chip"><i class="fas fa-chalkboard-teacher"></i> СРСП — 2 часа</div>
-            <div class="chip"><i class="fas fa-tv"></i> Интерактивная доска &bull; Проектор</div>
+        <!-- 3 Group Roles Cards at Hero Bottom -->
+        <div class="group-roles-banner">
+            <div class="role-chip-card pres">
+                <span class="role-card-badge" style="color:var(--team-pres);"><i class="fas fa-crown"></i> Наша группа</span>
+                <div class="role-card-title">1. Презентующие (6 чел.)</div>
+                <div class="role-card-desc">Ведут защиту проекта перед ректором, управляют экраном и судят турнир. В игре не соревнуются.</div>
+            </div>
+            <div class="role-chip-card dop">
+                <span class="role-card-badge" style="color:var(--team-dop);"><i class="fas fa-bolt"></i> Команда турнира</span>
+                <div class="role-card-title">2. Дополняющие (5 чел.)</div>
+                <div class="role-card-desc">Участники битвы. Дополняют теоретические положения, отвечают на вопросы и борются за кубок.</div>
+            </div>
+            <div class="role-chip-card ocen">
+                <span class="role-card-badge" style="color:var(--team-ocen);"><i class="fas fa-scale-balanced"></i> Команда турнира</span>
+                <div class="role-card-title">3. Оценивающие (6 чел.)</div>
+                <div class="role-card-desc">Участники битвы. Анализируют, критически оценивают ответы, оппонируют в дебатах и набирают баллы.</div>
+            </div>
         </div>
     </section>
 
-    <!-- ==================== SECTION 1: THEORY (С Фотографиями и цитатами!) ==================== -->
-    <section class="section-wrap" id="theory">
-        <div class="section-header">
-            <span class="section-kicker">Раздел 1 программы</span>
-            <h2 class="section-headline">Понятие и сущность культурного отдыха</h2>
-            <p class="section-lead">Почему культурный досуг — это активная интеллектуальная и эстетическая деятельность человека</p>
-        </div>
-
-        <div class="theory-split">
-            <div class="theory-image-holder">
-                <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&q=80" alt="Культурная атмосфера" loading="lazy">
-                <div class="theory-badge-overlay"><i class="fas fa-sparkles"></i> Эстетический опыт</div>
+    <!-- ==================== POETRY & QUOTES SECTION (АЛ БАСТА ӨЛЕҢДЕР МЕН ЦИТАТАЛАР) ==================== -->
+    <section class="poetry-section" id="poetry">
+        <div class="section-wrap" style="padding-top:0;padding-bottom:0;">
+            <div class="section-header">
+                <span class="section-kicker">Художественное вступление</span>
+                <h2 class="section-headline">Поэзия и вечные цитаты об искусстве</h2>
+                <p class="section-lead">Бессмертные строки классиков о духовном отдыхе, возвышающей силе театра, слова и музыки</p>
             </div>
-            <div class="theory-body">
-                <h3>Духовное обогащение против пассивного отдыха</h3>
-                <p>
-                    <strong style="color:var(--primary);">Культурный отдых</strong> — это не просто заполнение свободного времени, 
-                    а целенаправленный процесс приобщения к шедеврам мировой цивилизации: театрам, музеям, выставкам, музыке и чтению.
-                </p>
-                <p>
-                    В отличие от рутинного пассивного отдыха (просмотр соцсетей, бесцельный досуг), культурный отдых 
-                    активизирует воображение, тренирует критическое мышление и формирует внутреннюю шкалу нравственных ценностей.
-                </p>
-                <div class="theory-quote-card">
-                    «Культура — это не количество прочитанных книг, а количество понятых.»
-                    <cite>— Фазиль Искандер, классик литературы</cite>
+
+            <!-- Poetry Grid -->
+            <div class="poetry-grid">
+                <!-- Poem 1: Заболоцкий -->
+                <div class="poem-card">
+                    <span class="poem-badge"><i class="fas fa-book"></i> О труде души и саморазвитии</span>
+                    <h3 class="poem-title">«Не позволяй душе лениться!»</h3>
+                    <div class="poem-lines">
+                        Не позволяй душе лениться!<br>
+                        Чтоб в ступе воду не толочь,<br>
+                        Душа обязана трудиться<br>
+                        И день и ночь, и день и ночь!<br><br>
+                        Гони ее от дома к дому,<br>
+                        Тащи с этапа на этап,<br>
+                        По пустырю, по бурелому,<br>
+                        Через сугроб, через ухаб!
+                    </div>
+                    <div class="poem-author">— Николай Заболоцкий</div>
+                </div>
+
+                <!-- Poem 2: Пушкин о Театре -->
+                <div class="poem-card">
+                    <span class="poem-badge"><i class="fas fa-masks-theater"></i> Магия театрального зала</span>
+                    <h3 class="poem-title">«Театр уж полон; ложи блещут...»</h3>
+                    <div class="poem-lines">
+                        Театр уж полон; ложи блещут;<br>
+                        Партер и кресла, все кипит;<br>
+                        В райке нетерпеливо плещут,<br>
+                        И, взвившись, занавес шумит.<br><br>
+                        Блистательна, полувоздушна,<br>
+                        Смычку волшебному послушна,<br>
+                        Толпою нимф окружена,<br>
+                        Стоит Истомина...
+                    </div>
+                    <div class="poem-author">— А.С. Пушкин (из романа «Евгений Онегин»)</div>
+                </div>
+            </div>
+
+            <!-- Inspiring Quotes Grid -->
+            <div class="quotes-deck">
+                <div class="quote-bubble">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="quote-text">«Любите искусство в себе, а не себя в искусстве. Театр — это кафедра, с которой можно сказать миру много добра.»</p>
+                    <div class="quote-author">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=120&q=80" alt="Станиславский">
+                        <div class="author-info">
+                            <h5>К.С. Станиславский</h5>
+                            <span>Реформатор театра</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quote-bubble">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="quote-text">«Где бессильны слова, там является во всеоружии своем музыка. Она вымывает из души всю пыль повседневности.»</p>
+                    <div class="quote-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&q=80" alt="Чайковский">
+                        <div class="author-info">
+                            <h5>П.И. Чайковский</h5>
+                            <span>Великий композитор</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quote-bubble">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="quote-text">«Искусство есть высочайшее проявление могущества в человеке. Красота и культура спасут мир от равнодушия.»</p>
+                    <div class="quote-author">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&q=80" alt="Толстой">
+                        <div class="author-info">
+                            <h5>Л.Н. Толстой</h5>
+                            <span>Классик литературы</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== SECTION 2: SYLLABUS & РОД1-РОД5 (С ФОТОГРАФИЯМИ!) ==================== -->
-    <section class="section-wrap" id="syllabus">
+    <!-- ==================== THREE GROUPS STRUCTURE ==================== -->
+    <section class="section-wrap" id="teams">
         <div class="section-header">
-            <span class="section-kicker">Учебно-методический комплекс</span>
-            <h2 class="section-headline">Ожидаемые результаты обучения (РОД)</h2>
-            <p class="section-lead">Пять ключевых профессиональных и речевых компетенций, формируемых на занятии</p>
+            <span class="section-kicker">Учебный регламент занятия №6</span>
+            <h2 class="section-headline">Распределение ролей в студенческой аудитории</h2>
+            <p class="section-lead">Чёткое разграничение ответственности трёх групп для динамичной и слаженной защиты перед ректором</p>
         </div>
 
         <div class="rod-visual-grid">
-            <!-- РОД 1 -->
-            <div class="rod-visual-card">
+            <!-- 1. Презентующие -->
+            <div class="rod-visual-card" style="border-top:4px solid var(--team-pres);">
                 <div class="rod-card-thumb">
-                    <img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=600&q=80" alt="Языковые средства" loading="lazy">
-                    <div class="rod-pill-float">РОД 1</div>
+                    <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&q=80" alt="Презентующие спикеры">
+                    <div class="rod-pill-float" style="background:#fffbeb;color:var(--team-pres);">👑 Наша группа</div>
                 </div>
                 <div class="rod-card-inner">
-                    <h3>Языковые и речевые средства</h3>
-                    <p>Точный выбор лексических и грамматических конструкций русского языка для профессионального и культурного общения.</p>
-                    <span class="rod-outcome-tag">Лексический запас &bull; Грамотность</span>
+                    <h3 style="color:var(--team-pres);">1. Группа «Презентующие»</h3>
+                    <p><strong>Численность: 6 человек.</strong> Мы — хозяева сцены. Наша миссия — изложить теорию занятия №6, раскрыть компетенции РОД, модерировать интерактивные раунды и следить за регламентом.</p>
+                    <div style="background:#fffbeb;padding:10px 14px;border-radius:8px;font-size:0.82rem;font-weight:700;color:var(--team-pres);margin-top:10px;">
+                        🎯 Роль: Спикеры защиты & Арбитры турнира
+                    </div>
                 </div>
             </div>
 
-            <!-- РОД 2 -->
-            <div class="rod-visual-card">
+            <!-- 2. Дополняющие -->
+            <div class="rod-visual-card" style="border-top:4px solid var(--team-dop);">
                 <div class="rod-card-thumb">
-                    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80" alt="Диалог и аргументация" loading="lazy">
-                    <div class="rod-pill-float">РОД 2</div>
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80" alt="Дополняющие участники">
+                    <div class="rod-pill-float" style="background:#eff6ff;color:var(--team-dop);">🔵 Участники битвы</div>
                 </div>
                 <div class="rod-card-inner">
-                    <h3>Диалог и запрос информации</h3>
-                    <p>Умение грамотно запрашивать сведения, формулировать вопросы и оценивать эстетические суждения собеседника.</p>
-                    <span class="rod-outcome-tag">Интервью &bull; Диалог &bull; Анализ</span>
+                    <h3 style="color:var(--team-dop);">2. Группа «Дополняющие»</h3>
+                    <p><strong>Численность: 5 человек.</strong> Боевая команда №1. Включаются в интерактивные игры, дополняют ответы спикеров свежими примерами и набирают баллы в турнирную таблицу.</p>
+                    <div style="background:#eff6ff;padding:10px 14px;border-radius:8px;font-size:0.82rem;font-weight:700;color:var(--team-dop);margin-top:10px;">
+                        ⚡ Роль: Команда «Синих» в баттле
+                    </div>
                 </div>
             </div>
 
-            <!-- РОД 3 -->
-            <div class="rod-visual-card">
+            <!-- 3. Оценивающие -->
+            <div class="rod-visual-card" style="border-top:4px solid var(--team-ocen);">
                 <div class="rod-card-thumb">
-                    <img src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=600&q=80" alt="Речевое поведение" loading="lazy">
-                    <div class="rod-pill-float">РОД 3</div>
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&q=80" alt="Оценивающие эксперты">
+                    <div class="rod-pill-float" style="background:#f5f3ff;color:var(--team-ocen);">🟣 Участники битвы</div>
                 </div>
                 <div class="rod-card-inner">
-                    <h3>Программы речевого поведения</h3>
-                    <p>Построение этически выверенной речи в музеях, театрах, на научных конференциях и в академическом сообществе.</p>
-                    <span class="rod-outcome-tag">Культурный этикет &bull; Нормы речи</span>
-                </div>
-            </div>
-
-            <!-- РОД 4 -->
-            <div class="rod-visual-card">
-                <div class="rod-card-thumb">
-                    <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=600&q=80" alt="Культурная дискуссия" loading="lazy">
-                    <div class="rod-pill-float">РОД 4</div>
-                </div>
-                <div class="rod-card-inner">
-                    <h3>Культурная дискуссия и дебаты</h3>
-                    <p>Аргументированное отстаивание авторской позиции при обсуждении спорных этических и социально значимых проблем искусства.</p>
-                    <span class="rod-outcome-tag">Критическое мышление &bull; Дебаты</span>
-                </div>
-            </div>
-
-            <!-- РОД 5 -->
-            <div class="rod-visual-card">
-                <div class="rod-card-thumb">
-                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&q=80" alt="Межкультурная коммуникация" loading="lazy">
-                    <div class="rod-pill-float">РОД 5</div>
-                </div>
-                <div class="rod-card-inner">
-                    <h3>Межкультурная коммуникация</h3>
-                    <p>Успешная интеграция в глобальные культурные процессы, диалог с представителями других культур на основе взаимоуважения.</p>
-                    <span class="rod-outcome-tag">Толерантность &bull; Мировая культура</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== SECTION 3: FORMS OF REST ==================== -->
-    <section class="section-wrap" id="forms">
-        <div class="section-header">
-            <span class="section-kicker">Раздел 2 программы</span>
-            <h2 class="section-headline">Формы культурного отдыха</h2>
-            <p class="section-lead">Шесть ключевых сфер духовного и эстетического развития человека</p>
-        </div>
-
-        <div class="forms-deck">
-            <!-- 1. Theater -->
-            <div class="tilt-card-3d">
-                <div class="card-spotlight"></div>
-                <div class="card-media">
-                    <img src="https://images.unsplash.com/photo-1503095396549-807759245b35?w=700&q=80" alt="Театр" loading="lazy">
-                    <div class="card-floating-badge"><i class="fas fa-masks-theater"></i></div>
-                </div>
-                <div class="card-content">
-                    <h3 class="card-title">🎭 Театр</h3>
-                    <p class="card-text">Живая синергия актера и зрителя. Театр пробуждает сопереживание, погружает в этические конфликты эпох и учит понимать многогранность человеческой натуры.</p>
-                    <div class="card-tags">
-                        <span class="card-pill">Драматургия</span>
-                        <span class="card-pill">Катарсис</span>
-                        <span class="card-pill">Сцена</span>
+                    <h3 style="color:var(--team-ocen);">3. Группа «Оценивающие»</h3>
+                    <p><strong>Численность: 6 человек.</strong> Боевая команда №2. Проводят критический анализ, выступают в дебатах, отвечают на сложные вопросы викторины и борются за лидерство.</p>
+                    <div style="background:#f5f3ff;padding:10px 14px;border-radius:8px;font-size:0.82rem;font-weight:700;color:var(--team-ocen);margin-top:10px;">
+                        ⚖️ Роль: Команда «Фиолетовых» в баттле
                     </div>
-                </div>
-            </div>
-
-            <!-- 2. Museum -->
-            <div class="tilt-card-3d">
-                <div class="card-spotlight"></div>
-                <div class="card-media">
-                    <img src="https://images.unsplash.com/photo-1554907984-15263bfd63bd?w=700&q=80" alt="Музей" loading="lazy">
-                    <div class="card-floating-badge"><i class="fas fa-landmark"></i></div>
-                </div>
-                <div class="card-content">
-                    <h3 class="card-title">🏛️ Музеи</h3>
-                    <p class="card-text">Хранилища исторической памяти цивилизации. От Лувра до Эрмитажа — экспозиции расширяют эрудицию и формируют уважение к историческому наследию.</p>
-                    <div class="card-tags">
-                        <span class="card-pill">Артефакты</span>
-                        <span class="card-pill">История</span>
-                        <span class="card-pill">Наследие</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 3. Festivals -->
-            <div class="tilt-card-3d">
-                <div class="card-spotlight"></div>
-                <div class="card-media">
-                    <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=700&q=80" alt="Фестиваль" loading="lazy">
-                    <div class="card-floating-badge"><i class="fas fa-star"></i></div>
-                </div>
-                <div class="card-content">
-                    <h3 class="card-title">🎪 Фестивали</h3>
-                    <p class="card-text">Праздник единения культур. Музыкальные, книжные и кинематографические фестивали открывают новые таланты и формируют созидательное сообщество.</p>
-                    <div class="card-tags">
-                        <span class="card-pill">Единение</span>
-                        <span class="card-pill">Творчество</span>
-                        <span class="card-pill">Драйв</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 4. Exhibitions -->
-            <div class="tilt-card-3d">
-                <div class="card-spotlight"></div>
-                <div class="card-media">
-                    <img src="https://images.unsplash.com/photo-1531243269054-5ebf6f34081e?w=700&q=80" alt="Выставки" loading="lazy">
-                    <div class="card-floating-badge"><i class="fas fa-palette"></i></div>
-                </div>
-                <div class="card-content">
-                    <h3 class="card-title">🖼️ Выставки</h3>
-                    <p class="card-text">Диалог с современными и классическими художниками. Живопись, инсталляции и медиа-арт учат видеть скрытые смыслы в визуальных метафорах.</p>
-                    <div class="card-tags">
-                        <span class="card-pill">Живопись</span>
-                        <span class="card-pill">Авангард</span>
-                        <span class="card-pill">Концепт</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 5. Concerts -->
-            <div class="tilt-card-3d">
-                <div class="card-spotlight"></div>
-                <div class="card-media">
-                    <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=700&q=80" alt="Концерты" loading="lazy">
-                    <div class="card-floating-badge"><i class="fas fa-music"></i></div>
-                </div>
-                <div class="card-content">
-                    <h3 class="card-title">🎵 Концерты</h3>
-                    <p class="card-text">Универсальный язык вселенной. Симфонический оркестр, джазовая импровизация или рок-драйв гармонизируют нервную систему и вдохновляют.</p>
-                    <div class="card-tags">
-                        <span class="card-pill">Гармония</span>
-                        <span class="card-pill">Энергия</span>
-                        <span class="card-pill">Акустика</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 6. Literature -->
-            <div class="tilt-card-3d">
-                <div class="card-spotlight"></div>
-                <div class="card-media">
-                    <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=700&q=80" alt="Литература" loading="lazy">
-                    <div class="card-floating-badge"><i class="fas fa-book-open"></i></div>
-                </div>
-                <div class="card-content">
-                    <h3 class="card-title">📚 Литература</h3>
-                    <p class="card-text">Глубочайший тренажер эмпатии и мышления. Чтение шедевров классики и современности расширяет словарный запас и формирует философский взгляд на мир.</p>
-                    <div class="card-tags">
-                        <span class="card-pill">Мышление</span>
-                        <span class="card-pill">Слово</span>
-                        <span class="card-pill">Мудрость</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== SECTION 4: ROLE OF ART (С ФОТОГРАФИЯМИ!) ==================== -->
-    <section class="section-wrap" id="role">
-        <div class="section-header">
-            <span class="section-kicker">Раздел 3 & 4 программы</span>
-            <h2 class="section-headline">Роль искусства в жизни человека и общества</h2>
-            <p class="section-lead">Научные данные о воздействии искусства на интеллект, психику и гражданское общество</p>
-        </div>
-
-        <div class="bento-photo-grid">
-            <!-- 1. Когнитивное развитие (Большая карточка с фото) -->
-            <div class="bento-photo-card span-2">
-                <div class="bento-card-photo">
-                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=900&q=80" alt="Интеллект и мышление" loading="lazy">
-                    <div class="bento-photo-overlay"></div>
-                    <div class="bento-icon-badge" style="color:var(--primary);"><i class="fas fa-brain"></i></div>
-                </div>
-                <div class="bento-card-desc">
-                    <h3>Когнитивное развитие & Интеллектуальная гибкость</h3>
-                    <p>Нейробиологические исследования доказывают: регулярный культурный отдых активирует лобные доли и стимулирует нейропластичность мозга. Анализ сложных произведений учит выявлять причинно-следственные связи и находить нестандартные решения в науке и бизнесе.</p>
-                </div>
-            </div>
-
-            <!-- 2. Психоэмоциональный баланс -->
-            <div class="bento-photo-card">
-                <div class="bento-card-photo">
-                    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&q=80" alt="Психоэмоциональный баланс" loading="lazy">
-                    <div class="bento-photo-overlay"></div>
-                    <div class="bento-icon-badge" style="color:var(--accent-pink);"><i class="fas fa-heart-pulse"></i></div>
-                </div>
-                <div class="bento-card-desc">
-                    <h3>Психоэмоциональный баланс</h3>
-                    <p>Арт-терапия и гармоничная музыка снижают уровень гормона стресса кортизола до 35%, снимают тревожность и восстанавливают душевное равновесие.</p>
-                </div>
-            </div>
-
-            <!-- 3. Креативность и инновации -->
-            <div class="bento-photo-card">
-                <div class="bento-card-photo">
-                    <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&q=80" alt="Креативность" loading="lazy">
-                    <div class="bento-photo-overlay"></div>
-                    <div class="bento-icon-badge" style="color:var(--accent-amber);"><i class="fas fa-lightbulb"></i></div>
-                </div>
-                <div class="bento-card-desc">
-                    <h3>Креативность и инновации</h3>
-                    <p>Искусство развивает дивергентное мышление. По статистике, ученые и разработчики, интересующиеся искусством, регистрируют на 40% больше авторских патентов.</p>
-                </div>
-            </div>
-
-            <!-- 4. Общественная сплоченность (Большая карточка с фото) -->
-            <div class="bento-photo-card span-2">
-                <div class="bento-card-photo">
-                    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=900&q=80" alt="Общественная сплоченность" loading="lazy">
-                    <div class="bento-photo-overlay"></div>
-                    <div class="bento-icon-badge" style="color:var(--accent-cyan);"><i class="fas fa-users-rays"></i></div>
-                </div>
-                <div class="bento-card-desc">
-                    <h3>Общественная сплоченность & Культурная идентичность</h3>
-                    <p>Культурные институты являются фундаментом здорового гражданского общества. Общие культурные коды снижают уровень социальной агрессии, укрепляют солидарность и воспитывают уважение к многообразию традиций.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ============================================================
-         CENTRAL GAME HUB (ИНТЕРАКТИВНЫЙ ЦЕНТР: 5 ОБУЧАЮЩИХ ИГР!)
+         TOURNAMENT BATTLE ARENA (ИНТЕЛЛЕКТУАЛЬНЫЙ ТУРНИР: 2 КОМАНДЫ)
          ============================================================ -->
-    <section class="game-hub-section" id="gameHub">
+    <section class="battle-arena-section" id="tournament">
         <div class="section-wrap" style="padding-top:0;padding-bottom:0;">
             <div class="section-header">
-                <span class="section-kicker">Интерактивный центр знаний &bull; 5 игр в 1</span>
-                <h2 class="section-headline">Игровой хаб для студентов</h2>
-                <p class="section-lead">Выберите интересующую игру для проверки знаний, тренировки словарного запаса и обсуждения</p>
+                <span class="section-kicker" style="color:var(--team-pres);"><i class="fas fa-crown"></i> Модерирует Презентующая группа</span>
+                <h2 class="section-headline">Интеллектуальный Баттл Команд</h2>
+                <p class="section-lead">Прямое соперничество: <strong>Команда «Дополняющие»</strong> (5 чел.) против <strong>Команды «Оценивающие»</strong> (6 чел.)</p>
             </div>
 
-            <!-- GAME SELECTION TABS -->
-            <div class="game-nav-tabs">
-                <button class="game-tab-btn active" onclick="switchGameTab('quiz')">
-                    <i class="fas fa-list-check"></i> 1. Викторина (15 вопросов)
-                </button>
-                <button class="game-tab-btn" onclick="switchGameTab('artGuess')">
-                    <i class="fas fa-palette"></i> 2. Угадай шедевр и музей
-                </button>
-                <button class="game-tab-btn" onclick="switchGameTab('sorter')">
-                    <i class="fas fa-folder-tree"></i> 3. Сортировщик терминов
-                </button>
-                <button class="game-tab-btn" onclick="switchGameTab('memory')">
-                    <i class="fas fa-clone"></i> 4. Игра «Найди пару»
-                </button>
-                <button class="game-tab-btn" onclick="switchGameTab('words')">
-                    <i class="fas fa-spell-check"></i> 5. Обобщающее слово
-                </button>
-                <button class="game-tab-btn" onclick="switchGameTab('debate')">
-                    <i class="fas fa-comments"></i> 6. Культурные дебаты
-                </button>
-            </div>
-
-            <!-- ==================== GAME TAB 1: 15-QUESTION QUIZ ==================== -->
-            <div class="game-panel-view active" id="gameTab-quiz">
-                <div class="quiz-container">
-                    <div id="quizPlayZone">
-                        <div class="quiz-top-bar">
-                            <span class="academic-badge"><i class="fas fa-graduation-cap"></i> Тест по занятию №6</span>
-                            <span class="quiz-step-count" id="quizStepText">Вопрос 1 из 15</span>
+            <!-- LIVE TOURNAMENT SCOREBOARD -->
+            <div class="live-scoreboard">
+                <!-- Team 1: Дополняющие -->
+                <div class="team-score-card dop">
+                    <div class="team-pts-digit" id="scoreDop">0</div>
+                    <div class="team-meta-info">
+                        <h4>Команда «Дополняющие»</h4>
+                        <span>5 участников &bull; Синяя команда</span>
+                        <div class="score-control-btns">
+                            <button class="mini-score-btn" onclick="adjustTeamScore('dop', 1)">+1 балл</button>
+                            <button class="mini-score-btn" onclick="adjustTeamScore('dop', 2)">+2 балла</button>
+                            <button class="mini-score-btn" onclick="adjustTeamScore('dop', -1)">-1</button>
                         </div>
-                        <div class="quiz-meter"><div class="quiz-meter-fill" id="quizMeterBar"></div></div>
-                        <h3 class="quiz-stem" id="quizQuestionStem">Загрузка вопроса...</h3>
-                        <div class="quiz-choices" id="quizOptionGroup"></div>
-                        <div class="quiz-rationale" id="quizFeedbackBox"></div>
-                        <button class="btn-modern btn-primary-glow btn-quiz-next" id="quizNextAction" onclick="proceedNextQuestion()">
-                            Следующий вопрос <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Center VS & Actions -->
+                <div class="scoreboard-center-vs">
+                    <div class="vs-circle">VS</div>
+                    <button class="btn-declare-winner" onclick="declareTournamentWinner()">
+                        🏆 Наградить победителя!
+                    </button>
+                    <div style="margin-top:8px;">
+                        <button onclick="resetScores()" style="background:none;border:none;color:var(--text-muted);font-size:0.75rem;cursor:pointer;text-decoration:underline;">Сброс счёта</button>
+                    </div>
+                </div>
+
+                <!-- Team 2: Оценивающие -->
+                <div class="team-score-card ocen">
+                    <div class="team-pts-digit" id="scoreOcen">0</div>
+                    <div class="team-meta-info">
+                        <h4>Команда «Оценивающие»</h4>
+                        <span>6 участников &bull; Фиолетовая команда</span>
+                        <div class="score-control-btns">
+                            <button class="mini-score-btn" onclick="adjustTeamScore('ocen', 1)">+1 балл</button>
+                            <button class="mini-score-btn" onclick="adjustTeamScore('ocen', 2)">+2 балла</button>
+                            <button class="mini-score-btn" onclick="adjustTeamScore('ocen', -1)">-1</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROUND TABS -->
+            <div class="battle-round-tabs">
+                <button class="battle-tab-btn active" onclick="switchBattleRound('quiz')">
+                    <i class="fas fa-list-check"></i> Раунд 1: Блиц-дуэль (15 вопросов)
+                </button>
+                <button class="battle-tab-btn" onclick="switchBattleRound('art')">
+                    <i class="fas fa-palette"></i> Раунд 2: Шедевры на скорость
+                </button>
+                <button class="battle-tab-btn" onclick="switchBattleRound('sorter')">
+                    <i class="fas fa-folder-tree"></i> Раунд 3: Эстафета терминов
+                </button>
+                <button class="battle-tab-btn" onclick="switchBattleRound('words')">
+                    <i class="fas fa-spell-check"></i> Раунд 4: Обобщающее слово
+                </button>
+                <button class="battle-tab-btn" onclick="switchBattleRound('debate')">
+                    <i class="fas fa-scale-balanced"></i> Раунд 5: Дебаты с таймером
+                </button>
+            </div>
+
+            <!-- ==================== ROUND 1: 15 QUESTIONS ==================== -->
+            <div class="round-panel active" id="round-quiz">
+                <div class="moderator-strip">
+                    <div class="mod-title">
+                        <i class="fas fa-crown"></i> Панель модератора: начислить балл за текущий ответ
+                    </div>
+                    <div class="mod-actions">
+                        <button class="btn-award-dop" onclick="awardRoundPoint('dop', 1)">
+                            +1 балл Дополняющим
+                        </button>
+                        <button class="btn-award-ocen" onclick="awardRoundPoint('ocen', 1)">
+                            +1 балл Оценивающим
                         </button>
                     </div>
+                </div>
 
-                    <div class="quiz-scoreboard" id="quizScoreZone">
-                        <div class="score-emblem">🏆</div>
-                        <h2 style="font-family:var(--font-display);font-size:2.2rem;color:var(--text-main);">Тестирование завершено!</h2>
-                        <div class="score-digit" id="quizScoreValue">0 / 15</div>
-                        <p id="quizScoreCommentary" style="color:var(--text-secondary);font-size:1.1rem;margin-bottom:28px;"></p>
-                        <button class="btn-modern btn-primary-glow" onclick="resetQuizTest()">
-                            <i class="fas fa-rotate-right"></i> Пройти тест заново
+                <div class="quiz-container">
+                    <div class="quiz-top-bar">
+                        <span class="academic-badge"><i class="fas fa-swords"></i> Блиц-дуэль команд</span>
+                        <span class="quiz-step-count" id="quizStepText">Вопрос 1 из 15</span>
+                    </div>
+                    <div class="quiz-meter"><div class="quiz-meter-fill" id="quizMeterBar"></div></div>
+                    <h3 class="quiz-stem" id="quizQuestionStem">Загрузка вопроса...</h3>
+                    <div class="quiz-choices" id="quizOptionGroup"></div>
+                    <div class="quiz-rationale" id="quizFeedbackBox"></div>
+                    <div style="text-align:center;margin-top:24px;">
+                        <button class="btn-modern btn-primary-glow" id="quizNextAction" style="display:none;" onclick="proceedNextQuestion()">
+                            Следующий вопрос дуэли <i class="fas fa-arrow-right"></i>
                         </button>
                     </div>
                 </div>
             </div>
 
-            <!-- ==================== GAME TAB 2: GUESS THE MASTERPIECE ==================== -->
-            <div class="game-panel-view" id="gameTab-artGuess">
+            <!-- ==================== ROUND 2: ART SPEED GUESS ==================== -->
+            <div class="round-panel" id="round-art">
+                <div class="moderator-strip">
+                    <div class="mod-title">
+                        <i class="fas fa-bolt"></i> Кто первым нажал и ответил правильно?
+                    </div>
+                    <div class="mod-actions">
+                        <button class="btn-award-dop" onclick="awardRoundPoint('dop', 2)">
+                            +2 балла Дополняющим
+                        </button>
+                        <button class="btn-award-ocen" onclick="awardRoundPoint('ocen', 2)">
+                            +2 балла Оценивающим
+                        </button>
+                    </div>
+                </div>
+
                 <div class="art-quiz-box">
                     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">
-                        <span class="academic-badge"><i class="fas fa-image"></i> Визуальная эрудиция</span>
-                        <span class="quiz-step-count" id="artQuizCounter">Картина 1 из 5</span>
+                        <span class="academic-badge"><i class="fas fa-image"></i> Раунд на скорость и внимание</span>
+                        <span class="quiz-step-count" id="artQuizCounter">Шедевр 1 из 5</span>
                     </div>
                     <div class="art-quiz-media">
-                        <img id="artQuizImage" src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=800&q=80" alt="Шедевр искусства">
+                        <img id="artQuizImage" src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=800&q=80" alt="Шедевр">
                     </div>
-                    <h3 class="art-quiz-question-title" id="artQuizQuestion">Определите шедевр и его создателя:</h3>
+                    <h3 style="font-family:var(--font-display);font-size:1.4rem;text-align:center;margin-bottom:18px;" id="artQuizQuestion">Определите шедевр и автора:</h3>
                     <div class="art-quiz-grid" id="artQuizOptions"></div>
                     <div class="art-quiz-fact" id="artQuizFactBox"></div>
-                    <div style="text-align:center;margin-top:24px;">
+                    <div style="text-align:center;margin-top:22px;">
                         <button class="btn-modern btn-primary-glow" id="btnArtQuizNext" style="display:none;" onclick="nextArtQuestion()">
                             Следующий шедевр <i class="fas fa-arrow-right"></i>
                         </button>
@@ -2198,85 +2015,71 @@
                 </div>
             </div>
 
-            <!-- ==================== GAME TAB 3: CATEGORY SORTER ==================== -->
-            <div class="game-panel-view" id="gameTab-sorter">
+            <!-- ==================== ROUND 3: SORTER RELAY ==================== -->
+            <div class="round-panel" id="round-sorter">
+                <div class="moderator-strip">
+                    <div class="mod-title">
+                        <i class="fas fa-flag-checkered"></i> Командная эстафета: правильное определение категории
+                    </div>
+                    <div class="mod-actions">
+                        <button class="btn-award-dop" onclick="awardRoundPoint('dop', 1)">+1 Дополняющим</button>
+                        <button class="btn-award-ocen" onclick="awardRoundPoint('ocen', 1)">+1 Оценивающим</button>
+                    </div>
+                </div>
+
                 <div class="sorter-box">
-                    <div style="text-align:center;margin-bottom:24px;">
-                        <span class="academic-badge"><i class="fas fa-brain"></i> РОД 1 &bull; Систематизация лексики</span>
-                        <h3 style="font-family:var(--font-display);font-size:1.6rem;margin-top:10px;">Культурный классификатор</h3>
-                        <p style="color:var(--text-secondary);font-size:0.92rem;">Кликните на корзину, к которой относится данный термин:</p>
+                    <div style="text-align:center;margin-bottom:20px;">
+                        <h3 style="font-family:var(--font-display);font-size:1.5rem;">Классифицируйте культурный термин:</h3>
+                        <p style="color:var(--text-secondary);font-size:0.9rem;">Игрок от команды выбирает соответствующую сферу:</p>
                     </div>
 
-                    <div class="sorter-card-deck">
-                        <div class="current-term-card" id="sorterActiveTerm">Загрузка...</div>
+                    <div class="sorter-deck">
+                        <div class="active-term" id="sorterActiveTerm">Партер</div>
                     </div>
 
                     <div class="sorter-baskets">
-                        <button class="sorter-basket-btn" onclick="classifyTerm('theater')">
+                        <button class="basket-btn" onclick="classifyTerm('theater')">
                             <i class="fas fa-masks-theater"></i>
-                            <span class="sorter-basket-title">ТЕАТР</span>
-                            <span class="sorter-basket-count" id="count-theater">Собрано: 0</span>
+                            <span class="basket-title">ТЕАТР</span>
+                            <span class="basket-count" id="count-theater">Собрано: 0</span>
                         </button>
-                        <button class="sorter-basket-btn" onclick="classifyTerm('museum')">
+                        <button class="basket-btn" onclick="classifyTerm('museum')">
                             <i class="fas fa-landmark"></i>
-                            <span class="sorter-basket-title">МУЗЕЙ</span>
-                            <span class="sorter-basket-count" id="count-museum">Собрано: 0</span>
+                            <span class="basket-title">МУЗЕЙ</span>
+                            <span class="basket-count" id="count-museum">Собрано: 0</span>
                         </button>
-                        <button class="sorter-basket-btn" onclick="classifyTerm('music')">
+                        <button class="basket-btn" onclick="classifyTerm('music')">
                             <i class="fas fa-music"></i>
-                            <span class="sorter-basket-title">МУЗЫКА</span>
-                            <span class="sorter-basket-count" id="count-music">Собрано: 0</span>
+                            <span class="basket-title">МУЗЫКА</span>
+                            <span class="basket-count" id="count-music">Собрано: 0</span>
                         </button>
-                        <button class="sorter-basket-btn" onclick="classifyTerm('literature')">
+                        <button class="basket-btn" onclick="classifyTerm('literature')">
                             <i class="fas fa-book-open"></i>
-                            <span class="sorter-basket-title">ЛИТЕРАТУРА</span>
-                            <span class="sorter-basket-count" id="count-literature">Собрано: 0</span>
+                            <span class="basket-title">ЛИТЕРАТУРА</span>
+                            <span class="basket-count" id="count-literature">Собрано: 0</span>
                         </button>
                     </div>
 
-                    <div id="sorterResultMsg" style="text-align:center;margin-top:20px;font-weight:600;"></div>
+                    <div id="sorterResultMsg" style="text-align:center;margin-top:18px;font-weight:700;"></div>
                 </div>
             </div>
 
-            <!-- ==================== GAME TAB 4: MEMORY MATCH ==================== -->
-            <div class="game-panel-view" id="gameTab-memory">
-                <div class="memory-arena">
-                    <div class="memory-dashboard">
-                        <div class="mem-indicator">
-                            <div class="mem-indicator-val" id="memPairsFound">0 / 8</div>
-                            <div class="mem-indicator-lbl">Найдено пар</div>
-                        </div>
-                        <div class="mem-indicator">
-                            <div class="mem-indicator-val" id="memMoveCounter">0</div>
-                            <div class="mem-indicator-lbl">Всего ходов</div>
-                        </div>
-                        <div class="mem-indicator">
-                            <div class="mem-indicator-val" id="memTimeDisplay">00:00</div>
-                            <div class="mem-indicator-lbl">Время</div>
-                        </div>
+            <!-- ==================== ROUND 4: WORDS (ЗАДАНИЕ 1 УМК) ==================== -->
+            <div class="round-panel" id="round-words">
+                <div class="moderator-strip">
+                    <div class="mod-title">
+                        <i class="fas fa-spell-check"></i> Задание №1 из методкарты: правильное обобщение
                     </div>
-
-                    <div class="memory-grid" id="memoryCardsGrid"></div>
-
-                    <div style="text-align:center;margin-top:35px;">
-                        <button class="btn-modern btn-glass" onclick="restartMemoryMatch()">
-                            <i class="fas fa-rotate-right"></i> Перезапустить игру
-                        </button>
+                    <div class="mod-actions">
+                        <button class="btn-award-dop" onclick="awardRoundPoint('dop', 1)">+1 Дополняющим</button>
+                        <button class="btn-award-ocen" onclick="awardRoundPoint('ocen', 1)">+1 Оценивающим</button>
                     </div>
                 </div>
-            </div>
 
-            <!-- ==================== GAME TAB 5: GENERALIZING WORD ==================== -->
-            <div class="game-panel-view" id="gameTab-words">
                 <div class="exercise-box">
-                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;">
-                        <span class="academic-badge"><i class="fas fa-spell-check"></i> Практическое задание №1 УМК</span>
-                        <div style="font-family:var(--font-mono);font-size:0.95rem;font-weight:700;color:var(--accent-emerald);" id="exerciseScore">Баллы: 0 / 4</div>
-                    </div>
-
                     <!-- Task Item 1 -->
                     <div class="word-task-card" id="taskCard1">
-                        <div class="word-task-items">
+                        <div class="word-tags">
                             <span class="word-tag">🎭 Театр</span>
                             <span class="word-tag">🏛️ Музей</span>
                             <span class="word-tag">🖼️ Выставка</span>
@@ -2287,12 +2090,12 @@
                             <input type="text" class="word-input" id="inputWord1" placeholder="Введите обобщающее словосочетание...">
                             <button class="btn-check-word" onclick="checkGeneralWord(1, ['культурный отдых', 'отдых', 'досуг'])">Проверить</button>
                         </div>
-                        <div class="word-feedback" id="feedbackWord1"></div>
+                        <div class="word-feedback" id="feedbackWord1" style="display:none;margin-top:8px;"></div>
                     </div>
 
                     <!-- Task Item 2 -->
                     <div class="word-task-card" id="taskCard2">
-                        <div class="word-task-items">
+                        <div class="word-tags">
                             <span class="word-tag">🩰 Балет</span>
                             <span class="word-tag">🎼 Опера</span>
                             <span class="word-tag">🎭 Драма</span>
@@ -2303,12 +2106,12 @@
                             <input type="text" class="word-input" id="inputWord2" placeholder="Введите обобщающее понятие...">
                             <button class="btn-check-word" onclick="checkGeneralWord(2, ['театральное искусство', 'театр', 'театральные жанры', 'жанры театра'])">Проверить</button>
                         </div>
-                        <div class="word-feedback" id="feedbackWord2"></div>
+                        <div class="word-feedback" id="feedbackWord2" style="display:none;margin-top:8px;"></div>
                     </div>
 
                     <!-- Task Item 3 -->
                     <div class="word-task-card" id="taskCard3">
-                        <div class="word-task-items">
+                        <div class="word-tags">
                             <span class="word-tag">🎨 Живопись</span>
                             <span class="word-tag">🗿 Скульптура</span>
                             <span class="word-tag">🏛️ Архитектура</span>
@@ -2318,12 +2121,12 @@
                             <input type="text" class="word-input" id="inputWord3" placeholder="Введите обобщающее понятие...">
                             <button class="btn-check-word" onclick="checkGeneralWord(3, ['изобразительное искусство', 'визуальное искусство', 'искусство'])">Проверить</button>
                         </div>
-                        <div class="word-feedback" id="feedbackWord3"></div>
+                        <div class="word-feedback" id="feedbackWord3" style="display:none;margin-top:8px;"></div>
                     </div>
 
                     <!-- Task Item 4 -->
                     <div class="word-task-card" id="taskCard4">
-                        <div class="word-task-items">
+                        <div class="word-tags">
                             <span class="word-tag">📖 Роман</span>
                             <span class="word-tag">📜 Поэма</span>
                             <span class="word-tag">📝 Рассказ</span>
@@ -2333,49 +2136,61 @@
                             <input type="text" class="word-input" id="inputWord4" placeholder="Введите обобщающее понятие...">
                             <button class="btn-check-word" onclick="checkGeneralWord(4, ['литература', 'литературные жанры', 'художественная литература'])">Проверить</button>
                         </div>
-                        <div class="word-feedback" id="feedbackWord4"></div>
+                        <div class="word-feedback" id="feedbackWord4" style="display:none;margin-top:8px;"></div>
                     </div>
                 </div>
             </div>
 
-            <!-- ==================== GAME TAB 6: DEBATE CLUB ==================== -->
-            <div class="game-panel-view" id="gameTab-debate">
-                <div class="debate-box">
+            <!-- ==================== ROUND 5: DEBATE WITH TIMER ==================== -->
+            <div class="round-panel" id="round-debate">
+                <div class="debate-arena-box">
+                    <div class="debate-timer-widget">
+                        <div style="font-size:0.85rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;margin-bottom:4px;">
+                            Таймер выступления спикера
+                        </div>
+                        <div class="timer-digits" id="debateTimerDisplay">01:00</div>
+                        <div style="display:flex;justify-content:center;gap:10px;">
+                            <button class="mini-score-btn" onclick="startDebateTimer(60)"><i class="fas fa-play"></i> Старт (60с)</button>
+                            <button class="mini-score-btn" onclick="pauseDebateTimer()"><i class="fas fa-pause"></i> Пауза</button>
+                            <button class="mini-score-btn" onclick="resetDebateTimer()"><i class="fas fa-rotate-right"></i> Сброс</button>
+                        </div>
+                    </div>
+
                     <div style="text-align:center;margin-bottom:20px;">
-                        <span class="academic-badge"><i class="fas fa-scale-balanced"></i> РОД 4 &bull; Дискуссионный клуб</span>
+                        <h3 style="font-family:var(--font-display);font-size:1.5rem;">Тема финального баттла: «Заменит ли нейросеть живое искусство?»</h3>
+                        <p style="color:var(--text-secondary);font-size:0.9rem;">Презентующая группа присуждает до 3-х баллов за силу аргументов</p>
                     </div>
 
-                    <div class="debate-topic-card">
-                        <div class="debate-topic-title">Тема дебатов: «Заменит ли искусственный интеллект живых художников, писателей и музыкантов?»</div>
-                        <p style="color:var(--text-secondary);font-size:0.9rem;">Интерактивная трибуна для аргументации позиций студентов</p>
-                    </div>
-
-                    <div class="debate-columns">
-                        <div class="debate-col">
-                            <h4 style="color:var(--accent-emerald);"><i class="fas fa-check-circle"></i> Позиция: «НЕТ, НЕ ЗАМЕНИТ»</h4>
+                    <div class="debate-sides-grid">
+                        <div class="side-card dop-side">
+                            <h4 style="color:var(--team-dop);"><i class="fas fa-shield"></i> Позиция: Дополняющие</h4>
+                            <p style="font-weight:700;margin-bottom:10px;font-size:0.92rem;">«НЕТ: Искусство требует души и катарсиса»</p>
                             <ul>
-                                <li>Искусство — это продукт человеческого переживания, боли, любви и биографии.</li>
-                                <li>ИИ лишь рекомбинирует существующие базы данных, не обладая душой и катарсисом.</li>
-                                <li>Живое исполнение в театре или на концерте невозможно воспроизвести машиной.</li>
+                                <li>Машина не переживает радость, страх, любовь и смерть.</li>
+                                <li>Акт сопереживания возможен только между человеком и человеком.</li>
+                                <li>Живая акустика и театральная сцена уникальны в моменте.</li>
                             </ul>
+                            <div style="margin-top:14px;">
+                                <button class="btn-award-dop" style="width:100%;" onclick="awardRoundPoint('dop', 3)">
+                                    +3 балла за аргументацию
+                                </button>
+                            </div>
                         </div>
-                        <div class="debate-col">
-                            <h4 style="color:var(--accent-pink);"><i class="fas fa-microchip"></i> Позиция: «ИИ СТАНЕТ НОВЫМ АВТОРОМ»</h4>
-                            <ul>
-                                <li>Нейросети уже сочиняют симфонии и побеждают на конкурсах живописи.</li>
-                                <li>Доступность персонализированного искусства для каждого человека в мире.</li>
-                                <li>ИИ расширяет возможности авторов как новый художественный инструмент.</li>
-                            </ul>
-                        </div>
-                    </div>
 
-                    <div class="debate-vote-actions">
-                        <button class="btn-modern btn-glass" onclick="voteDebate('human')">
-                            👍 Голос: Человек первичен (<span id="voteCountHuman">14</span>)
-                        </button>
-                        <button class="btn-modern btn-glass" onclick="voteDebate('ai')">
-                            🤖 Голос: За нейросети (<span id="voteCountAi">9</span>)
-                        </button>
+                        <div class="side-card ocen-side">
+                            <h4 style="color:var(--team-ocen);"><i class="fas fa-scale-balanced"></i> Позиция: Оценивающие</h4>
+                            <p style="font-weight:700;margin-bottom:10px;font-size:0.92rem;">«ДА: Технологии рождают новое искусство»</p>
+                            <ul>
+                                <li>ИИ уже пишет симфонии и побеждает на конкурсах живописи.</li>
+                                <li>Персонализированное искусство становится доступно каждому.</li>
+                                <li>Цифровая революция расширяет горизонты творца.</li>
+                            </ul>
+                            <div style="margin-top:14px;">
+                                <button class="btn-award-ocen" style="width:100%;" onclick="awardRoundPoint('ocen', 3)">
+                                    +3 балла за аргументацию
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2383,12 +2198,148 @@
         </div>
     </section>
 
-    <!-- ==================== MASTERPIECE GALLERY ==================== -->
+    <!-- ==================== WINNER CELEBRATION MODAL ==================== -->
+    <div id="winnerModal">
+        <div class="winner-card">
+            <div class="winner-trophy">🏆</div>
+            <div class="winner-team-title" id="winnerBannerTitle">Победители турнира!</div>
+            <div class="winner-stats" id="winnerBannerStats">Дополняющие: 0 | Оценивающие: 0</div>
+            <p style="color:var(--text-secondary);font-size:1.05rem;line-height:1.6;margin-bottom:28px;">
+                Поздравляем с блестящим результатом! Обе команды продемонстрировали выдающуюся эрудицию, культуру речи и знание шедевров искусства.
+            </p>
+            <button class="btn-modern btn-primary-glow" onclick="closeWinnerModal()">
+                Продолжить занятие <i class="fas fa-check"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- ==================== THEORY SECTION WITH PHOTOS ==================== -->
+    <section class="section-wrap" id="theory">
+        <div class="section-header">
+            <span class="section-kicker">Теоретический базис &bull; Раздел 1</span>
+            <h2 class="section-headline">Понятие и сущность культурного отдыха</h2>
+            <p class="section-lead">Активное духовное приобщение к эстетическим ценностям цивилизации</p>
+        </div>
+
+        <div class="theory-split">
+            <div class="theory-image-holder">
+                <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&q=80" alt="Культурный отдых">
+            </div>
+            <div>
+                <h3 style="font-family:var(--font-display);font-size:1.8rem;margin-bottom:14px;">Культурный отдых vs Пассивный досуг</h3>
+                <p style="color:var(--text-secondary);margin-bottom:14px;">
+                    <strong>Культурный отдых</strong> — это высшая форма проведения свободного времени, направленная на приобщение к духовным богатствам человечества, развитие художественного вкуса и расширение кругозора.
+                </p>
+                <p style="color:var(--text-secondary);margin-bottom:20px;">
+                    В отличие от бесцельного потребления информации (скроллинг соцсетей, пассивность), культурный досуг активизирует аналитическое мышление, формирует мировоззрение и обогащает эмоциональный мир.
+                </p>
+                <div style="background:#f8fafc;border-left:4px solid var(--primary);padding:14px 20px;border-radius:0 8px 8px 0;font-style:italic;">
+                    «Культура — это не количество прочитанных книг, а количество понятых смыслов.»
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FORMS OF REST ==================== -->
+    <section class="section-wrap" id="forms">
+        <div class="section-header">
+            <span class="section-kicker">Раздел 2 программы</span>
+            <h2 class="section-headline">Шесть форм культурного отдыха</h2>
+            <p class="section-lead">Ключевые направления эстетического и интеллектуального досуга</p>
+        </div>
+
+        <div class="forms-deck">
+            <div class="tilt-card-3d">
+                <div class="card-media"><img src="https://images.unsplash.com/photo-1503095396549-807759245b35?w=700&q=80" alt="Театр"></div>
+                <div class="card-content">
+                    <h3 class="card-title">🎭 Театр</h3>
+                    <p class="card-text">Живая синергия актера и зрителя, пробуждающая эмпатию и катарсис.</p>
+                </div>
+            </div>
+            <div class="tilt-card-3d">
+                <div class="card-media"><img src="https://images.unsplash.com/photo-1554907984-15263bfd63bd?w=700&q=80" alt="Музеи"></div>
+                <div class="card-content">
+                    <h3 class="card-title">🏛️ Музеи</h3>
+                    <p class="card-text">Хранилища исторической памяти цивилизации от античности до наших дней.</p>
+                </div>
+            </div>
+            <div class="tilt-card-3d">
+                <div class="card-media"><img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=700&q=80" alt="Фестивали"></div>
+                <div class="card-content">
+                    <h3 class="card-title">🎪 Фестивали</h3>
+                    <p class="card-text">Праздник единения культур, открывающий новые таланты и сообщества.</p>
+                </div>
+            </div>
+            <div class="tilt-card-3d">
+                <div class="card-media"><img src="https://images.unsplash.com/photo-1531243269054-5ebf6f34081e?w=700&q=80" alt="Выставки"></div>
+                <div class="card-content">
+                    <h3 class="card-title">🖼️ Выставки</h3>
+                    <p class="card-text">Диалог с художниками через живопись, скульптуру и современные инсталляции.</p>
+                </div>
+            </div>
+            <div class="tilt-card-3d">
+                <div class="card-media"><img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=700&q=80" alt="Концерты"></div>
+                <div class="card-content">
+                    <h3 class="card-title">🎵 Концерты</h3>
+                    <p class="card-text">Универсальный язык гармонии — от классического оркестра до современного джаза.</p>
+                </div>
+            </div>
+            <div class="tilt-card-3d">
+                <div class="card-media"><img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=700&q=80" alt="Литература"></div>
+                <div class="card-content">
+                    <h3 class="card-title">📚 Литература</h3>
+                    <p class="card-text">Глубочайший тренажёр мышления, словесного богатства и человеческой мудрости.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ROLE OF ART (BENTO GRID WITH PHOTOS) ==================== -->
+    <section class="section-wrap" id="role">
+        <div class="section-header">
+            <span class="section-kicker">Раздел 3 & 4 программы</span>
+            <h2 class="section-headline">Роль искусства в жизни человека и общества</h2>
+            <p class="section-lead">Научные факты о пользе регулярного культурного досуга</p>
+        </div>
+
+        <div class="bento-photo-grid">
+            <div class="bento-photo-card span-2">
+                <div class="bento-card-photo"><img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=900&q=80" alt="Интеллект"></div>
+                <div class="bento-card-desc">
+                    <h3>Когнитивное развитие & Интеллект</h3>
+                    <p>Активация нейропластичности головного мозга, формирование критического мышления и способности решать нестандартные задачи в учебе и профессии.</p>
+                </div>
+            </div>
+            <div class="bento-photo-card">
+                <div class="bento-card-photo"><img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&q=80" alt="Эмоции"></div>
+                <div class="bento-card-desc">
+                    <h3>Психоэмоциональный баланс</h3>
+                    <p>Арт-терапия снижает уровень гормона стресса кортизола до 35%, предотвращая профессиональное выгорание.</p>
+                </div>
+            </div>
+            <div class="bento-photo-card">
+                <div class="bento-card-photo"><img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&q=80" alt="Креатив"></div>
+                <div class="bento-card-desc">
+                    <h3>Креативность и инновации</h3>
+                    <p>Дивергентное мышление: ученые, увлекающиеся искусством, патентуют на 40% больше разработок.</p>
+                </div>
+            </div>
+            <div class="bento-photo-card span-2">
+                <div class="bento-card-photo"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=900&q=80" alt="Общество"></div>
+                <div class="bento-card-desc">
+                    <h3>Общественная сплоченность</h3>
+                    <p>Общие культурные коды снижают уровень социальной агрессии и воспитывают уважение к многообразию традиций.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== GALLERY ==================== -->
     <section class="section-wrap" id="gallery">
         <div class="section-header">
             <span class="section-kicker">Эстетический опыт</span>
-            <h2 class="section-headline">Галерея шедевров и атмосферы</h2>
-            <p class="section-lead">Нажмите на любое изображение для просмотра в полноэкранном режиме высокого разрешения</p>
+            <h2 class="section-headline">Галерея культурных шедевров</h2>
+            <p class="section-lead">Кликните на изображение для просмотра в полном разрешении</p>
         </div>
 
         <div class="art-masonry">
@@ -2401,39 +2352,14 @@
         </div>
     </section>
 
-    <!-- ==================== VIDEO LECTURES ==================== -->
-    <section class="section-wrap" id="videos">
-        <div class="section-header">
-            <span class="section-kicker">Мультимедиа &bull; Видеоархив</span>
-            <h2 class="section-headline">Видеоматериалы к занятию</h2>
-            <p class="section-lead">Экспертные взгляды ученых и искусствоведов на роль культуры в XXI веке</p>
-        </div>
-
-        <div class="video-trio">
-            <div class="video-box">
-                <div class="video-ratio"><iframe src="https://www.youtube.com/embed/QZQyV9BB50E" title="Зачем нужно искусство" allowfullscreen loading="lazy"></iframe></div>
-                <div class="video-detail"><h4>🎬 Зачем человеку нужно искусство?</h4><p>Философское осмысление эстетической потребности человечества.</p></div>
-            </div>
-            <div class="video-box">
-                <div class="video-ratio"><iframe src="https://www.youtube.com/embed/PBAl9cFczXY" title="Музеи мира" allowfullscreen loading="lazy"></iframe></div>
-                <div class="video-detail"><h4>🏛️ Величайшие музеи мира</h4><p>Виртуальный тур по ключевым очагам мирового культурного наследия.</p></div>
-            </div>
-            <div class="video-box">
-                <div class="video-ratio"><iframe src="https://www.youtube.com/embed/sn0bDD4gXrE" title="Музыка и мозг" allowfullscreen loading="lazy"></iframe></div>
-                <div class="video-detail"><h4>🎵 Как музыка влияет на наш мозг</h4><p>Нейробиология восприятия звуковых гармоний и мелодий.</p></div>
-            </div>
-        </div>
-    </section>
-
     <!-- ==================== FOOTER ==================== -->
     <footer class="site-footer">
         <div class="footer-brand">✦ Культурный Отдых</div>
-        <p class="footer-meta">
-            Интерактивный образовательный портал к Практическому занятию №6.<br>
-            Разработано для интерактивной демонстрации, семинаров и университетских лекций.
+        <p style="color:var(--text-secondary);font-size:0.95rem;max-width:600px;margin:0 auto 20px;">
+            Практическое занятие №6 &bull; Проект подготовлен <strong>Презентующей группой</strong> (6 чел.)
         </p>
-        <div class="footer-copy">
-            &copy; 2026 &bull; Академический курс практического русского языка &bull; Все права защищены
+        <div style="font-size:0.8rem;color:var(--text-muted);">
+            &copy; 2026 &bull; Академический курс практического русского языка
         </div>
     </footer>
 
@@ -2442,14 +2368,14 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- Audio Player (Background Classical Ambient) -->
+    <!-- Audio Player -->
     <audio id="ambientAudio" loop preload="none">
         <source src="https://cdn.pixabay.com/audio/2022/02/22/audio_d1718ab41b.mp3" type="audio/mpeg">
     </audio>
 
-    <!-- ==================== JAVASCRIPT LOGIC ==================== -->
+    <!-- ==================== TOURNAMENT SCRIPT ==================== -->
     <script>
-        /* 1. PRELOADER (Instant & fail-safe) */
+        /* 1. PRELOADER */
         (function() {
             const preloader = document.getElementById('sitePreloader');
             const countEl = document.getElementById('loaderCount');
@@ -2458,30 +2384,25 @@
             const fullCircumference = 301.6;
 
             const interval = setInterval(() => {
-                progress += Math.floor(Math.random() * 24) + 16;
+                progress += Math.floor(Math.random() * 25) + 16;
                 if (progress >= 100) {
                     progress = 100;
                     clearInterval(interval);
                     countEl.textContent = '100%';
                     barEl.style.strokeDashoffset = '0';
-                    setTimeout(() => {
-                        preloader.classList.add('loaded');
-                    }, 280);
+                    setTimeout(() => preloader.classList.add('loaded'), 250);
                 } else {
                     countEl.textContent = progress + '%';
-                    const offset = fullCircumference - (progress / 100) * fullCircumference;
-                    barEl.style.strokeDashoffset = offset;
+                    barEl.style.strokeDashoffset = fullCircumference - (progress / 100) * fullCircumference;
                 }
-            }, 70);
+            }, 60);
 
             setTimeout(() => {
-                if (!preloader.classList.contains('loaded')) {
-                    preloader.classList.add('loaded');
-                }
+                if (!preloader.classList.contains('loaded')) preloader.classList.add('loaded');
             }, 1200);
         })();
 
-        /* 2. LIGHT IRIDESCENT CANVAS MOTION ENGINE */
+        /* 2. LIGHT CANVAS MOTION */
         const canvas = document.getElementById('fluidCanvas');
         const ctx = canvas.getContext('2d');
         let width, height;
@@ -2495,21 +2416,21 @@
         resizeCanvas();
 
         const lightPalette = [
-            [167, 139, 250],
-            [244, 114, 182],
-            [56, 189, 248],
-            [251, 191, 36],
-            [129, 140, 248]
+            [217, 119, 6],   // Золотой (Презентующие)
+            [37, 99, 235],   // Синий (Дополняющие)
+            [124, 58, 237],  // Фиолетовый (Оценивающие)
+            [236, 72, 153],
+            [16, 185, 129]
         ];
 
         for (let i = 0; i < 5; i++) {
             particles.push({
                 x: Math.random() * width,
                 y: Math.random() * height,
-                radius: Math.random() * 300 + 200,
+                radius: Math.random() * 280 + 180,
                 color: lightPalette[i % lightPalette.length],
-                vx: (Math.random() - 0.5) * 0.6,
-                vy: (Math.random() - 0.5) * 0.6,
+                vx: (Math.random() - 0.5) * 0.5,
+                vy: (Math.random() - 0.5) * 0.5,
                 pulse: Math.random() * Math.PI * 2,
             });
         }
@@ -2518,7 +2439,6 @@
         function renderLightFluid() {
             ctx.fillStyle = 'rgba(248, 249, 253, 0.28)';
             ctx.fillRect(0, 0, width, height);
-
             timeTick += 0.012;
 
             particles.forEach((p) => {
@@ -2530,10 +2450,10 @@
                 if (p.y < -p.radius) p.y = height + p.radius;
                 if (p.y > height + p.radius) p.y = -p.radius;
 
-                const currentR = p.radius + Math.sin(timeTick * 1.4 + p.pulse) * 32;
+                const currentR = p.radius + Math.sin(timeTick * 1.4 + p.pulse) * 30;
                 const grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, currentR);
-                grad.addColorStop(0, `rgba(${p.color[0]}, ${p.color[1]}, ${p.color[2]}, 0.22)`);
-                grad.addColorStop(0.5, `rgba(${p.color[0]}, ${p.color[1]}, ${p.color[2]}, 0.07)`);
+                grad.addColorStop(0, `rgba(${p.color[0]}, ${p.color[1]}, ${p.color[2]}, 0.2)`);
+                grad.addColorStop(0.5, `rgba(${p.color[0]}, ${p.color[1]}, ${p.color[2]}, 0.06)`);
                 grad.addColorStop(1, 'rgba(248, 249, 253, 0)');
 
                 ctx.fillStyle = grad;
@@ -2546,27 +2466,34 @@
         }
         renderLightFluid();
 
-        /* 3. BACKGROUND MODE TOGGLE */
+        /* 3. BG TOGGLE & AUDIO */
         const toggleBgBtn = document.getElementById('toggleBgBtn');
         const ambientVideo = document.getElementById('ambientVideo');
         let isVideoMode = true;
 
         toggleBgBtn.addEventListener('click', () => {
             isVideoMode = !isVideoMode;
-            if (isVideoMode) {
-                ambientVideo.style.opacity = '0.25';
-                toggleBgBtn.classList.remove('active');
-                toggleBgBtn.innerHTML = '<i class="fas fa-film"></i>';
-                toggleBgBtn.title = "Режим: Моушн-видео (Активен)";
-            } else {
-                ambientVideo.style.opacity = '0';
-                toggleBgBtn.classList.add('active');
-                toggleBgBtn.innerHTML = '<i class="fas fa-wand-magic-sparkles"></i>';
-                toggleBgBtn.title = "Режим: Генеративный шелк (Активен)";
-            }
+            ambientVideo.style.opacity = isVideoMode ? '0.22' : '0';
+            toggleBgBtn.classList.toggle('active', !isVideoMode);
         });
 
-        /* 4. FLUID MAGNETIC CURSOR */
+        const audio = document.getElementById('ambientAudio');
+        const musicBtn = document.getElementById('musicToggleBtn');
+        let isAudioPlaying = false;
+
+        musicBtn.addEventListener('click', () => {
+            if (isAudioPlaying) {
+                audio.pause();
+                musicBtn.classList.remove('active');
+            } else {
+                audio.volume = 0.35;
+                audio.play().catch(() => {});
+                musicBtn.classList.add('active');
+            }
+            isAudioPlaying = !isAudioPlaying;
+        });
+
+        /* 4. CURSOR & SCROLL */
         const curRing = document.getElementById('curRing');
         const curDot = document.getElementById('curDot');
         let cursorX = 0, cursorY = 0, ringX = 0, ringY = 0;
@@ -2587,81 +2514,66 @@
         }
         animateCursor();
 
-        document.querySelectorAll('a, button, input, .tilt-card-3d, .mem-tile, .art-frame, .bento-photo-card').forEach(elem => {
-            elem.addEventListener('mouseenter', () => curRing.classList.add('active'));
-            elem.addEventListener('mouseleave', () => curRing.classList.remove('active'));
-        });
-
-        /* 5. NAVBAR SCROLL EFFECT */
         const mainHeader = document.getElementById('mainHeader');
         const scrollTopBtn = document.getElementById('scrollTopBtn');
-
         window.addEventListener('scroll', () => {
             const pos = window.scrollY;
-            if (pos > 50) mainHeader.classList.add('scrolled');
-            else mainHeader.classList.remove('scrolled');
-
-            if (pos > 500) scrollTopBtn.classList.add('visible');
-            else scrollTopBtn.classList.remove('visible');
-        });
-
-        /* 6. AMBIENT AUDIO TOGGLE */
-        const audio = document.getElementById('ambientAudio');
-        const musicBtn = document.getElementById('musicToggleBtn');
-        let isAudioPlaying = false;
-
-        musicBtn.addEventListener('click', () => {
-            if (isAudioPlaying) {
-                audio.pause();
-                musicBtn.classList.remove('active');
-            } else {
-                audio.volume = 0.35;
-                audio.play().catch(() => {});
-                musicBtn.classList.add('active');
-            }
-            isAudioPlaying = !isAudioPlaying;
-        });
-
-        /* 7. 3D TILT WITH SPOTLIGHT EFFECT */
-        document.querySelectorAll('.tilt-card-3d').forEach(card => {
-            const spotlight = card.querySelector('.card-spotlight');
-
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                const rotX = ((y - centerY) / centerY) * -6;
-                const rotY = ((x - centerX) / centerX) * 6;
-
-                card.style.transform = `perspective(800px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateY(-4px)`;
-                if (spotlight) {
-                    spotlight.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(99, 102, 241, 0.14) 0%, transparent 65%)`;
-                }
-            });
-
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) translateY(0px)';
-            });
+            mainHeader.classList.toggle('scrolled', pos > 50);
+            scrollTopBtn.classList.toggle('visible', pos > 500);
         });
 
         /* ============================================================
-           GAME HUB TAB SWITCHER
+           5. LIVE TOURNAMENT SCOREBOARD SYSTEM (ТАБЛО БИТВЫ)
            ============================================================ */
-        function switchGameTab(tabName) {
-            document.querySelectorAll('.game-tab-btn').forEach(btn => btn.classList.remove('active'));
-            document.querySelectorAll('.game-panel-view').forEach(panel => panel.classList.remove('active'));
+        let scoreDopVal = 0;
+        let scoreOcenVal = 0;
 
-            const activeBtn = Array.from(document.querySelectorAll('.game-tab-btn')).find(b => b.getAttribute('onclick').includes(tabName));
+        function adjustTeamScore(team, delta) {
+            if (team === 'dop') {
+                scoreDopVal = Math.max(0, scoreDopVal + delta);
+                document.getElementById('scoreDop').textContent = scoreDopVal;
+                pulseDigit('scoreDop');
+            } else {
+                scoreOcenVal = Math.max(0, scoreOcenVal + delta);
+                document.getElementById('scoreOcen').textContent = scoreOcenVal;
+                pulseDigit('scoreOcen');
+            }
+        }
+
+        function awardRoundPoint(team, points) {
+            adjustTeamScore(team, points);
+            triggerMiniCheer();
+        }
+
+        function pulseDigit(id) {
+            const el = document.getElementById(id);
+            el.style.transform = 'scale(1.25)';
+            el.style.transition = 'transform 0.2s cubic-bezier(0.16, 1, 0.3, 1)';
+            setTimeout(() => el.style.transform = 'scale(1)', 200);
+        }
+
+        function resetScores() {
+            if (confirm("Сбросить счёт турнира до 0?")) {
+                scoreDopVal = 0;
+                scoreOcenVal = 0;
+                document.getElementById('scoreDop').textContent = '0';
+                document.getElementById('scoreOcen').textContent = '0';
+            }
+        }
+
+        function switchBattleRound(roundKey) {
+            document.querySelectorAll('.battle-tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.round-panel').forEach(p => p.classList.remove('active'));
+
+            const activeBtn = Array.from(document.querySelectorAll('.battle-tab-btn')).find(b => b.getAttribute('onclick').includes(roundKey));
             if (activeBtn) activeBtn.classList.add('active');
 
-            const targetPanel = document.getElementById(`gameTab-${tabName}`);
-            if (targetPanel) targetPanel.classList.add('active');
+            const target = document.getElementById(`round-${roundKey}`);
+            if (target) target.classList.add('active');
         }
 
         /* ============================================================
-           GAME 1: 15-QUESTION QUIZ ENGINE
+           6. ROUND 1: 15-QUESTION QUIZ
            ============================================================ */
         const quizBank = [
             {
@@ -2673,19 +2585,19 @@
                     "Спортивные соревнования на открытом воздухе"
                 ],
                 correct: 1,
-                why: "Культурный отдых — это осознанная и активная форма досуга, нацеленная на приобщение к ценностям искусства и духовное развитие личности."
+                why: "Культурный отдых — это активная форма досуга, нацеленная на приобщение к духовным богатствам."
             },
             {
                 q: "В каком веке сформировался так называемый «Золотой век» русской литературы?",
                 choices: ["XVIII век", "XIX век", "XX век", "XVII век"],
                 correct: 1,
-                why: "XIX век называют Золотым веком: именно тогда творили Пушкин, Лермонтов, Гоголь, Толстой, Достоевский и Чехов."
+                why: "XIX век — эпоха Пушкина, Толстого, Достоевского и Чехова."
             },
             {
                 q: "Какой музей признан крупнейшим художественным собранием в России?",
                 choices: ["Третьяковская галерея", "Русский музей", "Государственный Эрмитаж", "Пушкинский музей"],
                 correct: 2,
-                why: "Государственный Эрмитаж в Санкт-Петербурге насчитывает более 3 миллионов памятников мировой культуры и искусства."
+                why: "Государственный Эрмитаж в Санкт-Петербурге хранит более 3 миллионов экспонатов."
             },
             {
                 q: "Как искусство научно воздействует на психоэмоциональное здоровье человека?",
@@ -2696,7 +2608,7 @@
                     "Вызывает апатию и сонливость"
                 ],
                 correct: 2,
-                why: "Арт-терапия и гармоническая музыка активируют парасимпатическую нервную систему, нормализуя гормональный фон."
+                why: "Арт-терапия снижает уровень стресса и активизирует парасимпатическую нервную систему."
             },
             {
                 q: "Какова ключевая социальная роль культурного отдыха в жизни общества?",
@@ -2707,16 +2619,16 @@
                     "Вынужденная трата свободного времени"
                 ],
                 correct: 1,
-                why: "Культура транслирует нравственные ценности предков, сближает представителей разных поколений и укрепляет общество."
+                why: "Культура транслирует нравственные ценности и укрепляет солидарность общества."
             },
             {
                 q: "Какой композитор является автором всемирно известного балета «Лебединое озеро»?",
                 choices: ["В.А. Моцарт", "Л. ван Бетховен", "П.И. Чайковский", "С.В. Рахманинов"],
                 correct: 2,
-                why: "Петр Ильич Чайковский написал бессмертный шедевр «Лебединое озеро» в 1876 году."
+                why: "П.И. Чайковский написал шедевр «Лебединое озеро» в 1876 году."
             },
             {
-                q: "Что в теории театрального искусства (начиная с Аристотеля) называют термином «катарсис»?",
+                q: "Что в теории театрального искусства называют термином «катарсис»?",
                 choices: [
                     "Перерыв между действиями спектакля",
                     "Духовное очищение и эмоциональное возвышение через сопереживание",
@@ -2724,10 +2636,10 @@
                     "Сценический костюм главного героя"
                 ],
                 correct: 1,
-                why: "Катарсис — ключевое понятие античной эстетики, означающее очищение души и нравственное преображение зрителя через сострадание героям трагедии."
+                why: "Катарсис (по Аристотелю) — очищение души через высшее сострадание героям трагедии."
             },
             {
-                q: "Кем и с какой целью была основана знаменитая Государственная Третьяковская галерея?",
+                q: "Кем и с какой целью была основана Государственная Третьяковская галерея?",
                 choices: [
                     "Императором Петром I для дипломатических приемов",
                     "Меценатом Павлом Третьяковым для создания общедоступного национального музея",
@@ -2735,32 +2647,32 @@
                     "Международным союзом художников"
                 ],
                 correct: 1,
-                why: "Павел Михайлович Третьяков посвятил жизнь собиранию шедевров русского искусства и подарил свою грандиозную коллекцию городу Москве."
+                why: "Павел Третьяков передал свое собрание шедевров в дар Москве для просвещения народа."
             },
             {
                 q: "Какова ключевая профессиональная функция дирижёра в симфоническом оркестре?",
                 choices: [
-                    "Задавать громкость звука с помощью специальной аппаратуры",
+                    "Задавать громкость звука с помощью аппаратуры",
                     "Обеспечивать художественное единство, ансамблевую слаженность и ритмический баланс",
-                    "Просто показывать музыкантам точное время окончания концерта",
-                    "Играть на самом тихом музыкальном инструменте"
+                    "Просто показывать музыкантам время окончания концерта",
+                    "Играть на самом тихом инструменте"
                 ],
                 correct: 1,
-                why: "Дирижёр объединяет десятки музыкантов в единый звучащий организм, интерпретирует замысел композитора и управляет динамикой и темпом."
+                why: "Дирижёр объединяет музыкантов в единый звучащий организм и задает трактовку произведения."
             },
             {
                 q: "Каково главное преимущество культурных фестивалей как формы проведения досуга?",
                 choices: [
                     "Они проводятся исключительно в закрытых аудиториях для критиков",
                     "Создание открытого творческого пространства для живого обмена идеями и премьер",
-                    "На фестивалях запрещено непосредственное общение со зрителями",
-                    "Фестивали не оказывают влияния на развитие туризма и общества"
+                    "На фестивалях запрещено общение со зрителями",
+                    "Фестивали не оказывают влияния на общество"
                 ],
                 correct: 1,
-                why: "Фестивали создают неповторимую атмосферу праздника искусства, открывают молодые таланты и способствуют межкультурной интеграции."
+                why: "Фестивали объединяют артистов и широкую аудиторию в едином созидательном пространстве."
             },
             {
-                q: "На какие три основных рода традиционно подразделяется классическая художественная литература?",
+                q: "На какие три основных рода традиционно подразделяется классическая литература?",
                 choices: [
                     "Проза, стихи и басни",
                     "Эпос, лирика и драма",
@@ -2768,51 +2680,50 @@
                     "Научная, публицистическая и учебная"
                 ],
                 correct: 1,
-                why: "В литературоведении три фундаментальных рода литературы — это эпос (повествование о событиях), лирика (выражение чувств) и драма (действие на сцене)."
+                why: "Три рода литературы: Эпос (повествование), Лирика (чувства) и Драма (действие)."
             },
             {
-                q: "Какому виду искусства принадлежит знаменитое классическое определение: «... — это застывшая музыка»?",
+                q: "Какому виду искусства принадлежит классическое определение: «... — это застывшая музыка»?",
                 choices: ["Живопись", "Скульптура", "Архитектура", "Кинематограф"],
                 correct: 2,
-                why: "Метафора «Архитектура — это застывшая музыка» (И.В. Гёте, Ф. Шеллинг) подчеркивает ритм, гармонию и пропорциональность великих зодческих сооружений."
+                why: "Метафора «Архитектура — застывшая музыка» принадлежит философу Шеллингу и поэту Гёте."
             },
             {
-                q: "Чем современные иммерсивные мультимедийные выставки отличаются от традиционных экспозиций?",
+                q: "Чем современные иммерсивные мультимедийные выставки отличаются от традиционных?",
                 choices: [
-                    "Полным отсутствием художественных экспонатов",
+                    "Полным отсутствием художественных произведений",
                     "Эффектом полного аудиовизуального погружения зрителя внутрь полотен художников",
-                    "Категорическим запретом на любое взаимодействие с пространством",
-                    "Они предназначены исключительно для детских садов"
+                    "Категорическим запретом на любое взаимодействие",
+                    "Они создаются только для детей"
                 ],
                 correct: 1,
-                why: "Иммерсивный формат использует 360-градусные проекции, объемный звук и интерактивные медиа-технологии, превращая зрителя в участника произведения."
+                why: "Иммерсивность погружает зрителя в пространство с помощью проекций и интерактива."
             },
             {
-                q: "Каким образом культурный отдых способствует развитию межкультурного диалога (РОД 5)?",
+                q: "Каким образом культурный отдых способствует развитию межкультурного диалога?",
                 choices: [
                     "Доказывает безусловное превосходство одной культуры над другими",
                     "Помогает глубже понять историю, традицию и менталитет других народов через искусство",
-                    "Полностью устраняет необходимость общения на родном языке",
-                    "Изолирует общество от международных культурных процессов"
+                    "Полностью устраняет необходимость общения",
+                    "Изолирует общество от международных процессов"
                 ],
                 correct: 1,
-                why: "Искусство говорит на универсальном языке общечеловеческих ценностей, воспитывая толерантность и уважение к мировому культурному разнообразию."
+                why: "Искусство говорит на языке общечеловеческих ценностей, объединяя разные народы."
             },
             {
-                q: "Какую важнейшую способность человека, по исследованиям психологов, сильнее всего развивает чтение литературы?",
+                q: "Какую способность человека сильнее всего развивает регулярное чтение литературы?",
                 choices: [
                     "Физическую выносливость",
                     "Эмпатию — способность глубоко понимать чувства и мотивы других людей",
-                    "Скорость механического набора символов на клавиатуре",
-                    "Способность запоминать случайные телефонные номера"
+                    "Скорость механического набора символов",
+                    "Память на случайные телефонные номера"
                 ],
                 correct: 1,
-                why: "Художественная литература погружает читателя во внутренний мир персонажей, развивая эмоциональный интеллект и глубокую социальную эмпатию."
+                why: "Художественная литература развивает глубокий эмоциональный интеллект и социальную эмпатию."
             }
         ];
 
         let quizIndex = 0;
-        let quizScore = 0;
         let questionLocked = false;
         const lettersList = ['А', 'Б', 'В', 'Г'];
 
@@ -2834,7 +2745,7 @@
             });
 
             document.getElementById('quizFeedbackBox').classList.remove('revealed');
-            document.getElementById('quizNextAction').classList.remove('revealed');
+            document.getElementById('quizNextAction').style.display = 'none';
             questionLocked = false;
         }
 
@@ -2846,7 +2757,6 @@
             const allBtns = document.querySelectorAll('.quiz-choice-btn');
 
             if (selectedIdx === curQ.correct) {
-                quizScore++;
                 clickedBtn.classList.add('is-correct');
             } else {
                 clickedBtn.classList.add('is-wrong');
@@ -2857,46 +2767,18 @@
             feedbackEl.innerHTML = `<strong><i class="fas fa-info-circle"></i> Пояснение:</strong> ${curQ.why}`;
             feedbackEl.classList.add('revealed');
 
-            document.getElementById('quizNextAction').classList.add('revealed');
+            document.getElementById('quizNextAction').style.display = 'inline-flex';
         }
 
         function proceedNextQuestion() {
-            quizIndex++;
-            if (quizIndex < quizBank.length) {
-                showQuestion();
-            } else {
-                finishQuiz();
-            }
-        }
-
-        function finishQuiz() {
-            document.getElementById('quizPlayZone').style.display = 'none';
-            document.getElementById('quizScoreZone').classList.add('revealed');
-            document.getElementById('quizMeterBar').style.width = '100%';
-
-            document.getElementById('quizScoreValue').textContent = `${quizScore} / ${quizBank.length}`;
-            const percent = (quizScore / quizBank.length) * 100;
-            let note = "";
-
-            if (percent >= 80) note = "Превосходно! Вы продемонстрировали глубокие знания в сфере культуры и искусства! 🌟";
-            else if (percent >= 50) note = "Хороший результат! Вы уверенно ориентируетесь в большинстве тем. 👏";
-            else note = "Рекомендуется повторить ключевые разделы занятия. 📚";
-
-            document.getElementById('quizScoreCommentary').textContent = note;
-        }
-
-        function resetQuizTest() {
-            quizIndex = 0;
-            quizScore = 0;
-            document.getElementById('quizPlayZone').style.display = 'block';
-            document.getElementById('quizScoreZone').classList.remove('revealed');
+            quizIndex = (quizIndex + 1) % quizBank.length;
             showQuestion();
         }
 
         showQuestion();
 
         /* ============================================================
-           GAME 2: GUESS THE MASTERPIECE & MUSEUM
+           7. ROUND 2: ART SPEED GUESS
            ============================================================ */
         const artQuestions = [
             {
@@ -2909,11 +2791,11 @@
                     "«Сикстинская Мадонна» — Рафаэль Санти"
                 ],
                 correct: 0,
-                fact: "«Мона Лиза» Леонардо да Винчи написана около 1503–1519 гг. Находится в Лувре (Париж) и является самым известным полотном в истории человечества."
+                fact: "«Мона Лиза» Леонардо да Винчи (Лувр, Париж) — самое знаменитое живописное полотно в истории."
             },
             {
                 img: "https://images.unsplash.com/photo-1569587112025-0d460e81a126?w=800&q=80",
-                q: "К какому виду изобразительного искусства принадлежит эта классическая мраморная работа?",
+                q: "К какому виду изобразительного искусства принадлежит эта работа?",
                 options: [
                     "Барельефная мозаика",
                     "Античная монументальная скульптура",
@@ -2921,23 +2803,23 @@
                     "Архитектурный фриз"
                 ],
                 correct: 1,
-                fact: "Классическая античная скульптура заложила каноны гармонии, анатомической точности и возвышенной красоты европейской цивилизации."
+                fact: "Классическая античная скульптура сформировала эталон телесной и духовной гармонии."
             },
             {
                 img: "https://images.unsplash.com/photo-1503095396549-807759245b35?w=800&q=80",
-                q: "Какой прославленный музыкальный и театральный жанр ассоциируется с пышными интерьерами ярусного зала?",
+                q: "Какой театральный жанр ассоциируется с ярусным залом, хрустальными люстрами и оркестровой ямой?",
                 options: [
                     "Оперное и балетное искусство (Большой и Мариинский театры)",
                     "Камерный стендап-клуб",
-                    "Кинематографический показ",
+                    "Кинематографический фестиваль",
                     "Рок-фестиваль под открытым небом"
                 ],
                 correct: 0,
-                fact: "Классический ярусный театр с позолотой и хрустальной люстрой — символ высшего академического театрального искусства (Опера и Балет)."
+                fact: "Ярусный академический театр — вершина синтеза музыки, актерского мастерства и сценографии."
             },
             {
                 img: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?w=800&q=80",
-                q: "Какой всемирно известный российский музей хранит более 3 миллионов шедевров в залах Зимнего дворца?",
+                q: "Какой всемирно известный российский музей хранит более 3 миллионов экспонатов в Зимнем дворце?",
                 options: [
                     "Третьяковская галерея (Москва)",
                     "Государственный Эрмитаж (Санкт-Петербург)",
@@ -2945,7 +2827,7 @@
                     "Кунсткамера"
                 ],
                 correct: 1,
-                fact: "Государственный Эрмитаж основан императрицей Екатериной II в 1764 году. Чтобы осмотреть каждый экспонат хотя бы по минуте, понадобится около 11 лет!"
+                fact: "Государственный Эрмитаж основан в 1764 году Екатериной Великой."
             },
             {
                 img: "https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?w=800&q=80",
@@ -2957,8 +2839,7 @@
                     "Вокальный дуэт"
                 ],
                 correct: 1,
-                why: "",
-                fact: "Симфонический оркестр включает 4 группы инструментов: струнные, деревянные духовые, медные духовые и ударные, создавая колоссальную звуковую палитру."
+                fact: "Симфонический оркестр объединяет 4 инструментальные группы, создавая колоссальную палитру звуков."
             }
         ];
 
@@ -2967,7 +2848,7 @@
 
         function loadArtQuestion() {
             const cur = artQuestions[artIndex];
-            document.getElementById('artQuizCounter').textContent = `Картина ${artIndex + 1} из ${artQuestions.length}`;
+            document.getElementById('artQuizCounter').textContent = `Шедевр ${artIndex + 1} из ${artQuestions.length}`;
             document.getElementById('artQuizImage').src = cur.img;
             document.getElementById('artQuizQuestion').textContent = cur.q;
 
@@ -3002,7 +2883,7 @@
             }
 
             const factBox = document.getElementById('artQuizFactBox');
-            factBox.innerHTML = `<strong><i class="fas fa-lightbulb"></i> Культурный факт:</strong> ${cur.fact}`;
+            factBox.innerHTML = `<strong><i class="fas fa-lightbulb"></i> Исторический факт:</strong> ${cur.fact}`;
             factBox.classList.add('revealed');
 
             document.getElementById('btnArtQuizNext').style.display = 'inline-flex';
@@ -3016,7 +2897,7 @@
         loadArtQuestion();
 
         /* ============================================================
-           GAME 3: CULTURAL CATEGORY SORTER
+           8. ROUND 3: TERM SORTER RELAY
            ============================================================ */
         const termsToClassify = [
             { term: "Партер", category: "theater" },
@@ -3041,149 +2922,35 @@
                 document.getElementById('sorterActiveTerm').textContent = termsToClassify[sorterIndex].term;
             } else {
                 document.getElementById('sorterActiveTerm').textContent = "🎉 Все термины отсортированы!";
-                document.getElementById('sorterResultMsg').innerHTML = `<span style="color:#059669;font-size:1.1rem;">Блестяще! Вы правильно классифицировали термины четырёх сфер культуры.</span>`;
+                document.getElementById('sorterResultMsg').innerHTML = `<span style="color:#059669;font-size:1.1rem;">Блестяще! Раунд эстафеты завершен.</span>`;
             }
         }
 
         function classifyTerm(chosenCategory) {
             if (sorterIndex >= termsToClassify.length) return;
-
             const cur = termsToClassify[sorterIndex];
             const msgEl = document.getElementById('sorterResultMsg');
 
             if (chosenCategory === cur.category) {
                 sorterScore[chosenCategory]++;
                 document.getElementById(`count-${chosenCategory}`).textContent = `Собрано: ${sorterScore[chosenCategory]}`;
-                msgEl.innerHTML = `<span style="color:#059669;"><i class="fas fa-check"></i> Верно! «${cur.term}» относится к категории.</span>`;
+                msgEl.innerHTML = `<span style="color:#059669;"><i class="fas fa-check"></i> Верно! «${cur.term}» отнесён к верной сфере.</span>`;
                 sorterIndex++;
                 updateSorterCard();
             } else {
-                msgEl.innerHTML = `<span style="color:#dc2626;"><i class="fas fa-xmark"></i> Неверно! Попробуйте определить другую сферу для «${cur.term}».</span>`;
+                msgEl.innerHTML = `<span style="color:#dc2626;"><i class="fas fa-xmark"></i> Неверная сфера! Попробуйте другой вариант.</span>`;
             }
         }
 
         updateSorterCard();
 
         /* ============================================================
-           GAME 4: MEMORY MATCH GAME
+           9. ROUND 4: GENERALIZING WORD
            ============================================================ */
-        const memoryCardsData = [
-            { icon: '🎭', text: 'Театр' },
-            { icon: '🏛️', text: 'Музей' },
-            { icon: '🎵', text: 'Музыка' },
-            { icon: '📚', text: 'Книги' },
-            { icon: '🎨', text: 'Живопись' },
-            { icon: '🎪', text: 'Фестиваль' },
-            { icon: '🖼️', text: 'Выставка' },
-            { icon: '🎬', text: 'Кино' }
-        ];
-
-        let flippedTiles = [];
-        let matchedPairsCount = 0;
-        let totalMoves = 0;
-        let gameSeconds = 0;
-        let gameTimerRef = null;
-        let gameActive = false;
-
-        function shuffleList(list) {
-            const arr = [...list];
-            for (let i = arr.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [arr[i], arr[j]] = [arr[j], arr[i]];
-            }
-            return arr;
-        }
-
-        function setupMemoryGame() {
-            const grid = document.getElementById('memoryCardsGrid');
-            grid.innerHTML = '';
-            flippedTiles = [];
-            matchedPairsCount = 0;
-            totalMoves = 0;
-            gameSeconds = 0;
-            gameActive = false;
-
-            if (gameTimerRef) clearInterval(gameTimerRef);
-
-            document.getElementById('memPairsFound').textContent = `0 / ${memoryCardsData.length}`;
-            document.getElementById('memMoveCounter').textContent = '0';
-            document.getElementById('memTimeDisplay').textContent = '00:00';
-
-            const deck = shuffleList([...memoryCardsData, ...memoryCardsData]);
-
-            deck.forEach((item) => {
-                const tile = document.createElement('div');
-                tile.className = 'mem-tile';
-                tile.dataset.id = item.text;
-                tile.innerHTML = `
-                    <div class="mem-face mem-face-front"><i class="fas fa-sparkles"></i></div>
-                    <div class="mem-face mem-face-back">
-                        <span class="emoji">${item.icon}</span>
-                        <span class="caption">${item.text}</span>
-                    </div>
-                `;
-                tile.onclick = () => handleTileFlip(tile);
-                grid.appendChild(tile);
-            });
-        }
-
-        function handleTileFlip(tile) {
-            if (flippedTiles.length >= 2 || tile.classList.contains('flipped')) return;
-
-            if (!gameActive) {
-                gameActive = true;
-                gameTimerRef = setInterval(() => {
-                    gameSeconds++;
-                    const m = Math.floor(gameSeconds / 60).toString().padStart(2, '0');
-                    const s = (gameSeconds % 60).toString().padStart(2, '0');
-                    document.getElementById('memTimeDisplay').textContent = `${m}:${s}`;
-                }, 1000);
-            }
-
-            tile.classList.add('flipped');
-            flippedTiles.push(tile);
-
-            if (flippedTiles.length === 2) {
-                totalMoves++;
-                document.getElementById('memMoveCounter').textContent = totalMoves;
-
-                const [t1, t2] = flippedTiles;
-                if (t1.dataset.id === t2.dataset.id) {
-                    matchedPairsCount++;
-                    document.getElementById('memPairsFound').textContent = `${matchedPairsCount} / ${memoryCardsData.length}`;
-                    flippedTiles = [];
-
-                    if (matchedPairsCount === memoryCardsData.length) {
-                        clearInterval(gameTimerRef);
-                        setTimeout(() => {
-                            alert(`🎉 Победа! Все пары найдены за ${totalMoves} ходов и ${document.getElementById('memTimeDisplay').textContent}!`);
-                        }, 400);
-                    }
-                } else {
-                    setTimeout(() => {
-                        t1.classList.remove('flipped');
-                        t2.classList.remove('flipped');
-                        flippedTiles = [];
-                    }, 850);
-                }
-            }
-        }
-
-        function restartMemoryMatch() {
-            setupMemoryGame();
-        }
-
-        setupMemoryGame();
-
-        /* ============================================================
-           GAME 5: EXERCISE 1 (Найдите обобщающее слово)
-           ============================================================ */
-        let exercisePoints = 0;
         const taskSolved = { 1: false, 2: false, 3: false, 4: false };
 
         function checkGeneralWord(taskId, validAnswers) {
             if (taskSolved[taskId]) return;
-
             const inputEl = document.getElementById(`inputWord${taskId}`);
             const feedbackEl = document.getElementById(`feedbackWord${taskId}`);
             const cardEl = document.getElementById(`taskCard${taskId}`);
@@ -3193,48 +2960,149 @@
 
             if (isCorrect) {
                 taskSolved[taskId] = true;
-                exercisePoints++;
-                document.getElementById('exerciseScore').textContent = `Баллы: ${exercisePoints} / 4`;
                 cardEl.classList.add('correct');
-                feedbackEl.innerHTML = `<span style="color:#059669;font-weight:600;"><i class="fas fa-circle-check"></i> Превосходно! Обобщающее понятие определено верно.</span>`;
-                feedbackEl.classList.add('show');
+                feedbackEl.innerHTML = `<span style="color:#059669;font-weight:700;"><i class="fas fa-check-circle"></i> Верно! Родовое понятие определено верно. Модератор начисляет балл команде.</span>`;
+                feedbackEl.style.display = 'block';
                 inputEl.disabled = true;
             } else {
-                feedbackEl.innerHTML = `<span style="color:#dc2626;"><i class="fas fa-triangle-exclamation"></i> Попробуйте ещё раз. Подсказка: объедините суть понятий в одну общую категорию.</span>`;
-                feedbackEl.classList.add('show');
+                feedbackEl.innerHTML = `<span style="color:#dc2626;"><i class="fas fa-triangle-exclamation"></i> Попробуйте другое понятие. Подсказка: объедините все слова в одну категорию.</span>`;
+                feedbackEl.style.display = 'block';
             }
         }
 
         /* ============================================================
-           GAME 6: DEBATE VOTING
+           10. ROUND 5: DEBATE TIMER
            ============================================================ */
-        let votesHuman = 14;
-        let votesAi = 9;
+        let debateSeconds = 60;
+        let debateInterval = null;
 
-        function voteDebate(type) {
-            if (type === 'human') {
-                votesHuman++;
-                document.getElementById('voteCountHuman').textContent = votesHuman;
+        function updateDebateTimerDisplay() {
+            const m = Math.floor(debateSeconds / 60).toString().padStart(2, '0');
+            const s = (debateSeconds % 60).toString().padStart(2, '0');
+            document.getElementById('debateTimerDisplay').textContent = `${m}:${s}`;
+        }
+
+        function startDebateTimer(sec) {
+            if (sec) debateSeconds = sec;
+            if (debateInterval) clearInterval(debateInterval);
+            updateDebateTimerDisplay();
+
+            debateInterval = setInterval(() => {
+                if (debateSeconds > 0) {
+                    debateSeconds--;
+                    updateDebateTimerDisplay();
+                } else {
+                    clearInterval(debateInterval);
+                    alert("⏰ Время выступления спикера завершено! Презентующая группа подводит итог раунда.");
+                }
+            }, 1000);
+        }
+
+        function pauseDebateTimer() {
+            if (debateInterval) clearInterval(debateInterval);
+        }
+
+        function resetDebateTimer() {
+            pauseDebateTimer();
+            debateSeconds = 60;
+            updateDebateTimerDisplay();
+        }
+
+        /* ============================================================
+           11. WINNER CELEBRATION & PURE CANVAS CONFETTI
+           ============================================================ */
+        function declareTournamentWinner() {
+            const modal = document.getElementById('winnerModal');
+            const titleEl = document.getElementById('winnerBannerTitle');
+            const statsEl = document.getElementById('winnerBannerStats');
+
+            statsEl.textContent = `Дополняющие: ${scoreDopVal} баллов | Оценивающие: ${scoreOcenVal} баллов`;
+
+            if (scoreDopVal > scoreOcenVal) {
+                titleEl.textContent = "Победила команда «Дополняющие»!";
+                titleEl.style.color = "var(--team-dop)";
+            } else if (scoreOcenVal > scoreDopVal) {
+                titleEl.textContent = "Победила команда «Оценивающие»!";
+                titleEl.style.color = "var(--team-ocen)";
             } else {
-                votesAi++;
-                document.getElementById('voteCountAi').textContent = votesAi;
+                titleEl.textContent = "Боевая ничья! Победила культура!";
+                titleEl.style.color = "var(--team-pres)";
             }
+
+            modal.classList.add('show');
+            launchConfetti();
         }
 
-        /* ============================================================
-           LIGHTBOX VIEWER
-           ============================================================ */
+        function closeWinnerModal() {
+            document.getElementById('winnerModal').classList.remove('show');
+        }
+
+        // Lightweight pure canvas confetti
+        function launchConfetti() {
+            const c = document.getElementById('confettiCanvas');
+            const cCtx = c.getContext('2d');
+            c.width = window.innerWidth;
+            c.height = window.innerHeight;
+
+            const confs = [];
+            const colors = ['#f59e0b', '#2563eb', '#7c3aed', '#ec4899', '#10b981', '#38bdf8'];
+
+            for (let i = 0; i < 180; i++) {
+                confs.push({
+                    x: Math.random() * c.width,
+                    y: Math.random() * c.height - c.height,
+                    r: Math.random() * 8 + 4,
+                    d: Math.random() * 60 + 20,
+                    color: colors[Math.floor(Math.random() * colors.length)],
+                    tilt: Math.random() * 10 - 10,
+                    tiltAngleIncremental: (Math.random() * 0.07) + 0.05,
+                    tiltAngle: 0
+                });
+            }
+
+            let animationFrames = 0;
+            function drawConfetti() {
+                cCtx.clearRect(0, 0, c.width, c.height);
+                animationFrames++;
+
+                confs.forEach(p => {
+                    p.tiltAngle += p.tiltAngleIncremental;
+                    p.y += (Math.cos(p.d) + 3 + p.r / 2) / 1.5;
+                    p.x += Math.sin(p.d);
+                    p.tilt = Math.sin(p.tiltAngle - (animationFrames / 3)) * 15;
+
+                    cCtx.beginPath();
+                    cCtx.lineWidth = p.r / 2;
+                    cCtx.strokeStyle = p.color;
+                    cCtx.moveTo(p.x + p.tilt + (p.r / 4), p.y);
+                    cCtx.lineTo(p.x + p.tilt, p.y + p.tilt + (p.r / 4));
+                    cCtx.stroke();
+                });
+
+                if (animationFrames < 250) {
+                    requestAnimationFrame(drawConfetti);
+                } else {
+                    cCtx.clearRect(0, 0, c.width, c.height);
+                }
+            }
+            drawConfetti();
+        }
+
+        function triggerMiniCheer() {
+            pulseDigit('scoreDop');
+            pulseDigit('scoreOcen');
+        }
+
+        /* 12. LIGHTBOX */
         const mediaViewer = document.getElementById('mediaViewer');
         const viewerImage = document.getElementById('viewerImage');
-
-        function openViewer(element) {
-            const img = element.querySelector('img');
+        function openViewer(el) {
+            const img = el.querySelector('img');
             if (img) {
                 viewerImage.src = img.src;
                 mediaViewer.classList.add('visible');
             }
         }
-
         function closeViewer() {
             mediaViewer.classList.remove('visible');
         }
